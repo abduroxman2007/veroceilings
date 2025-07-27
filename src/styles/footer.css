@@ -1,0 +1,96 @@
+.footer-section {
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 4rem 0.5rem; /* Reduced horizontal padding */
+  font-family: var(--font-main);
+}
+
+.container {
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center the content */
+  padding: 0; /* Inner padding for smaller screens */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: var(--color-hover);
+}
+
+.footer-column form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 0.5rem;
+}
+
+.footer-column button {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.footer-column button:hover {
+  background: var(--color-hover);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: var(--color-text-light);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--color-hover);
+}

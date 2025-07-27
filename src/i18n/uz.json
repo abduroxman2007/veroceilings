@@ -1,0 +1,140 @@
+{
+  "navbar": {
+    "products": "Mahsulotlar",
+    "projects": "Loyihalar/Obyektlar",
+    "architects": "Arxitektorlar uchun",
+    "clients": "Mijozlar uchun",
+    "about": "Kompaniya haqida",
+    "contact": "Bog'lanish",
+    "language": "Til"
+  },
+  "welcome": "Vero Ceilings ga xush kelibsiz",
+  "whyus": {
+    "title": "Nima uchun bizni tanlaysiz",
+    "subtitle": "Siz uchun to'g'ri tanlov",
+    "features": {
+      "experience": {
+        "title": "10+ yillik tajriba",
+        "description": "O'n yillik tajribaga ega Vero Ceilings, innovatsion va yuqori sifatli shift echimlarini taklif etib, makonlarni mukammallik bilan o'zgartiradi."
+      },
+      "quality": {
+        "title": "Yuqori sifatli mahsulotlar",
+        "description": "Biz har qanday interyer uchun murakkab bezak va uzoq muddatli ishlashni ta'minlaydigan premium, bardoshli materiallarni taqdim etamiz."
+      },
+      "guarantee": {
+        "title": "15 yillik kafolat",
+        "description": "Bizning sifatga bo'lgan sodiqligimiz 15 yillik kafolat bilan tasdiqlangan bo'lib, sizga xotirjamlik va mahsulotlarimizga ishonch bag'ishlaydi."
+      }
+    }
+  },
+  "hero": {
+    "slide1": {
+      "title": "Vero Ceiling Kompaniyasi",
+      "text": "O'n yillik tajribaga ega Vero Ceilings, makonlarni mukammallik bilan o'zgartiradi.",
+      "button": "KO'PROQ O'QISH"
+    },
+    "slide2": {
+      "title": "Vero Shiftlari bilan makonlarni ko'taring.",
+      "text": "Har bir detalda innovatsiyani kashf eting. Vero Shiftlari, dizayn o'ziga xoslik bilan uchrashadigan joy. Zo'r ta'sir uchun bizning tanlangan to'plamimizni o'rganing.",
+      "button": "Barcha mahsulotlarni o'rganing"
+    },
+    "slide3": {
+      "title": "Vero Shiftlar Galereyasi: abadiy nafislikni aks ettirish",
+      "text": "Vero Shiftlar Galereyasida abadiy dizayn dunyosiga qadam qo'ying. Har bir detal mustahkam nafislik haqida hikoya qiladigan bizning maftunkor ko'rgazmamizga sho'ng'ing.",
+      "button": "GALEREYANI KO'RISH"
+    }
+  },
+  "products": {
+    "title": "Bizning mahsulotlarimiz",
+    "grilyato": {
+      "title": "Grilyato Shiftlari",
+      "description": "Zamonaviy, ko'p qirrali va o'rnatish oson."
+    },
+    "armstrong": {
+      "title": "Armstrong Shiftlari",
+      "description": "Har qanday makon uchun klassik va ishonchli echimlar."
+    },
+    "reyechniy": {
+      "title": "Reyechniy Shiftlari",
+      "description": "Zamonaviy ko'rinish uchun silliq va chiziqli dizaynlar."
+    },
+    "gypsum_armstrong": {
+      "title": "Gipsokarton Armstrong",
+      "description": "Yong'inga chidamli va ovoz yutuvchi gips panellari."
+    },
+    "metal_armstrong": {
+      "title": "Metall Armstrong",
+      "description": "Bardoshli va zamonaviy metall shift tizimlari."
+    },
+    "washing_armstrong": {
+      "title": "Yuviladigan Armstrong",
+      "description": "Oson tozalanadigan va parvarish qilinadigan shift echimlari."
+    },
+    "t_profil": {
+      "title": "T-Profil",
+      "description": "Mustahkam va barqaror T-profil osma tizimlari."
+    },
+    "l_profil": {
+      "title": "L-Profil",
+      "description": "Toza tugatish uchun perimetr qoplamasi."
+    },
+    "stringer": {
+      "title": "Stringer",
+      "description": "Chiziqli shift tizimlari uchun tayanch."
+    },
+    "honeycomb": {
+      "title": "Asalari uyasi panellari",
+      "description": "Yengil va estetik jihatdan yoqimli."
+    },
+    "aqua_panel": {
+      "title": "Aqua Panellar",
+      "description": "Nam joylar uchun namlikka chidamli panellar."
+    }
+  },
+  "accessories": {
+    "title": "O'rnatish aksessuarlari",
+    "wrench_set": {
+      "title": "Kalitlar to'plami",
+      "description": "O'rnatish vaqtida asosiy qismlarni mahkamlash uchun ishlatiladi."
+    },
+    "bolt_kit": {
+      "title": "Boltlar to'plami",
+      "description": "Rama va moslamalarning barqarorligi uchun zarur."
+    },
+    "mounting_gear": {
+      "title": "O'rnatish moslamalari",
+      "description": "Modullarning aniq joylashishini ta'minlaydi."
+    },
+    "connectors": {
+      "title": "Ulagichlar",
+      "description": "Quvvat va signal ulanish aksessuarlari."
+    },
+    "measuring_tools": {
+      "title": "O'lchov asboblari",
+      "description": "Komponentlarni aniq o'rnatish uchun ishlatiladi."
+    },
+    "led_indicators": {
+      "title": "LED indikatorlari",
+      "description": "Vizual holat va xavfsizlik ko'rsatkichlari."
+    }
+  },
+  "footer": {
+    "links": {
+      "title": "Havolalar"
+    },
+    "products": {
+      "title": "Mahsulotlar"
+    },
+    "contact": {
+      "title": "Bog'lanish",
+      "address": "Toshkent, Chilonzor, Chorbog' 27."
+    },
+    "newsletter": {
+      "title": "Bizning yangiliklarimizga obuna bo'ling",
+      "description": "Bizdan yangi va qiziqarli narsalar haqida oylik dayjest.",
+      "placeholder": "Email manzili",
+      "button": "Obuna bo'lish"
+    },
+    "rights": "Barcha huquqlar himoyalangan."
+  }
+}

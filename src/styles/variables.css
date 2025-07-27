@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --color-bg: #fff;
+  --color-bg-dark: #111;
+  --color-primary: #ff5303; /* logo orange */
+  --color-accent: #ff5303;  /* logo orange (accent) */
+  --color-logo: #ff5303;    /* logo orange */
+  --color-hover: #ffb380;   /* light orange for hover */
+  --color-text: #222;
+  --color-text-light: #fff;
+  --color-border: #e0e0e0;
+  --color-shadow: rgba(0,0,0,0.08);
+  --color-black: #111;
+  --color-white: #fff;
+
+  /* Fonts */
+  --font-main: 'Inter', Arial, sans-serif;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+}

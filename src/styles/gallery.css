@@ -1,0 +1,56 @@
+/* Project gallery styles */
+.gallery_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.gallery_container div {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+  flex: 0 0 calc(33.333% - 20px);
+  overflow: hidden;
+}
+.gal-text{
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.gallery_container div img:hover{
+  transform: scale(1.07);
+}
+.gallery_container img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+}
+.gallery_container .gallery_overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+.gallery_container div:hover .gallery_overlay {
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  .gallery_container div {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+@media (max-width: 600px) {
+  .gallery_container div {
+    flex: 0 0 100%;
+  }
+} 

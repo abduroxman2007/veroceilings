@@ -1,0 +1,378 @@
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+
+
+  /* ====================================================================================== */
+
+
+/* Styling for the first section with text and image */
+.product {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.product-description {
+  flex: 1;
+  max-width: 600px; /* Adjust as needed */
+}
+
+.product-image {
+  flex: 1;
+  max-width: 500px; /* Adjust as needed */
+  /* margin-left: 20px;  */
+}
+
+.productImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .product {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-image {
+    margin-left: 0; /* Reset margin for smaller screens */
+    margin-top: 20px; /* Adjust as needed */
+  }
+}
+
+/* Styling for the second section with swiper and text */
+.product-card {
+  display: flex;
+  align-items: flex-start; /* Adjusted alignment for both elements to be on the same line */
+  justify-content: space-between;
+  /* margin-top: 40px; Adjust as needed */
+}
+
+.sample-slider {
+  flex: 1;
+  width: 50%; /* Adjust as needed */
+}
+
+.product-dimension {
+  flex: 1;
+  width: 50%; /* Adjust as needed */
+}
+
+.swiper-slide img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+  .sample-slider2 {
+    --add-bottom: 50px;
+    padding-bottom: var(--add-bottom);
+  }
+
+  .sample-slider2 [class^="swiper-button-"] {
+    top: calc(50% - var(--add-bottom) / 2);
+
+  }
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .product-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sample-slider,
+  .product-dimension {
+    width: 100%; /* Adjust as needed */
+  }
+}
+
+/* Styling for the third section with panel dimensions */
+.product-dimension {
+  padding: 30px; /* Adjust as needed */
+}
+
+/* Styling for the last swiper and additional text */
+.sample-slider2,
+.sample-slider {
+  margin-top: 40px; /* Adjust as needed */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .sample-slider2,
+  .sample-slider {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.application-cases-text{
+  text-align: left;
+}
+
+
+@media screen and (max-width: 600px) {
+  .application-cases-text{
+    text-align: left;
+  }
+  .application-cases-text h1{
+    font-size: 22px;
+  }
+  /* .application-cases-text p{
+    font-size: 12px;
+  } */
+}
+  /* ====================================================================================== */
+
+  h1 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* Table */
+
+table {
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 2px solid black;
+  padding: 9px;
+  text-align: left;
+}
+.color{
+  text-align: center !important;
+  
+}
+.color-box {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.mama-color {
+  background-color: #000000; /* Black */
+  
+}
+.papa-color {
+  background-color: #808080; /* Gray */
+}
+.extra-color1 {
+  background-color: #000000; /* Navy */
+}
+.extra-color2 {
+  border: 2px solid black;
+  background-color: #ffffff; /* White */
+}
+
+.darkbrown{ background-color: #8B4513;}
+.brown{ background-color: #A52A2A;}
+.white{ background-color: #FFFFFF;}
+.grey{ background-color: #808080;}
+.darkgrey{ background-color: #63666A;}
+.lightturquoise{ background-color: #40E0D0;}
+.azure{ background-color: #007FFF;}
+.blue{ background-color: #0000FF;}
+.anthracite{ background-color: #293133;}
+.black{ background-color: #000000;}
+.orange{ background-color: #FFA500;}
+.yellow{ background-color: #FFFF00;}
+.green{ background-color: #008000;}
+.purple{ background-color: #800080;}
+.walnut{ background-color: #79443B;}
+
+th{
+  text-align: center;
+}
+
+
+
+/* ---------------------------------------------------------------------------- */
+/* --------------------------------- Carousel --------------------------------- */
+/* ---------------------------------------------------------------------------- */
+#myCarousel {
+  height: 60vh;
+  width: 100%;
+}
+
+#carousel-item1 {
+  height: 60vh;
+  background-image: url(../images/slider/slid8.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------ */
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  transition: background-color 0.3s ease-in-out;
+  
+}
+.select-selected.scrolled{
+  background-color: #212529;
+  /* Set your desired background color here */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  justify-content:center;
+  padding: 4px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  transition: background-color 0.3s ease-in-out;
+  /* background-color: #212529; */
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.select-items.scrolled{
+  background-color: #212529;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,98 @@
+.carousel-section {
+  padding: 60px 20px; /* Increased padding to give more space for hover effect */
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  text-align: center;
+  font-family: var(--font-main);
+}
+
+.carousel-title {
+  font-size: 2rem;
+  color: var(--color-logo);
+  margin-bottom: 20px; /* Reduced margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-icon {
+  font-size: 1.8rem;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  gap: 24px;
+  width: max-content; /* Ensure it takes content width */
+}
+
+.carousel-card {
+  min-width: 280px;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 0 10px var(--color-shadow);
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 180px; /* Fixed height for images */
+  object-fit: cover; /* Cover the area without distortion */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.carousel-card h3 {
+  font-size: 1.1rem;
+  color: var(--color-logo);
+  margin-bottom: 6px;
+}
+
+.carousel-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    flex-wrap: nowrap;
+    animation-duration: 40s;
+  }
+
+  .carousel-card {
+    min-width: 220px;
+    padding: 16px;
+  }
+
+  .carousel-card img {
+    height: 150px; /* Adjust height for smaller screens */
+  }
+
+  .carousel-title {
+    font-size: 1.5rem;
+  }
+}

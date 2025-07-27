@@ -1,0 +1,140 @@
+{
+  "navbar": {
+    "products": "Products",
+    "projects": "Projects/Objects",
+    "architects": "For Architects",
+    "clients": "For Clients",
+    "about": "About Company",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "welcome": "Welcome to Vero Ceilings",
+  "whyus": {
+    "title": "Why Choose Us",
+    "subtitle": "The Right Choice for You",
+    "features": {
+      "experience": {
+        "title": "10+ Years of Experience",
+        "description": "With a decade of expertise, Vero Ceilings transforms spaces with excellence, offering innovative and high-quality ceiling solutions."
+      },
+      "quality": {
+        "title": "High-Quality Products",
+        "description": "We provide premium, durable materials that ensure a sophisticated finish and long-lasting performance for any interior."
+      },
+      "guarantee": {
+        "title": "15-Year Guarantee",
+        "description": "Our commitment to quality is backed by a 15-year guarantee, giving you peace of mind and confidence in our products."
+      }
+    }
+  },
+  "hero": {
+    "slide1": {
+      "title": "Vero Ceiling Company",
+      "text": "With a decade of expertise, Vero Ceilings transforms spaces with excellence.",
+      "button": "READ MORE"
+    },
+    "slide2": {
+      "title": "Elevate Spaces with Vero Ceilings.",
+      "text": "Discover innovation in every detail. Vero Ceilings, where design meets distinction. Explore our curated collection for a touch of excellence.",
+      "button": "EXPLORE ALL PRODUCTS"
+    },
+    "slide3": {
+      "title": "Vero Ceilings Gallery: Capturing Timeless Elegance",
+      "text": "Step into a world of timeless design at Vero Ceilings Gallery. Immerse yourself in our captivating showcase, where every detail tells a story of enduring elegance.",
+      "button": "VIEW THE GALLERY"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "grilyato": {
+      "title": "Grilyato Ceilings",
+      "description": "Modern, versatile, and easy to install."
+    },
+    "armstrong": {
+      "title": "Armstrong Ceilings",
+      "description": "Classic and reliable solutions for any space."
+    },
+    "reyechniy": {
+      "title": "Reyechniy Ceilings",
+      "description": "Sleek and linear designs for a contemporary look."
+    },
+    "gypsum_armstrong": {
+      "title": "Gypsum Armstrong",
+      "description": "Fire-resistant and sound-absorbing gypsum panels."
+    },
+    "metal_armstrong": {
+      "title": "Metal Armstrong",
+      "description": "Durable and modern metal ceiling systems."
+    },
+    "washing_armstrong": {
+      "title": "Washing Armstrong",
+      "description": "Easy to clean and maintain ceiling solutions."
+    },
+    "t_profil": {
+      "title": "T-Profil",
+      "description": "Strong and stable T-grid suspension systems."
+    },
+    "l_profil": {
+      "title": "L-Profil",
+      "description": "Perimeter trim for a clean finish."
+    },
+    "stringer": {
+      "title": "Stringer",
+      "description": "Support for linear ceiling systems."
+    },
+    "honeycomb": {
+      "title": "Honeycomb Panels",
+      "description": "Lightweight and aesthetically pleasing."
+    },
+    "aqua_panel": {
+      "title": "Aqua Panels",
+      "description": "Moisture-resistant panels for wet areas."
+    }
+  },
+  "accessories": {
+    "title": "Installation Accessories",
+    "wrench_set": {
+      "title": "Wrench Set",
+      "description": "Used to secure core parts during installation."
+    },
+    "bolt_kit": {
+      "title": "Bolt Kit",
+      "description": "Essential for frame and fixture stability."
+    },
+    "mounting_gear": {
+      "title": "Mounting Gear",
+      "description": "Ensures precise alignment of modules."
+    },
+    "connectors": {
+      "title": "Connectors",
+      "description": "Power and signal connectivity accessories."
+    },
+    "measuring_tools": {
+      "title": "Measuring Tools",
+      "description": "Used for accurate component fitting."
+    },
+    "led_indicators": {
+      "title": "LED Indicators",
+      "description": "Visual status and safety indicators."
+    }
+  },
+  "footer": {
+    "links": {
+      "title": "Links"
+    },
+    "products": {
+      "title": "Products"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Tashkent, Chilanzar, Chorbog 27."
+    },
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "description": "Monthly digest of what's new and exciting from us.",
+      "placeholder": "Email address",
+      "button": "Subscribe"
+    },
+    "rights": "All rights reserved."
+  }
+}
