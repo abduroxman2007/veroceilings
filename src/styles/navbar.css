@@ -89,7 +89,26 @@ nav {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-right: 8px;
+}
+
+.catalog-button {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.catalog-button:hover {
+  background-color: var(--color-hover);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  order: 3; /* Ensure hamburger is last */
 }
 .lang-dropdown {
   min-width: 80px;

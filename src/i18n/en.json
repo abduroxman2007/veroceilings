@@ -6,7 +6,8 @@
     "clients": "For Clients",
     "about": "About Company",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "catalog": "Catalog"
   },
   "welcome": "Welcome to Vero Ceilings",
   "whyus": {
@@ -45,7 +46,9 @@
     }
   },
   "products": {
-    "title": "Our Products",
+    "page_title": "Our Projects",
+    "products_section_title": "Ceiling Systems",
+    "accessories_section_title": "Accessories",
     "grilyato": {
       "title": "Grilyato Ceilings",
       "description": "Modern, versatile, and easy to install."
@@ -120,14 +123,46 @@
   },
   "footer": {
     "links": {
-      "title": "Links"
+      "title": "Links",
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "projects": "Projects",
+      "contact": "Contact"
     },
-    "products": {
-      "title": "Products"
+    "product_detail": {
+      "dimensions": "Dimensions",
+      "product": "Product",
+      "size": "Size",
+      "name": "Name",
+      "width": "Width",
+      "height": "Height",
+      "length": "Length",
+      "application_cases": "Application Cases"
+    }
+      "title": "Products",
+      "metal_armstrong": {
+        "title": "Metal Armstrong"
+      },
+      "gypsum_armstrong": {
+        "title": "Gypsum Armstrong"
+      },
+      "washing_armstrong": {
+        "title": "Washing Armstrong"
+      },
+      "grilyato": {
+        "title": "Grilyato"
+      },
+      "slat_ceiling": {
+        "title": "Slat Ceiling"
+      }
     },
     "contact": {
       "title": "Contact",
-      "address": "Tashkent, Chilanzar, Chorbog 27."
+      "address": "Tashkent, Chilanzar, Chorbog 27.",
+      "phone1": "+998 (90) 098 11 10",
+      "phone2": "+998 (90) 109 11 10",
+      "email": "veroceilingsuz@gmail.com"
     },
     "newsletter": {
       "title": "Subscribe to our newsletter",
@@ -136,5 +171,68 @@
       "button": "Subscribe"
     },
     "rights": "All rights reserved."
+  },
+  "about": {
+    "page_title": "About Us",
+    "intro_title": "The Vero Group Group of Companies expresses its respect to you!",
+    "intro_text": "Vero Group of Companies, founded in 2014. The holding includes more than 10 companies, specializing in the production of a wide range of building materials. The Vero Group of Companies is constantly expanding its range, using modern equipment and advanced technologies, adheres to high quality standards, has international certificates and produces environmentally friendly products ideal for various construction applications.",
+    "counter1_title": "Factory workers",
+    "counter1_text": "Vero Group employs 1,700 qualified specialists of various profiles, technologists, and workers who serve the development and prosperity of the Company. Their expertise ensures that every product meets the highest standards of quality and craftsmanship, ensuring our customers' satisfaction.",
+    "counter2_title": "Modern equipment",
+    "counter2_text": "Our company produces high-quality building materials using more than 200 modern equipment. From foundation to finishing, we ensure precision and reliability in every product. Trust us to deliver the quality that creates superior construction.",
+    "counter3_title": "More than 120 respected partners cooperate with us.",
+    "counter3_text": "We provide you with a wealth of experience, variety and quality service. Explore our network and feel confident in working with the best in the industry, dedicated to serving your needs with unwavering commitment and professionalism.",
+    "story_title": "Vero Ceilings: Elevating Spaces with a Decade of Excellence.",
+    "story_text": "Vero Ceilings is one of the divisions of the Vero Group Companies, which produces ceilings, MDF decor, ARMSTRONG suspended ceilings and also sells its products in 14 regions of Uzbekistan. Vero Ceilings doesn't just make ceilings; ahe creates architectural masterpieces. The product range includes innovative acoustic and aesthetic ceiling designs, as well as advanced solutions for commercial and residential applications. With a commitment to excellence, Vero Ceilings provides not only visually impressive options, but also functional solutions, ensuring that their ceilings meet the diverse needs of modern construction. Vero Ceilings provides a list of services provided: design, measurements, installation, delivery. The main goal of Vero Ceilings is to provide consumers with high-quality, safe branded products made from the best raw materials.",
+    "vision_title": "Vero Group's Vision: A Decade of Success, A Future of Excellence",
+    "vision_text": "After nearly a decade of growth, Vero Group has secured its position in the market, earning trust through high-quality products. Not only recognized in Uzbekistan, Vero Group stands out for rapid development and connecting consumers with modern living. Vero Ceilings, a division of Vero Group, produces exceptional ceilings in four Uzbek regions, employing 1700 factory workers. Offering benefits for loyal customers, the company provides free measurement services and delivery for orders exceeding 100 square meters. Over the years, Vero has achieved milestones, including a visit by the President of Uzbekistan, Shavkat Mirziyeev, who praised the company's work.Actively participating in international exhibitions, such as 'Aquatherm Tashkent 2017' and 'ShymkentBuild 2018,' Vero has earned certificates for its outstanding contributions to the industry. As Vero Group looks towards the future, it remains dedicated to excellence and aims to contribute significantly to the global construction industry."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What types of ceilings do you offer?",
+      "answer": "We offer a wide range including Grilyato, Armstrong (Gypsum, Metal, Washing), Slat ceilings, and more. Our products are designed to meet diverse aesthetic and functional needs."
+    },
+    "q2": {
+      "question": "Do you provide installation services?",
+      "answer": "Yes, we offer comprehensive installation services for all our ceiling products. Our experienced team ensures a seamless and efficient installation process, guaranteeing optimal performance and longevity."
+    },
+    "q3": {
+      "question": "What is your guarantee policy?",
+      "answer": "All our products come with a 15-year guarantee, reflecting our confidence in their durability and quality. This commitment provides you with peace of mind and assurance in your investment."
+    },
+    "q4": {
+      "question": "Can I get a sample of your products?",
+      "answer": "Yes, we can provide samples of our products. Please contact our sales team to request samples and discuss your project requirements."
+    },
+    "q5": {
+      "question": "What are the maintenance requirements for your ceilings?",
+      "answer": "Maintenance requirements vary by product. Generally, our ceilings are low-maintenance and can be cleaned with a damp cloth. We provide detailed maintenance guides for each product."
+    },
+    "q6": {
+      "question": "Do you offer custom design solutions?",
+      "answer": "Yes, we specialize in custom design solutions. Our team works closely with architects and designers to create unique ceiling systems that meet specific project needs."
+    }
+  },
+  "contact": {
+    "page_title": "Contact Us",
+    "view_map": "View Map",
+    "form_description_new": "We'd love to hear from you! Reach out to us through any of the following methods or fill out the form.",
+    "phone_number": "+998 (90) 098 11 10",
+    "email_address": "veroceilingsuz@gmail.com",
+    "location": "Tashkent, Chilanzar, Chorbog 27.",
+    "name_label": "Name",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "message_label": "Message",
+    "name_placeholder_new": "Your Name",
+    "phone_placeholder_new": "Your Phone (Optional)",
+    "email_placeholder_new": "you@example.com",
+    "message_placeholder_new": "Your message here...",
+    "send_button": "Send Message",
+    "status_sending": "Sending message...",
+    "status_success": "Thank you for your message! We will get back to you soon.",
+    "status_error": "Failed to send message. Please try again.",
+    "status_error_generic": "An error occurred. Please try again."
   }
 }

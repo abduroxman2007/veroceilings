@@ -20,11 +20,6 @@ function Navbar() {
           <img src={logo} alt="Vero Ceilings Logo" style={{ width: '140px', height: 'auto' }} />
         </Link>
       </div>
-      <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
       <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
         <ul className="nav-links">
           <li className="nav-item dropdown">
@@ -38,23 +33,21 @@ function Navbar() {
           </li>
           <li className="nav-item"><Link to="/projects" className="nav-link">{t('navbar.projects')}</Link></li>
           <li className="nav-item"><Link to="/architects" className="nav-link">{t('navbar.architects')}</Link></li>
-          <li className="nav-item dropdown">
-            <span className="nav-link">{t('navbar.clients')}</span>
-            <ul className="dropdown-menu">
-              <li><Link to="/clients/distributors" className="dropdown-link"><span>Distributors</span></Link></li>
-              <li><Link to="/clients/prices" className="dropdown-link"><span>Prices</span></Link></li>
-              <li><Link to="/faq" className="dropdown-link"><span>FAQ</span></Link></li>
-            </ul>
-          </li>
           <li className="nav-item"><Link to="/about" className="nav-link">{t('navbar.about')}</Link></li>
           <li className="nav-item"><Link to="/contact" className="nav-link">{t('navbar.contact')}</Link></li>
         </ul>
       </nav>
       <div className="navbar-right">
+        <a href="/catalog.pdf" className="catalog-button">{t('navbar.catalog')}</a>
         <LanguageSwitcher dropdown label={<span className="lang-switcher-label">{t('navbar.language')}</span>} borderColorVar="--color-logo" />
+        <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
       </div>
     </div>
   );
 }
 
-export default Navbar; 
+export default Navbar;

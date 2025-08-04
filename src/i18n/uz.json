@@ -6,7 +6,8 @@
     "clients": "Mijozlar uchun",
     "about": "Kompaniya haqida",
     "contact": "Bog'lanish",
-    "language": "Til"
+    "language": "Til",
+    "catalog": "Katalog"
   },
   "welcome": "Vero Ceilings ga xush kelibsiz",
   "whyus": {
@@ -45,7 +46,9 @@
     }
   },
   "products": {
-    "title": "Bizning mahsulotlarimiz",
+    "page_title": "Bizning loyihalarimiz",
+    "products_section_title": "Shift tizimlari",
+    "accessories_section_title": "Aksessuarlar",
     "grilyato": {
       "title": "Grilyato Shiftlari",
       "description": "Zamonaviy, ko'p qirrali va o'rnatish oson."
@@ -120,14 +123,46 @@
   },
   "footer": {
     "links": {
-      "title": "Havolalar"
+      "title": "Havolalar",
+      "home": "Bosh sahifa",
+      "about": "Biz haqimizda",
+      "products": "Mahsulotlar",
+      "projects": "Loyihalar",
+      "contact": "Bog'lanish"
     },
-    "products": {
-      "title": "Mahsulotlar"
+    "product_detail": {
+      "dimensions": "O'lchamlari",
+      "product": "Mahsulot",
+      "size": "Hajmi",
+      "name": "Nomi",
+      "width": "Kengligi",
+      "height": "Balandligi",
+      "length": "Uzunligi",
+      "application_cases": "Qo'llash sohalari"
+    }
+      "title": "Mahsulotlar",
+      "metal_armstrong": {
+        "title": "Metall Armstrong"
+      },
+      "gypsum_armstrong": {
+        "title": "Gipsli Armstrong"
+      },
+      "washing_armstrong": {
+        "title": "Yuviladigan Armstrong"
+      },
+      "grilyato": {
+        "title": "Grilyato"
+      },
+      "slat_ceiling": {
+        "title": "Reyka Shift"
+      }
     },
     "contact": {
       "title": "Bog'lanish",
-      "address": "Toshkent, Chilonzor, Chorbog' 27."
+      "address": "Toshkent, Chilonzor, Chorbog' 27.",
+      "phone1": "+998 (90) 098 11 10",
+      "phone2": "+998 (90) 109 11 10",
+      "email": "veroceilingsuz@gmail.com"
     },
     "newsletter": {
       "title": "Bizning yangiliklarimizga obuna bo'ling",
@@ -136,5 +171,68 @@
       "button": "Obuna bo'lish"
     },
     "rights": "Barcha huquqlar himoyalangan."
+  },
+  "about": {
+    "page_title": "Biz haqimizda",
+    "intro_title": "«Vero Group» kompaniyalar guruhi Sizga o'z hurmatini bildiradi!",
+    "intro_text": "2014-yilda tashkil etilgan «Vero Group» kompaniyalar guruhi. Xolding tarkibiga keng turdagi qurilish materiallari ishlab chiqarishga ixtisoslashgan 10 dan ortiq kompaniya kiradi. «Vero Group» kompaniyalar guruhi zamonaviy uskunalar va ilg'or texnologiyalardan foydalangan holda o'z assortimentini doimiy ravishda kengaytirib bormoqda, yuqori sifat standartlariga amal qiladi, xalqaro sertifikatlarga ega va turli qurilish sohalari uchun ideal bo'lgan ekologik toza mahsulotlar ishlab chiqaradi.",
+    "counter1_title": "Zavod ishchilari",
+    "counter1_text": "«Vero Group» kompaniyasida turli profildagi 1700 nafar malakali mutaxassis, texnolog va ishchilar mehnat qiladi, ular Kompaniyaning rivojlanishi va ravnaqiga xizmat qiladi. Ularning tajribasi har bir mahsulotning eng yuqori sifat va mahorat standartlariga javob berishini ta'minlaydi va mijozlarimizning mamnuniyatini ta'minlaydi.",
+    "counter2_title": "Zamonaviy uskunalar",
+    "counter2_text": "Kompaniyamiz 200 dan ortiq zamonaviy uskunalardan foydalangan holda yuqori sifatli qurilish materiallari ishlab chiqaradi. Poydevordan tortib to pardozlashgacha, biz har bir mahsulotda aniqlik va ishonchlilikni ta'minlaymiz. Yuqori darajadagi qurilishni yaratadigan sifatni ta'minlash uchun bizga ishoning.",
+    "counter3_title": "Biz bilan 120 dan ortiq hurmatli hamkorlar hamkorlik qiladi.",
+    "counter3_text": "Biz sizga boy tajriba, xilma-xillik va sifatli xizmatni taqdim etamiz. Bizning tarmog'imizni o'rganing va o'z ehtiyojlaringizni qondirishga sodiqlik va professionallik bilan yondashadigan sohaning eng yaxshilari bilan ishlashga ishonch hosil qiling.",
+    "story_title": "Vero Ceilings: O'n yillik mukammallik bilan makonlarni yuksaltirish.",
+    "story_text": "Vero Ceilings «Vero Group» kompaniyalar guruhining bo'linmalaridan biri bo'lib, u shiftlar, MDF dekorlari, ARMSTRONG osma shiftlarini ishlab chiqaradi va o'z mahsulotlarini O'zbekistonning 14 viloyatida sotadi. Vero Ceilings shunchaki shiftlar ishlab chiqarmaydi; u me'moriy durdonalar yaratadi. Mahsulotlar assortimenti innovatsion akustik va estetik shift dizaynlarini, shuningdek, tijorat va turar-joy binolari uchun ilg'or echimlarni o'z ichiga oladi. Mukammallikka intilib, Vero Ceilings nafaqat vizual jihatdan ta'sirchan variantlarni, balki funktsional echimlarni ham taqdim etadi, bu ularning shiftlari zamonaviy qurilishning turli ehtiyojlarini qondirishini ta'minlaydi. Vero Ceilings ko'rsatiladigan xizmatlar ro'yxatini taqdim etadi: dizayn, o'lchovlar, o'rnatish, yetkazib berish. Vero Ceilingsning asosiy maqsadi iste'molchilarga eng yaxshi xom ashyolardan tayyorlangan yuqori sifatli, xavfsiz markali mahsulotlarni taqdim etishdir.",
+    "vision_title": "Vero Groupning qarashlari: O'n yillik muvaffaqiyat, kelajakdagi mukammallik",
+    "vision_text": "Deyarli o'n yillik o'sishdan so'ng, Vero Group yuqori sifatli mahsulotlar orqali ishonch qozonib, bozorda o'z o'rnini mustahkamladi. Nafaqat O'zbekistonda tan olingan, Vero Group tez rivojlanishi va iste'molchilarni zamonaviy hayot bilan bog'lashi bilan ajralib turadi. Vero Groupning bo'linmasi bo'lgan Vero Ceilings O'zbekistonning to'rtta viloyatida 1700 nafar zavod ishchisini ish bilan ta'minlab, ajoyib shiftlar ishlab chiqaradi. Sodiq mijozlar uchun imtiyozlar taklif qilib, kompaniya 100 kvadrat metrdan ortiq buyurtmalar uchun bepul o'lchov xizmatlari va yetkazib berishni ta'minlaydi. Yillar davomida Vero O'zbekiston Prezidenti Shavkat Mirziyoyevning tashrifi kabi muhim bosqichlarga erishdi, u kompaniyaning ishini yuqori baholadi. «Aquatherm Tashkent 2017» va «ShymkentBuild 2018» kabi xalqaro ko'rgazmalarda faol ishtirok etib, Vero sanoatga qo'shgan ulkan hissasi uchun sertifikatlarga sazovor bo'ldi. Vero Group kelajakka nazar tashlar ekan, u mukammallikka sodiq qoladi va jahon qurilish sanoatiga sezilarli hissa qo'shishni maqsad qilgan."
+  },
+  "faq": {
+    "title": "Tez-tez so'raladigan savollar",
+    "q1": {
+      "question": "Qanday shift turlarini taklif qilasiz?",
+      "answer": "Biz Grilyato, Armstrong (Gips, Metall, Yuviladigan), reyka shiftlari va boshqalarni o'z ichiga olgan keng turdagi mahsulotlarni taklif etamiz. Mahsulotlarimiz turli estetik va funksional ehtiyojlarni qondirish uchun mo'ljallangan."
+    },
+    "q2": {
+      "question": "O'rnatish xizmatlarini taqdim qilasizmi?",
+      "answer": "Ha, biz barcha shift mahsulotlarimiz uchun keng qamrovli o'rnatish xizmatlarini taklif etamiz. Tajribali jamoamiz uzluksiz va samarali o'rnatish jarayonini ta'minlaydi, optimal ishlash va uzoq umr ko'rishni kafolatlaydi."
+    },
+    "q3": {
+      "question": "Kafolat siyosatingiz qanday?",
+      "answer": "Barcha mahsulotlarimiz 15 yillik kafolat bilan ta'minlangan bo'lib, bu ularning chidamliligi va sifatiga bo'lgan ishonchimizni aks ettiradi. Bu majburiyat sizga xotirjamlik va sarmoyangizga ishonch bag'ishlaydi."
+    },
+    "q4": {
+      "question": "Mahsulotlaringizdan namuna olsam bo'ladimi?",
+      "answer": "Ha, biz mahsulotlarimizdan namunalar taqdim eta olamiz. Namunalar so'rash va loyiha talablarini muhokama qilish uchun savdo guruhimiz bilan bog'laning."
+    },
+    "q5": {
+      "question": "Shiftlaringizga texnik xizmat ko'rsatish talablari qanday?",
+      "answer": "Texnik xizmat ko'rsatish talablari mahsulotga qarab farq qiladi. Umuman olganda, bizning shiftlarimiz kam texnik xizmat talab qiladi va ularni nam mato bilan tozalash mumkin. Biz har bir mahsulot uchun batafsil texnik xizmat ko'rsatmalarini taqdim etamiz."
+    },
+    "q6": {
+      "question": "Maxsus dizayn echimlarini taklif qilasizmi?",
+      "answer": "Ha, biz maxsus dizayn echimlariga ixtisoslashganmiz. Bizning jamoamiz arxitektorlar va dizaynerlar bilan yaqindan hamkorlik qilib, muayyan loyiha ehtiyojlariga javob beradigan noyob shift tizimlarini yaratadi."
+    }
+  },
+  "contact": {
+    "page_title": "Biz bilan bog'lanish",
+    "view_map": "Xaritani ko'rish",
+    "form_description_new": "Sizdan xabar eshitishni istardik! Quyidagi usullardan biri orqali biz bilan bog'laning yoki shaklni to'ldiring.",
+    "phone_number": "+998 (90) 098 11 10",
+    "email_address": "veroceilingsuz@gmail.com",
+    "location": "Toshkent, Chilonzor, Chorbog' 27.",
+    "name_label": "Ism",
+    "phone_label": "Telefon",
+    "email_label": "Elektron pochta",
+    "message_label": "Xabar",
+    "name_placeholder_new": "Ismingiz",
+    "phone_placeholder_new": "Telefoningiz (ixtiyoriy)",
+    "email_placeholder_new": "you@example.com",
+    "message_placeholder_new": "Xabaringiz shu yerda...",
+    "send_button": "Xabar yuborish",
+    "status_sending": "Xabar yuborilmoqda...",
+    "status_success": "Xabaringiz uchun rahmat! Tez orada siz bilan bog'lanamiz.",
+    "status_error": "Xabarni yuborib bo'lmadi. Iltimos, qaytadan urunib ko'ring.",
+    "status_error_generic": "Xatolik yuz berdi. Iltimos, qaytadan urunib ko'ring."
   }
 }

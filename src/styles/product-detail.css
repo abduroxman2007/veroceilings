@@ -1,0 +1,31 @@
+/* Copied from the old project's product_details.css */
+.product {
+  display: flex;
+  margin-top: 50px;
+}
+
+.product-description {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.product-image {
+  flex: 1;
+}
+
+.product-image img {
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  margin-top: 50px;
+}
+
+.product-dimension {
+  flex: 1;
+}
+
+.application-cases-text {
+  margin-top: 50px;
+}

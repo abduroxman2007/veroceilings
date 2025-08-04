@@ -13,30 +13,30 @@ const Footer = () => {
           <div className="footer-column">
             <h5>{t('footer.links.title')}</h5>
             <ul>
-              <li><a href="/">{t('navbar.home')}</a></li>
-              <li><a href="/about">{t('navbar.about')}</a></li>
-              <li><a href="/gallery">{t('navbar.projects')}</a></li>
-              <li><a href="/products">{t('navbar.products')}</a></li>
-              <li><a href="/contact">{t('navbar.contact')}</a></li>
+              <li><a href="/">{t('footer.links.home')}</a></li>
+              <li><a href="/about">{t('footer.links.about')}</a></li>
+              <li><a href="/products">{t('footer.links.products')}</a></li>
+              <li><a href="/gallery">{t('footer.links.projects')}</a></li>
+              <li><a href="/contact">{t('footer.links.contact')}</a></li>
             </ul>
           </div>
           <div className="footer-column">
             <h5>{t('footer.products.title')}</h5>
             <ul>
-              <li><a href="/products/metal-armstrong">{t('products.metal_armstrong.title')}</a></li>
-              <li><a href="/products/gypsum-armstrong">{t('products.gypsum_armstrong.title')}</a></li>
-              <li><a href="/products/washing-armstrong">{t('products.washing_armstrong.title')}</a></li>
-              <li><a href="/products/grilyato">{t('products.grilyato.title')}</a></li>
-              <li><a href="/products/slat-ceiling">{t('products.slat_ceiling.title')}</a></li>
+              <li><a href="/products/metal-armstrong">{t('footer.products.metal_armstrong.title')}</a></li>
+              <li><a href="/products/gypsum-armstrong">{t('footer.products.gypsum_armstrong.title')}</a></li>
+              <li><a href="/products/washing-armstrong">{t('footer.products.washing_armstrong.title')}</a></li>
+              <li><a href="/products/grilyato">{t('footer.products.grilyato.title')}</a></li>
+              <li><a href="/products/slat-ceiling">{t('footer.products.slat_ceiling.title')}</a></li>
             </ul>
           </div>
           <div className="footer-column">
             <h5>{t('footer.contact.title')}</h5>
             <ul>
               <li>{t('footer.contact.address')}</li>
-              <li><a href="tel:+998900981110">+998 (90) 098 11 10</a></li>
-              <li><a href="tel:+998901091110">+998 (90) 109 11 10</a></li>
-              <li><a href="mailto:veroceilingsuz@gmail.com">veroceilingsuz@gmail.com</a></li>
+              <li><a href="tel:+998900981110">{t('footer.contact.phone1')}</a></li>
+              <li><a href="tel:+998901091110">{t('footer.contact.phone2')}</a></li>
+              <li><a href="mailto:veroceilingsuz@gmail.com">{t('footer.contact.email')}</a></li>
             </ul>
           </div>
           <div className="footer-column">

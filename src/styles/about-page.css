@@ -1,0 +1,45 @@
+.about-intro {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.duo-images {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.image1-box,
+.image2-box {
+  flex: 1;
+}
+
+.image1-box img,
+.image2-box img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.aboutustext {
+  padding: 40px 0;
+}
+
+.about-card {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.text-card {
+  flex: 1;
+}
+
+.image-card {
+  flex: 1;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 15px;
+}

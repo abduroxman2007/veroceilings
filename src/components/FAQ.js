@@ -7,12 +7,36 @@ const FAQ = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
 
   const faqData = [
-    { questionKey: 'faq.q1.question', answerKey: 'faq.q1.answer' },
-    { questionKey: 'faq.q2.question', answerKey: 'faq.q2.answer' },
-    { questionKey: 'faq.q3.question', answerKey: 'faq.q3.answer' },
-    { questionKey: 'faq.q4.question', answerKey: 'faq.q4.answer' },
-    { questionKey: 'faq.q5.question', answerKey: 'faq.q5.answer' },
-    { questionKey: 'faq.q6.question', answerKey: 'faq.q6.answer' },
+    {
+      id: 1,
+      question: t('faq.q1.question'),
+      answer: t('faq.q1.answer')
+    },
+    {
+      id: 2,
+      question: t('faq.q2.question'),
+      answer: t('faq.q2.answer')
+    },
+    {
+      id: 3,
+      question: t('faq.q3.question'),
+      answer: t('faq.q3.answer')
+    },
+    {
+      id: 4,
+      question: t('faq.q4.question'),
+      answer: t('faq.q4.answer')
+    },
+    {
+      id: 5,
+      question: t('faq.q5.question'),
+      answer: t('faq.q5.answer')
+    },
+    {
+      id: 6,
+      question: t('faq.q6.question'),
+      answer: t('faq.q6.answer')
+    }
   ];
 
   const toggleFAQ = (id) => {

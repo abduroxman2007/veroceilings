@@ -39,7 +39,7 @@ const HeaderCarousel = () => {
       title: t('hero.slide3.title'),
       text: t('hero.slide3.text'),
       buttonText: t('hero.slide3.button'),
-      buttonLink: '/gallery',
+      buttonLink: '/projects',
     },
   ];
 

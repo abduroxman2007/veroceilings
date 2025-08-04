@@ -17,6 +17,9 @@ import InstallationGuide from './pages/InstallationGuide';
 import Manufacturing from './pages/Manufacturing';
 import Footer from './components/Footer';
 
+import ProductDetailTemplate from './components/ProductDetailTemplate';
+import productData from './product-data';
+
 function App() {
   const { t } = useTranslation();
   
@@ -26,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<ProductDetailTemplate productData={productData} />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/architects" element={<Architects />} />
         <Route path="/clients" element={<Clients />} />
