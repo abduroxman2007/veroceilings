@@ -1,24 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
+
 import lightGallery from 'lightgallery';
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
-import 'lightgallery/css/lg-autoplay.css';
-import 'lightgallery/css/lg-fullscreen.css';
-import 'lightgallery/css/lg-rotate.css';
-import 'lightgallery/css/lg-share.css';
+
+// Plugins (autoplay is skipped due to bug)
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
-import lgAutoplay from 'lightgallery/plugins/autoplay';
 import lgFullscreen from 'lightgallery/plugins/fullscreen';
 import lgRotate from 'lightgallery/plugins/rotate';
 import lgShare from 'lightgallery/plugins/share';
+
+// Styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-fullscreen.css';
+import 'lightgallery/css/lg-rotate.css';
+import 'lightgallery/css/lg-share.css';
+
 import '../styles/projects-page.css';
 
-// Image Imports
+// Image imports
 import airportproject from '../assets/images/project gallery/airportproject.jpg';
 import educationalproject from '../assets/images/project gallery/educationalproject.png';
 import hotel from '../assets/images/project gallery/hotel.jpg';
@@ -30,12 +34,30 @@ import shopingcenter from '../assets/images/project gallery/shoping-center.jpg';
 
 function Projects() {
   const { t } = useTranslation();
+  const galleryRef = useRef(null);
+  const lgInstanceRef = useRef(null);
 
   useEffect(() => {
-    lightGallery(document.getElementById('gallery-container'), {
-      plugins: [lgThumbnail, lgZoom, lgAutoplay, lgFullscreen, lgRotate, lgShare],
-      speed: 500,
-    });
+    const initGallery = () => {
+      if (galleryRef.current && !lgInstanceRef.current) {
+        lgInstanceRef.current = lightGallery(galleryRef.current, {
+          plugins: [lgThumbnail, lgZoom, lgFullscreen, lgRotate, lgShare],
+          speed: 500,
+          download: false,
+        });
+      }
+    };
+
+    // Timeout ensures DOM is rendered before init
+    const timer = setTimeout(initGallery, 0);
+
+    return () => {
+      clearTimeout(timer);
+      if (lgInstanceRef.current) {
+        lgInstanceRef.current.destroy();
+        lgInstanceRef.current = null;
+      }
+    };
   }, []);
 
   const breadcrumbs = [
@@ -44,14 +66,14 @@ function Projects() {
   ];
 
   const galleryImages = [
-    { thumb: airportproject, full: airportproject },
-    { thumb: educationalproject, full: educationalproject },
-    { thumb: hotel, full: hotel },
-    { thumb: officearmstrong, full: officearmstrong },
-    { thumb: officegrilyato, full: officegrilyato },
-    { thumb: officeslatceiling, full: officeslatceiling },
-    { thumb: restaurantproject, full: restaurantproject },
-    { thumb: shopingcenter, full: shopingcenter },
+    { src: airportproject, alt: 'Airport Project' },
+    { src: educationalproject, alt: 'Educational Project' },
+    { src: hotel, alt: 'Hotel' },
+    { src: officearmstrong, alt: 'Office Armstrong' },
+    { src: officegrilyato, alt: 'Office Grilyato' },
+    { src: officeslatceiling, alt: 'Office Slat Ceiling' },
+    { src: restaurantproject, alt: 'Restaurant Project' },
+    { src: shopingcenter, alt: 'Shopping Center' },
   ];
 
   return (
@@ -59,13 +81,13 @@ function Projects() {
       <PageHeader
         title={t('projects.page_title')}
         breadcrumbs={breadcrumbs}
-        backgroundImage={airportproject} // Using one of the project images as hero background
+        backgroundImage={airportproject}
       />
       <div className="projects-page-content">
-        <div id="gallery-container" className="gallery">
+        <div id="gallery-container" className="gallery" ref={galleryRef}>
           {galleryImages.map((image, index) => (
-            <a key={index} href={image.full}>
-              <img src={image.thumb} alt={`Project ${index + 1}`} />
+            <a key={index} href={image.src}>
+              <img src={image.src} alt={image.alt} />
             </a>
           ))}
         </div>

@@ -5,6 +5,7 @@ import ContactForm from '../components/ContactForm';
 import '../styles/about-page.css';
 
 // Image Imports
+import slider from '../assets/images/slider/slid1.jpg';
 import aboutImg0 from '../assets/images/aboutus/au0.jpg';
 import aboutImg1 from '../assets/images/aboutus/au1.jpg';
 import aboutImg2 from '../assets/images/aboutus/au2.jpg';
@@ -26,7 +27,7 @@ function About() {
       <PageHeader
         title={t('about.page_title')}
         breadcrumbs={breadcrumbs}
-        backgroundImage={aboutImg0} // Using one of the about images as hero background
+        backgroundImage={slider} // Using one of the about images as hero background
       />
       <div className="container marketing">
         <div className="about-intro">

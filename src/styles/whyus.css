@@ -1,0 +1,146 @@
+.expert-section {
+    padding: 60px 60px;
+    background-color: var(--color-bg);
+    font-family: var(--font-main);
+    text-align: center;
+  }
+  
+  .expert-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    font-weight: 600;
+  }
+  
+  .highlight {
+    color: var(--color-logo);
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 24px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .feature {
+    background: #f5f7fa; /* This color is not in variables, using as is */
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0 0 10px var(--color-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .feature h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .feature p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+  
+  .highlight-box {
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+    grid-row: span 2;
+  }
+  
+  .highlight-box h3 {
+    color: var(--color-text-light);
+  }
+  
+  .highlight-box p{
+    color: var(--color-text-light);
+  } 
+  
+  .highlight-box .start-trial {
+    margin-top: 16px;
+    background: var(--color-logo);
+    color: var(--color-text-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+  
+  .short-wide {
+    grid-column: span 2;
+  }
+  
+  .counters {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .counter-box {
+    text-align: center;
+    width: 180px;
+    padding: 20px 10px;
+  }
+  
+  .counter-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: var(--color-logo);
+  }
+  
+  .counter-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-logo);
+  }
+  
+  .counter-text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto auto;
+    }
+  
+    .highlight-box {
+      grid-row: span 1;
+      grid-column: span 2;
+    }
+  
+    .short-wide {
+      grid-column: span 2;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .feature,
+    .highlight-box,
+    .short-wide {
+      width: 100%;
+    }
+  
+    .counters {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }

@@ -130,16 +130,7 @@
       "projects": "Projects",
       "contact": "Contact"
     },
-    "product_detail": {
-      "dimensions": "Dimensions",
-      "product": "Product",
-      "size": "Size",
-      "name": "Name",
-      "width": "Width",
-      "height": "Height",
-      "length": "Length",
-      "application_cases": "Application Cases"
-    }
+    "products": {
       "title": "Products",
       "metal_armstrong": {
         "title": "Metal Armstrong"

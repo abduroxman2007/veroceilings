@@ -139,7 +139,8 @@
       "height": "Высота",
       "length": "Длина",
       "application_cases": "Сферы применения"
-    }
+    },
+      "footer_products": {
       "title": "Продукты",
       "metal_armstrong": {
         "title": "Металлический Армстронг"

@@ -139,7 +139,8 @@
       "height": "Balandligi",
       "length": "Uzunligi",
       "application_cases": "Qo'llash sohalari"
-    }
+    },
+      "footer_products": {
       "title": "Mahsulotlar",
       "metal_armstrong": {
         "title": "Metall Armstrong"

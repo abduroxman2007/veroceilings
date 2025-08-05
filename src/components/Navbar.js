@@ -23,7 +23,7 @@ function Navbar() {
       <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
         <ul className="nav-links">
           <li className="nav-item dropdown">
-            <span className="nav-link">{t('navbar.products')}</span>
+            <span className="nav-link"><Link to="/products" className="nav-link">{t('navbar.products')}</Link></span>
             <ul className="dropdown-menu">
               <li><Link to="/products/grilyato" className="dropdown-link"><span>Grilyato</span></Link></li>
               <li><Link to="/products/armstrong" className="dropdown-link"><span>Armstrong</span></Link></li>
