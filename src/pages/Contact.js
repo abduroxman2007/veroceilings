@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 import '../styles/contact-page.css';
+import slid7 from '../assets/images/slider/slid7.jpg'; // Ensure you have the correct path for the background image
 
 function Contact() {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ function Contact() {
       <PageHeader
         title={t('contact.page_title')}
         breadcrumbs={breadcrumbs}
-        backgroundImage="/assets/images/contact-hero-bg.jpg" // Placeholder
+        backgroundImage={slid7}
       />
       <div className="contact-page-wrapper">
         <div className="contact-page-container">
