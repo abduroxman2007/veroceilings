@@ -1,65 +1,53 @@
+/* General Wrapper for the entire contact section */
 .contact-page-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 80px 20px;
-  background: #f4f7f6;
+  /* /* background: #f4f7f6; */
+  background: white; /* Light background for the whole page */
 }
 
+/* Flex container for the form and map */
 .contact-page-container {
   display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  gap: 40px; /* Space between the form and map */
   width: 100%;
   max-width: 1400px;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  margin: 0 auto; /* Center the container */
+  background: transparent; /* Removed the dark card background */
 }
 
-.contact-form-section {
-  flex: 1.5;
-  padding: 50px 40px;
-}
 
+
+/* Section containing the map */
 .map-section {
-  flex: 1;
+  flex: 1; /* Takes up less space */
+  min-height: 500px; /* Ensures map has a good height */
+  min-width: 350px;
   position: relative;
-  background: rgba(0, 0, 0, 0.3);
-  transition: background 0.5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  cursor: pointer;
-}
-
-.map-placeholder {
-  text-align: center;
-  transition: opacity 0.5s ease;
-}
-
-.map-placeholder svg {
-  font-size: 48px;
-  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden; /* Keeps the iframe within the rounded corners */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .map-section iframe {
+  /* --- Default State (Inactive) --- */
+  filter: grayscale(100%); /* Makes the map black and white */
+  opacity: 0.7; /* Makes it look darker/dimmed */
+  
+  /* --- Smooth Transition --- */
+  transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+  /* --- Sizing --- */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
 }
 
-.map-section:hover .map-placeholder {
-  opacity: 0;
-}
-
+/* --- Hover State (Active) --- */
 .map-section:hover iframe {
-  opacity: 1;
+  filter: grayscale(0%); /* Returns the map to full color */
+  opacity: 1; /* Makes it fully bright */
 }

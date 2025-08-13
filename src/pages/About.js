@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+
+
 import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
-import '../styles/about-page.css';
+// import WhyUsSection from '../components/WhyUsSection';
 
-// Image Imports
-import slider from '../assets/images/slider/slid1.jpg';
+import slider from '../assets/images/slider/slid1.jpg'; 
 import aboutImg0 from '../assets/images/aboutus/au0.jpg';
 import aboutImg1 from '../assets/images/aboutus/au1.jpg';
 import aboutImg2 from '../assets/images/aboutus/au2.jpg';
@@ -14,78 +15,58 @@ import aboutImg4 from '../assets/images/aboutus/au4.jpg';
 import aboutImg5 from '../assets/images/aboutus/au5.jpg';
 import aboutImg6 from '../assets/images/aboutus/au6.jpg';
 
-function About() {
-  const { t } = useTranslation();
+const AboutUs = () => {
 
-  const breadcrumbs = [
-    { text: t('navbar.home'), link: '/' },
-    { text: t('navbar.about') },
-  ];
+    const { t } = useTranslation();
+  
+    const breadcrumbs = [
+      { text: t('navbar.about'), link: '/' },
+      { text: t('navbar.about') },
+    ];
 
   return (
-    <>
+    
+    <main>
       <PageHeader
-        title={t('about.page_title')}
+        title={t('contact.page_title')}
         breadcrumbs={breadcrumbs}
-        backgroundImage={slider} // Using one of the about images as hero background
+        backgroundImage={slider}
       />
-      <div className="container marketing">
-        <div className="about-intro">
-          <h1>{t('about.intro_title')}</h1>
-          <p>{t('about.intro_text')}</p>
-        </div>
 
-        <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div className="col d-flex align-items-start">
-            <div className="cb" data-max="1700">
-              <h3 className="fs-1 text-body-emphasis counter-number">1700+</h3>
-              <h3 className="fs-3 text-body-emphasis">{t('about.counter1_title')}</h3>
-              <p>{t('about.counter1_text')}</p>
-            </div>
-          </div>
-          <div className="col d-flex align-items-start">
-            <div className="cb" data-max="200">
-              <h3 className="fs-1 text-body-emphasis counter-number">200+</h3>
-              <h3 className="fs-3 text-body-emphasis">{t('about.counter2_title')}</h3>
-              <p>{t('about.counter2_text')}</p>
-            </div>
-          </div>
-          <div className="col d-flex align-items-start ">
-            <div className="cb" data-max="120">
-              <h3 className="fs-1 text-body-emphasis counter-number">120+</h3>
-              <h3 className="fs-3 text-body-emphasis">{t('about.counter3_title')}</h3>
-              <p>{t('about.counter3_text')}</p>
-            </div>
-          </div>
-        </div>
 
-        <div className="duo-images">
-          <div className="image1-box">
-            <img className="image" src={aboutImg1} alt="About us 1" />
-          </div>
-          <div className="image2-box">
-            <img className="image" src={aboutImg6} alt="About us 2" />
-          </div>
-        </div>
+      {/* <WhyUsSection /> */}
 
-        <div className="aboutustext">
-          <h1>{t('about.story_title')}</h1>
-          <p>{t('about.story_text')}</p>
-        </div>
+      <div className="b-example-divider"></div>
+      
 
-        <div className="about-card">
-          <div className="text-card">
-            <h2>{t('about.vision_title')}</h2>
-            <p>{t('about.vision_text')}</p>
-          </div>
-          <div className="image-card">
-            <img src={aboutImg0} alt="Building" />
-          </div>
+      <div className="duo-images">
+        <div className="image1-box">
+          <img className="image" src={aboutImg0} alt="About us 1" />
+        </div>
+        <div className="image2-box">
+          <img className="image" src={aboutImg6} alt="About us 2" />
         </div>
       </div>
-      <ContactForm />
-    </>
-  );
-}
 
-export default About;
+      <div className="b-example-divider"></div>
+      <div className="">
+        <hr className="featurette-divider" />
+        <div className="aboutustext">
+          <h1>Vero Ceilings: Elevating Spaces with a Decade of Excellence.</h1>
+          <p>Vero Ceilings is one of the divisions of the Vero Group Companies, which produces ceilings, MDF decor, ARMSTRONG suspended ceilings and also sells its products in 14 regions of Uzbekistan.
+            <br />
+            <br />
+            Vero Ceilings doesn't just make ceilings; she creates architectural masterpieces. The product range includes innovative acoustic and aesthetic ceiling designs, as well as advanced solutions for commercial and residential applications. With a commitment to excellence, Vero Ceilings provides not only visually impressive options, but also functional solutions, ensuring that their ceilings meet the diverse needs of modern construction.
+            <br />
+            <br />
+            Vero Ceilings provides a list of services provided: design, measurements, installation, delivery. The main goal of Vero Ceilings is to provide consumers with high-quality, safe branded products made from the best raw materials.
+          </p>
+        </div>
+        {/* <hr className="featurette-divider" /> */}
+        
+      </div>
+    </main>
+  );
+};
+
+export default AboutUs;

@@ -22,14 +22,14 @@ function Navbar() {
       </div>
       <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
         <ul className="nav-links">
-          <li className="nav-item dropdown">
-            <span className="nav-link"><Link to="/products" className="nav-link">{t('navbar.products')}</Link></span>
-            <ul className="dropdown-menu">
+          <li className="nav-item"><Link to="/" className="nav-link">{t('navbar.home')}</Link></li>
+          <li className="nav-item dropdown"> <Link to="/products" className="nav-link">{t('navbar.products')}</Link>
+            {/* <ul className="dropdown-menu">
               <li><Link to="/products/grilyato" className="dropdown-link"><span>Grilyato</span></Link></li>
               <li><Link to="/products/armstrong" className="dropdown-link"><span>Armstrong</span></Link></li>
               <li><Link to="/products/reyechniy" className="dropdown-link"><span>Reyechniy</span></Link></li>
               <li><Link to="/products/accessories" className="dropdown-link"><span>Accessories</span></Link></li>
-            </ul>
+            </ul> */}
           </li>
           <li className="nav-item"><Link to="/projects" className="nav-link">{t('navbar.projects')}</Link></li>
           <li className="nav-item"><Link to="/architects" className="nav-link">{t('navbar.architects')}</Link></li>
