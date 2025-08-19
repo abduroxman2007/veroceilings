@@ -1,5 +1,117 @@
-.container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding: 100px;
+/* About Us Page Styling */
+
+/* General Section Styling */
+.about-us-sections {
+    padding: 60px 0;
+}
+
+.about-us-sections h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us-sections p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Image Section Styling */
+.about-us-sections .row.g-4 .col-md-8,
+.about-us-sections .row.g-4 .col-md-4 {
+    display: flex;
+    align-items: stretch;
+}
+
+.about-us-sections .row.g-4 .img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.small-image-left {
+    max-height: 300px;
+}
+
+.small-image-right {
+    max-height: 300px;
+}
+
+
+/* Swiper Styling */
+.about-us-sections .mySwiper_about {
+    width: 85%;
+    height: 400px; 
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.about-us-sections .mySwiper_about .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-sections .mySwiper_about .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* Swiper Pagination */
+.about-us-sections .swiper-pagination-bullet {
+    background: #333;
+    opacity: 0.6;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 100%!important;
+}
+
+.about-us-sections .swiper-pagination {
+    bottom:-5px !important; /* Adjust the value as needed */
+}
+
+.about-us-sections .swiper-pagination-bullet-active {
+    background: var(--color-primary);  
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-us-sections h2 {
+        font-size: 2rem;
+    }
+
+    .about-us-sections p {
+        font-size: 0.9rem;
+    }
+
+    .about-us-sections .mySwiper_about {
+        height: 200px; /* Smaller height for mobile */
+    }
+
+    .about-us-sections .mySwiper_about .swiper-slide {
+        font-size: 14px;
+    }
+
+    .small-image-left,
+    .small-image-right {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us-sections .mySwiper_about {
+        height: 150px; /* Even smaller on extra small screens */
+    }
 }

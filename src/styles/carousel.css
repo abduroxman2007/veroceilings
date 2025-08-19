@@ -77,15 +77,15 @@
 
 /* Swiper Pagination */
 .swiper-pagination-bullet {
-  width: 30px !important;
-  height: 3px !important;
-  border-radius: 0 !important;
-  background: var(--color-primary) !important;
-  opacity: 0.5 !important;
+  width: 30px ;
+  height: 3px ;
+  border-radius: 0 ;
+  background: var(--color-primary);
+  opacity: 0.5 ;
 }
 
 .swiper-pagination-bullet-active {
-  opacity: 1 !important;
+  opacity: 1 ;
 }
 
 /* Swiper Navigation */

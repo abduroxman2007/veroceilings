@@ -80,7 +80,7 @@
   .counters {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 120px;
     margin-top: 60px;
     flex-wrap: wrap;
   }
@@ -88,7 +88,7 @@
   .counter-box {
     text-align: center;
     width: 180px;
-    padding: 20px 10px;
+    padding: 20px 0px;
   }
   
   .counter-icon {

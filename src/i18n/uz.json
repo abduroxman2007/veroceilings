@@ -51,48 +51,120 @@
     "accessories_section_title": "Aksessuarlar",
     "grilyato": {
       "title": "Grilyato Shiftlari",
-      "description": "Zamonaviy, ko'p qirrali va o'rnatish oson."
+      "description": "Mustahkam katakli tuzilishga ega shift, monolit panjarali bo'shliqni hosil qilish uchun U-shaklidagi profillardan yig'ilgan.",
+      "specs": {
+        "durability": "20 yil",
+        "profile_width": "10 mm",
+        "profile_height": "30-40 mm",
+        "profile_length": "2000 mm",
+        "cell_sizes": "75x75 mm, 100x100 mm, 150x150 mm, 200x200 mm"
+      }
     },
     "armstrong": {
       "title": "Armstrong Shiftlari",
-      "description": "Har qanday makon uchun klassik va ishonchli echimlar."
+      "description": "Har qanday makon uchun klassik va ishonchli yechimlar.",
+      "specs": {
+        "durability": "15 yil",
+        "water_resistance": "Ha",
+        "humidity_resistance": "Ha"
+      }
     },
-    "reyechniy": {
-      "title": "Reyechniy Shiftlari",
-      "description": "Zamonaviy ko'rinish uchun silliq va chiziqli dizaynlar."
+    "slatceiling": {
+      "title": "Reykali Shiftlar",
+      "description": "Traverslarga o'rnatilgan metall va alyuminiy reykali yig'ma osma shift.",
+      "specs": {
+        "durability": "15+ yil",
+        "material": "Metall va Alyuminiy"
+      }
     },
-    "gypsum_armstrong": {
-      "title": "Gipsokarton Armstrong",
-      "description": "Yong'inga chidamli va ovoz yutuvchi gips panellari."
+    "gypsumarmstrong": {
+      "title": "Gipsli Armstrong",
+      "description": "Yong'inga chidamli va ovoz yutuvchi gips panellari.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "15 mm"
+      }
     },
-    "metal_armstrong": {
+    "metalarmstrong": {
       "title": "Metall Armstrong",
-      "description": "Bardoshli va zamonaviy metall shift tizimlari."
+      "description": "Bardoshli va zamonaviy metall shift tizimlari.",
+      "specs": {
+        "size": "595 x 595 mm"
+      }
     },
-    "washing_armstrong": {
+    "washingarmstrong": {
       "title": "Yuviladigan Armstrong",
-      "description": "Oson tozalanadigan va parvarish qilinadigan shift echimlari."
+      "description": "Oson tozalanadigan va parvarish qilinadigan shift yechimlari.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "6 mm",
+        "features": "Old tomoni oboy, orqa tomoni folga bilan qoplangan, bu uni issiq va sovuqqa chidamli qiladi."
+      }
     },
-    "t_profil": {
+    "t-profil": {
       "title": "T-Profil",
-      "description": "Mustahkam va barqaror T-profil osma tizimlari."
+      "description": "Mustahkam va barqaror T-grid osma tizimlari.",
+      "specs": {
+        "length": "0.6 m",
+        "height": "24 mm",
+        "width": "24 mm",
+        "thickness": "0.25 mm"
+      }
     },
-    "l_profil": {
+    "l-profil": {
       "title": "L-Profil",
-      "description": "Toza tugatish uchun perimetr qoplamasi."
+      "description": "Toza perimetrli bezak uchun.",
+      "specs": {
+        "length": "3 m",
+        "height": "22 mm",
+        "width": "20 mm",
+        "thickness": "0.25 mm"
+      }
     },
     "stringer": {
       "title": "Stringer",
-      "description": "Chiziqli shift tizimlari uchun tayanch."
+      "description": "Chiziqli shift tizimlari uchun tayanch.",
+      "specs": {
+        "thickness": "0.6 mm"
+      }
     },
-    "honeycomb": {
-      "title": "Asalari uyasi panellari",
-      "description": "Yengil va estetik jihatdan yoqimli."
+    "hexagon-wall-decor": {
+      "title": "Olti burchakli devor dekori",
+      "description": "Ta'lim muassasalari, IT markazlari va ofis interyerlari uchun tavsiya etilgan zamonaviy mahsulot.",
+      "specs": {
+        "application": "Ta'lim muassasalari, IT markazlari, ofis interyerlari",
+        "colors": "Asosan qora va sariq"
+      }
     },
-    "aqua_panel": {
-      "title": "Aqua Panellar",
-      "description": "Nam joylar uchun namlikka chidamli panellar."
-    }
+    "suspension": {
+      "title": "Osma tizim",
+      "description": "Shift tizimlari uchun osma.",
+      "specs": {
+        "length": "25-50 m"
+      }
+    },
+    "specs_title": "Texnik xususiyatlari",
+    "spec_keys": {
+        "durability": "Chidamlilik",
+        "profile_width": "Profil kengligi",
+        "profile_height": "Profil balandligi",
+        "profile_length": "Profil uzunligi",
+        "cell_sizes": "Katak o'lchamlari",
+        "water_resistance": "Suvga chidamliligi",
+        "humidity_resistance": "Namlikka chidamliligi",
+        "material": "Material",
+        "size": "O'lcham",
+        "thickness": "Qalinligi",
+        "features": "Xususiyatlari",
+        "length": "Uzunligi",
+        "height": "Balandligi",
+        "width": "Kengligi",
+        "application": "Qo'llanilishi",
+        "colors": "Ranglari"
+    },
+    "application_cases_title": "Qo'llash sohalari",
+    "video_installation_title": "O'rnatish videosi",
+    "related_products_title": "Tegishli mahsulotlar"
   },
   "accessories": {
     "title": "O'rnatish aksessuarlari",
@@ -213,6 +285,35 @@
     "q6": {
       "question": "Maxsus dizayn echimlarini taklif qilasizmi?",
       "answer": "Ha, biz maxsus dizayn echimlariga ixtisoslashganmiz. Bizning jamoamiz arxitektorlar va dizaynerlar bilan yaqindan hamkorlik qilib, muayyan loyiha ehtiyojlariga javob beradigan noyob shift tizimlarini yaratadi."
+    }
+  },
+  "architects": {
+    "page_title": "Arxitektorlar uchun",
+    "library_title": "Video kutubxona",
+    "library_description": "Loyihalaringizda yordam beradigan video darsliklar va o'rnatish qo'llanmalari to'plamini o'rganing.",
+    "video1": {
+      "title": "Grilyato shiftini o'rnatish",
+      "description": "Grilyato shiftlarini o'rnatish bo'yicha bosqichma-bosqich qo'llanma."
+    },
+    "video2": {
+      "title": "Armstrong shiftini o'rnatish",
+      "description": "Armstrong shiftlarini tez va samarali o'rnatishni o'rganing."
+    },
+    "video3": {
+      "title": "Reykali shiftni o'rnatish",
+      "description": "Zamonaviy ko'rinish uchun reykali shiftlarni o'rnatish bo'yicha batafsil qo'llanma."
+    },
+    "video4": {
+      "title": "T-profilni o'rnatish",
+      "description": "Mustahkam shift panjarasi uchun T-profillarni o'rnatishni o'rganing."
+    },
+    "video5": {
+      "title": "L-profilni o'rnatish",
+      "description": "Toza perimetrli bezak uchun L-profillarni o'rnatish bo'yicha qo'llanma."
+    },
+    "video6": {
+      "title": "Osma tizimini o'rnatish",
+      "description": "Shiftlaringiz uchun osma tizimini qanday sozlashni o'rganing."
     }
   },
   "contact": {

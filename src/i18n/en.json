@@ -51,48 +51,120 @@
     "accessories_section_title": "Accessories",
     "grilyato": {
       "title": "Grilyato Ceilings",
-      "description": "Modern, versatile, and easy to install."
+      "description": "A ceiling with a solid cellular structure, assembled from U-shaped profiles to form a monolithic lattice space.",
+      "specs": {
+        "durability": "20 years",
+        "profile_width": "10 mm",
+        "profile_height": "30-40 mm",
+        "profile_length": "2000 mm",
+        "cell_sizes": "75x75 mm, 100x100 mm, 150x150 mm, 200x200 mm"
+      }
     },
     "armstrong": {
       "title": "Armstrong Ceilings",
-      "description": "Classic and reliable solutions for any space."
+      "description": "Classic and reliable solutions for any space.",
+      "specs": {
+        "durability": "15 years",
+        "water_resistance": "Yes",
+        "humidity_resistance": "Yes"
+      }
     },
-    "reyechniy": {
-      "title": "Reyechniy Ceilings",
-      "description": "Sleek and linear designs for a contemporary look."
+    "slatceiling": {
+      "title": "Slat Ceilings",
+      "description": "A suspended ceiling assembled from metal and aluminum slats fixed on traverses.",
+      "specs": {
+        "durability": "15+ years",
+        "material": "Metal and Aluminum"
+      }
     },
-    "gypsum_armstrong": {
+    "gypsumarmstrong": {
       "title": "Gypsum Armstrong",
-      "description": "Fire-resistant and sound-absorbing gypsum panels."
+      "description": "Fire-resistant and sound-absorbing gypsum panels.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "15 mm"
+      }
     },
-    "metal_armstrong": {
+    "metalarmstrong": {
       "title": "Metal Armstrong",
-      "description": "Durable and modern metal ceiling systems."
+      "description": "Durable and modern metal ceiling systems.",
+      "specs": {
+        "size": "595 x 595 mm"
+      }
     },
-    "washing_armstrong": {
+    "washingarmstrong": {
       "title": "Washing Armstrong",
-      "description": "Easy to clean and maintain ceiling solutions."
+      "description": "Easy to clean and maintain ceiling solutions.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "6 mm",
+        "features": "Wallpaper on the front and foil on the back, making it resistant to heat and cold."
+      }
     },
-    "t_profil": {
+    "t-profil": {
       "title": "T-Profil",
-      "description": "Strong and stable T-grid suspension systems."
+      "description": "Strong and stable T-grid suspension systems.",
+      "specs": {
+        "length": "0.6 m",
+        "height": "24 mm",
+        "width": "24 mm",
+        "thickness": "0.25 mm"
+      }
     },
-    "l_profil": {
+    "l-profil": {
       "title": "L-Profil",
-      "description": "Perimeter trim for a clean finish."
+      "description": "Perimeter trim for a clean finish.",
+      "specs": {
+        "length": "3 m",
+        "height": "22 mm",
+        "width": "20 mm",
+        "thickness": "0.25 mm"
+      }
     },
     "stringer": {
       "title": "Stringer",
-      "description": "Support for linear ceiling systems."
+      "description": "Support for linear ceiling systems.",
+      "specs": {
+        "thickness": "0.6 mm"
+      }
     },
-    "honeycomb": {
-      "title": "Honeycomb Panels",
-      "description": "Lightweight and aesthetically pleasing."
+    "hexagon-wall-decor": {
+      "title": "Hexagon Wall Decor",
+      "description": "A modern product recommended for educational buildings, IT centers, and office interiors.",
+      "specs": {
+        "application": "Educational buildings, IT centers, office interiors",
+        "colors": "Primarily black and yellow"
+      }
     },
-    "aqua_panel": {
-      "title": "Aqua Panels",
-      "description": "Moisture-resistant panels for wet areas."
-    }
+    "suspension": {
+      "title": "Suspension",
+      "description": "Suspension for ceiling systems.",
+      "specs": {
+        "length": "25-50 m"
+      }
+    },
+    "specs_title": "Specifications",
+    "spec_keys": {
+        "durability": "Durability",
+        "profile_width": "Profile Width",
+        "profile_height": "Profile Height",
+        "profile_length": "Profile Length",
+        "cell_sizes": "Cell Sizes",
+        "water_resistance": "Water Resistance",
+        "humidity_resistance": "Humidity Resistance",
+        "material": "Material",
+        "size": "Size",
+        "thickness": "Thickness",
+        "features": "Features",
+        "length": "Length",
+        "height": "Height",
+        "width": "Width",
+        "application": "Application",
+        "colors": "Colors"
+    },
+    "application_cases_title": "Application Cases",
+    "video_installation_title": "Video Installation",
+    "related_products_title": "Related Products"
   },
   "accessories": {
     "title": "Installation Accessories",
@@ -203,6 +275,35 @@
     "q6": {
       "question": "Do you offer custom design solutions?",
       "answer": "Yes, we specialize in custom design solutions. Our team works closely with architects and designers to create unique ceiling systems that meet specific project needs."
+    }
+  },
+  "architects": {
+    "page_title": "For Architects",
+    "library_title": "Video Library",
+    "library_description": "Explore our collection of video tutorials and installation guides to help you with your projects.",
+    "video1": {
+      "title": "Grilyato Ceiling Installation",
+      "description": "A step-by-step guide to installing Grilyato ceilings."
+    },
+    "video2": {
+      "title": "Armstrong Ceiling Installation",
+      "description": "Learn how to install Armstrong ceilings quickly and efficiently."
+    },
+    "video3": {
+      "title": "Slat Ceiling Installation",
+      "description": "A detailed tutorial on installing slat ceilings for a modern look."
+    },
+    "video4": {
+      "title": "T-Profile Installation",
+      "description": "Learn how to install T-profiles for a sturdy ceiling grid."
+    },
+    "video5": {
+      "title": "L-Profile Installation",
+      "description": "A guide to installing L-profiles for a clean perimeter finish."
+    },
+    "video6": {
+      "title": "Suspension System Installation",
+      "description": "Learn how to set up the suspension system for your ceilings."
     }
   },
   "contact": {

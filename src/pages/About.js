@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import '../styles/about-page.css';
 
 import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
-// import WhyUsSection from '../components/WhyUsSection';
+import WhyUsSection from '../components/WhyUsSection';
+import AboutUsSection from '../components/AboutUsSection';
 
-import slider from '../assets/images/slider/slid1.jpg'; 
+import slider from '../assets/images/slider/slid1.jpg';
 import aboutImg0 from '../assets/images/aboutus/au0.jpg';
 import aboutImg1 from '../assets/images/aboutus/au1.jpg';
 import aboutImg2 from '../assets/images/aboutus/au2.jpg';
@@ -18,55 +25,84 @@ import aboutImg6 from '../assets/images/aboutus/au6.jpg';
 const AboutUs = () => {
 
     const { t } = useTranslation();
-  
+
     const breadcrumbs = [
-      { text: t('navbar.about'), link: '/' },
-      { text: t('navbar.about') },
+        { text: t('navbar.about'), link: '/' },
+        { text: t('navbar.about') },
     ];
 
-  return (
-    
-    <main>
-      <PageHeader
-        title={t('contact.page_title')}
-        breadcrumbs={breadcrumbs}
-        backgroundImage={slider}
-      />
+    return (
 
+        <main>
+            <PageHeader
+                title={t('contact.page_title')}
+                breadcrumbs={breadcrumbs}
+                backgroundImage={slider}
+            />
+            <WhyUsSection />
 
-      {/* <WhyUsSection /> */}
+            <section className="about-us-sections">
+                <div className="container">
+                    {/* Section 1: Images */}
+                    <div className="row g-4 mb-5">
+                        <div className="col-md-8">
+                            <img src={aboutImg0} alt="Vero Group Factory" className="img-fluid small-image-left" />
+                        </div>
+                        <div className="col-md-4">
+                            <img src={aboutImg2} alt="Vero Group Leadership" className="img-fluid small-image-right" />
+                        </div>
+                    </div>
 
-      <div className="b-example-divider"></div>
-      
+                    {/* Section 2: Text */}
+                    <div className="row mb-5">
+                        <div className="col-12">
+                            <div className="text-center">
+                                <h2 className="mb-4">{t('about.title')}</h2>
+                                <p>{t('about.paragraph1')}</p>
+                                <p>{t('about.paragraph2')}</p>
+                                <p>{t('about.paragraph3')}</p>
+                            </div>
+                        </div>
+                    </div>
 
-      <div className="duo-images">
-        <div className="image1-box">
-          <img className="image" src={aboutImg0} alt="About us 1" />
-        </div>
-        <div className="image2-box">
-          <img className="image" src={aboutImg6} alt="About us 2" />
-        </div>
-      </div>
-
-      <div className="b-example-divider"></div>
-      <div className="">
-        <hr className="featurette-divider" />
-        <div className="aboutustext">
-          <h1>Vero Ceilings: Elevating Spaces with a Decade of Excellence.</h1>
-          <p>Vero Ceilings is one of the divisions of the Vero Group Companies, which produces ceilings, MDF decor, ARMSTRONG suspended ceilings and also sells its products in 14 regions of Uzbekistan.
-            <br />
-            <br />
-            Vero Ceilings doesn't just make ceilings; she creates architectural masterpieces. The product range includes innovative acoustic and aesthetic ceiling designs, as well as advanced solutions for commercial and residential applications. With a commitment to excellence, Vero Ceilings provides not only visually impressive options, but also functional solutions, ensuring that their ceilings meet the diverse needs of modern construction.
-            <br />
-            <br />
-            Vero Ceilings provides a list of services provided: design, measurements, installation, delivery. The main goal of Vero Ceilings is to provide consumers with high-quality, safe branded products made from the best raw materials.
-          </p>
-        </div>
-        {/* <hr className="featurette-divider" /> */}
-        
-      </div>
-    </main>
-  );
+                    {/* Section 3: Swiper */}
+                    <div className="row">
+                        <div className="col-12">
+                            <Swiper
+                                slidesPerView={2}
+                                spaceBetween={10}
+                                autoplay={{
+                                    delay: 1500,
+                                    disableOnInteraction: false,
+                                }}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                
+                                modules={[Autoplay, Pagination]}
+                                className="mySwiper_about"
+                            >
+                                <SwiperSlide>
+                                    <img src={aboutImg2} alt="Leadership Team" className="img-fluid" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={aboutImg3} alt="Warehouse Interior" className="img-fluid" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={aboutImg4} alt="Product Detail" className="img-fluid" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={aboutImg5} alt="Another Product View" className="img-fluid" />
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <AboutUsSection />
+            <ContactForm />
+        </main>
+    );
 };
 
 export default AboutUs;

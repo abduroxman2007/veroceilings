@@ -94,3 +94,10 @@
 .social-icons a:hover {
   color: var(--color-hover);
 }
+
+@media (max-width: 576px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

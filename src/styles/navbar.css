@@ -189,6 +189,16 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
