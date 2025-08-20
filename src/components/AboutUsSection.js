@@ -14,13 +14,12 @@ const AboutUsSection = () => {
         <h2 className="story-title">{t('about.story_title')}</h2>
         <div className="story-content">
           <div className="story-text">
-            <p>{t('about.story_paragraph_new_1')}</p>
-            <p>{t('about.story_paragraph_new_2')}</p>
-            <p>{t('about.story_paragraph_new_3')}</p>
-            <p>{t('about.story_paragraph_new_4')}</p>
+            {t('about.story_text').split('\n').map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
           <div className="story-image-container">
-            <img src={storyImage} alt="Our Story" className="story-image" />
+            <img src={storyImage} alt={t("about.story_image_alt")} className="story-image" />
           </div>
         </div>
       </div>

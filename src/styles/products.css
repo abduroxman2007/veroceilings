@@ -7,7 +7,9 @@
 }
 
 .carousel-title {
-  font-size: 2rem;
+  /* Standardized carousel title font size using typography scale */
+  font-size: var(--text-3xl);
+  font-weight: var(--font-semibold);
   color: var(--color-logo);
   margin-bottom: 20px; /* Reduced margin */
   display: flex;
@@ -17,7 +19,8 @@
 }
 
 .carousel-icon {
-  font-size: 1.8rem;
+  /* Standardized carousel icon font size using typography scale */
+  font-size: var(--text-2xl);
 }
 
 .carousel-wrapper {
@@ -58,13 +61,17 @@
 }
 
 .carousel-card h3 {
-  font-size: 1.1rem;
+  /* Standardized carousel card heading font size using typography scale */
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
   color: var(--color-logo);
   margin-bottom: 6px;
 }
 
 .carousel-card p {
-  font-size: 0.9rem;
+  /* Standardized carousel card text font size using typography scale */
+  font-size: var(--text-sm);
+  font-weight: var(--font-normal);
   color: var(--color-text-light);
 }
 
@@ -77,22 +84,380 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Enhanced responsive design with comprehensive breakpoints */
+
+/* Large desktop screens */
+@media (max-width: 1400px) {
+  .carousel-section {
+    padding: 55px 18px;
+  }
+
+  .carousel-wrapper {
+    max-width: 1100px;
+  }
+
   .carousel-track {
-    flex-wrap: nowrap;
-    animation-duration: 40s;
+    gap: 22px;
   }
 
   .carousel-card {
-    min-width: 220px;
+    min-width: 270px;
+    max-width: 290px;
+  }
+}
+
+/* Desktop and laptop screens */
+@media (max-width: 1200px) {
+  .carousel-section {
+    padding: 50px 16px;
+  }
+
+  .carousel-title {
+    /* Responsive carousel title using typography scale */
+    font-size: var(--text-2xl);
+  }
+
+  .carousel-icon {
+    /* Responsive carousel icon using typography scale */
+    font-size: var(--text-xl);
+  }
+
+  .carousel-wrapper {
+    max-width: 1000px;
+  }
+
+  .carousel-track {
+    gap: 20px;
+    animation-duration: 28s;
+  }
+
+  .carousel-card {
+    min-width: 260px;
+    max-width: 280px;
+    padding: 18px;
+  }
+
+  .carousel-card img {
+    height: 170px;
+  }
+
+  .carousel-card h3 {
+    /* Responsive carousel card heading using typography scale */
+    font-size: var(--text-base);
+  }
+
+  .carousel-card p {
+    /* Responsive carousel card text using typography scale */
+    font-size: var(--text-xs);
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .carousel-section {
+    padding: 45px 15px;
+  }
+
+  .carousel-title {
+    /* Tablet carousel title using typography scale */
+    font-size: var(--text-2xl);
+    margin-bottom: 18px;
+  }
+
+  .carousel-icon {
+    /* Tablet carousel icon using typography scale */
+    font-size: var(--text-xl);
+  }
+
+  .carousel-wrapper {
+    max-width: 900px;
+  }
+
+  .carousel-track {
+    gap: 18px;
+    animation-duration: 30s;
+  }
+
+  .carousel-card {
+    min-width: 240px;
+    max-width: 260px;
     padding: 16px;
   }
 
   .carousel-card img {
-    height: 150px; /* Adjust height for smaller screens */
+    height: 160px;
+  }
+
+  .carousel-card h3 {
+    /* Tablet carousel card heading using typography scale */
+    font-size: var(--text-base);
+    margin-bottom: 5px;
+  }
+
+  .carousel-card p {
+    /* Tablet carousel card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .carousel-section {
+    padding: 40px 12px;
   }
 
   .carousel-title {
-    font-size: 1.5rem;
+    /* Mobile carousel title using typography scale */
+    font-size: var(--text-xl);
+    margin-bottom: 16px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .carousel-icon {
+    /* Mobile carousel icon using typography scale */
+    font-size: var(--text-lg);
+  }
+
+  .carousel-wrapper {
+    max-width: 100%;
+  }
+
+  .carousel-track {
+    flex-wrap: nowrap;
+    animation-duration: 35s;
+    gap: 16px;
+  }
+
+  .carousel-card {
+    min-width: 220px;
+    max-width: 240px;
+    padding: 14px;
+  }
+
+  .carousel-card img {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  .carousel-card h3 {
+    /* Mobile carousel card heading using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 4px;
+  }
+
+  .carousel-card p {
+    /* Mobile carousel card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+  }
+
+  /* Reduce hover effect on touch devices */
+  .carousel-card:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 640px) {
+  .carousel-section {
+    padding: 35px 10px;
+  }
+
+  .carousel-title {
+    /* Small mobile carousel title using typography scale */
+    font-size: var(--text-lg);
+    margin-bottom: 14px;
+  }
+
+  .carousel-icon {
+    /* Small mobile carousel icon using typography scale */
+    font-size: var(--text-base);
+  }
+
+  .carousel-track {
+    animation-duration: 40s;
+    gap: 14px;
+  }
+
+  .carousel-card {
+    min-width: 200px;
+    max-width: 220px;
+    padding: 12px;
+  }
+
+  .carousel-card img {
+    height: 140px;
+    margin-bottom: 10px;
+  }
+
+  .carousel-card h3 {
+    /* Small mobile carousel card heading using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 3px;
+  }
+
+  .carousel-card p {
+    /* Small mobile carousel card text using typography scale */
+    font-size: var(--text-xs);
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .carousel-section {
+    padding: 30px 8px;
+  }
+
+  .carousel-title {
+    /* Extra small mobile carousel title using typography scale */
+    font-size: var(--text-base);
+    margin-bottom: 12px;
+  }
+
+  .carousel-icon {
+    /* Extra small mobile carousel icon using typography scale */
+    font-size: var(--text-sm);
+  }
+
+  .carousel-track {
+    animation-duration: 45s;
+    gap: 12px;
+  }
+
+  .carousel-card {
+    min-width: 180px;
+    max-width: 200px;
+    padding: 10px;
+  }
+
+  .carousel-card img {
+    height: 130px;
+    margin-bottom: 8px;
+  }
+
+  .carousel-card h3 {
+    /* Extra small mobile carousel card heading using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 2px;
+  }
+
+  .carousel-card p {
+    /* Extra small mobile carousel card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+  }
+
+  /* Disable hover effect on small mobile screens */
+  .carousel-card:hover {
+    transform: none;
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+  .carousel-section {
+    padding: 25px 6px;
+  }
+
+  .carousel-title {
+    /* Tiny mobile carousel title using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 10px;
+  }
+
+  .carousel-icon {
+    /* Tiny mobile carousel icon using typography scale */
+    font-size: var(--text-xs);
+  }
+
+  .carousel-track {
+    animation-duration: 50s;
+    gap: 10px;
+  }
+
+  .carousel-card {
+    min-width: 160px;
+    max-width: 180px;
+    padding: 8px;
+  }
+
+  .carousel-card img {
+    height: 120px;
+    margin-bottom: 6px;
+  }
+
+  .carousel-card h3 {
+    /* Tiny mobile carousel card heading using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 2px;
+  }
+
+  .carousel-card p {
+    /* Tiny mobile carousel card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .carousel-section {
+    padding: 20px 8px;
+  }
+
+  .carousel-title {
+    /* Landscape mobile carousel title using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 8px;
+  }
+
+  .carousel-track {
+    animation-duration: 35s;
+  }
+
+  .carousel-card {
+    min-width: 150px;
+    max-width: 170px;
+    padding: 6px;
+  }
+
+  .carousel-card img {
+    height: 100px;
+    margin-bottom: 4px;
+  }
+
+  .carousel-card h3 {
+    /* Landscape mobile carousel card heading using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 1px;
+  }
+
+  .carousel-card p {
+    /* Landscape mobile carousel card text using typography scale */
+    font-size: var(--text-xs);
+  }
+}
+
+/* Pause animation on hover for better UX on desktop */
+@media (hover: hover) and (pointer: fine) {
+  .carousel-wrapper:hover .carousel-track {
+    animation-play-state: paused;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: none;
+  }
+
+  .carousel-card {
+    transition: none;
+  }
+
+  .carousel-card:hover {
+    transform: none;
   }
 }

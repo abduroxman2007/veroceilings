@@ -6,7 +6,8 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  /* Standardized swiper slide font size */
+  font-size: var(--text-lg);
   background: #fff;
 
   /* Center slide text vertically */
@@ -52,12 +53,16 @@
 }
 
 .hero-title {
-  font-size: 3em;
+  /* Standardized hero title font size using typography scale */
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
   margin-bottom: 10px;
 }
 
 .hero-subtitle {
-  font-size: 1.2em;
+  /* Standardized hero subtitle font size */
+  font-size: var(--text-xl);
+  font-weight: var(--font-normal);
   margin-bottom: 20px;
 }
 
@@ -68,6 +73,9 @@
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  /* Standardized hero button font size and weight */
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
   transition: background-color 0.3s ease;
 }
 
@@ -77,19 +85,293 @@
 
 /* Swiper Pagination */
 .swiper-pagination-bullet {
-  width: 30px ;
-  height: 3px ;
-  border-radius: 0 ;
+  width: 30px;
+  height: 3px;
+  border-radius: 0;
   background: var(--color-primary);
-  opacity: 0.5 ;
+  opacity: 0.5;
 }
 
 .swiper-pagination-bullet-active {
-  opacity: 1 ;
+  opacity: 1;
 }
 
 /* Swiper Navigation */
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--color-primary) !important;
+}
+
+/* Enhanced responsive design for HeaderCarousel */
+
+/* Large desktop screens */
+@media (max-width: 1400px) {
+  .hero-content {
+    max-width: 700px;
+    padding: 18px;
+  }
+
+  .hero-title {
+    /* Responsive hero title using typography scale */
+    font-size: var(--text-4xl);
+  }
+
+  .hero-subtitle {
+    /* Responsive hero subtitle using typography scale */
+    font-size: var(--text-lg);
+  }
+}
+
+/* Desktop and laptop screens */
+@media (max-width: 1200px) {
+  .hero-content {
+    max-width: 600px;
+    padding: 16px;
+  }
+
+  .hero-title {
+    /* Responsive hero title using typography scale */
+    font-size: var(--text-4xl);
+  }
+
+  .hero-subtitle {
+    /* Responsive hero subtitle using typography scale */
+    font-size: var(--text-lg);
+  }
+
+  .hero-button {
+    padding: 12px 24px;
+    /* Responsive hero button using typography scale */
+    font-size: var(--text-sm);
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .swiper {
+    height: 80vh;
+  }
+
+  .hero-content {
+    max-width: 500px;
+    padding: 15px;
+  }
+
+  .hero-title {
+    /* Tablet hero title using typography scale */
+    font-size: var(--text-3xl);
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    /* Tablet hero subtitle using typography scale */
+    font-size: var(--text-base);
+    margin-bottom: 18px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 18px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .swiper {
+    height: 70vh;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    padding: 12px;
+  }
+
+  .hero-title {
+    /* Mobile hero title using typography scale */
+    font-size: var(--text-2xl);
+    margin-bottom: 10px;
+    line-height: var(--leading-tight);
+  }
+
+  .hero-subtitle {
+    /* Mobile hero subtitle using typography scale */
+    font-size: var(--text-base);
+    margin-bottom: 16px;
+    line-height: var(--leading-normal);
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    /* Mobile hero button using typography scale */
+    font-size: var(--text-sm);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 16px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 25px;
+    height: 3px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 640px) {
+  .swiper {
+    height: 60vh;
+  }
+
+  .hero-content {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .hero-title {
+    /* Small mobile hero title using typography scale */
+    font-size: var(--text-xl);
+    margin-bottom: 8px;
+  }
+
+  .hero-subtitle {
+    /* Small mobile hero subtitle using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 14px;
+  }
+
+  .hero-button {
+    padding: 8px 16px;
+    /* Small mobile hero button using typography scale */
+    font-size: var(--text-xs);
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .swiper {
+    height: 50vh;
+  }
+
+  .hero-content {
+    max-width: 95%;
+    padding: 8px;
+  }
+
+  .hero-title {
+    /* Extra small mobile hero title using typography scale */
+    font-size: var(--text-xl);
+    margin-bottom: 6px;
+    line-height: var(--leading-tight);
+  }
+
+  .hero-subtitle {
+    /* Extra small mobile hero subtitle using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 12px;
+    line-height: var(--leading-normal);
+  }
+
+  .hero-button {
+    padding: 6px 14px;
+    /* Extra small mobile hero button using typography scale */
+    font-size: var(--text-xs);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 14px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+  .swiper {
+    height: 45vh;
+  }
+
+  .hero-content {
+    padding: 6px;
+  }
+
+  .hero-title {
+    /* Tiny mobile hero title using typography scale */
+    font-size: var(--text-lg);
+    margin-bottom: 5px;
+  }
+
+  .hero-subtitle {
+    /* Tiny mobile hero subtitle using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 10px;
+  }
+
+  .hero-button {
+    padding: 5px 12px;
+    /* Tiny mobile hero button using typography scale */
+    font-size: var(--text-xs);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 20px;
+    height: 20px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 12px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .swiper {
+    height: 100vh;
+  }
+
+  .hero-content {
+    padding: 5px;
+  }
+
+  .hero-title {
+    /* Landscape mobile hero title using typography scale */
+    font-size: var(--text-lg);
+    margin-bottom: 4px;
+  }
+
+  .hero-subtitle {
+    /* Landscape mobile hero subtitle using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 8px;
+  }
+
+  .hero-button {
+    padding: 4px 10px;
+    /* Landscape mobile hero button using typography scale */
+    font-size: var(--text-xs);
+  }
 }

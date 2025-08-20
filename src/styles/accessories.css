@@ -44,3 +44,765 @@
   font-size: 1rem;
   color: #666;
 }
+
+/* Enhanced responsive design with comprehensive breakpoints */
+
+/* Large desktop screens */
+@media (max-width: 1400px) {
+  .accessories-section {
+    padding: 3.5rem 1.8rem;
+  }
+
+  .accessories-title {
+    font-size: 2.3rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .accessory-grid {
+    gap: 1.8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .accessory-card {
+    padding: 1.8rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.8rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Desktop and laptop screens */
+@media (max-width: 1200px) {
+  .accessories-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .accessories-title {
+    font-size: 2.1rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .accessory-grid {
+    gap: 1.6rem;
+    max-width: 1000px;
+  }
+
+  .accessory-card {
+    padding: 1.6rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .accessories-section {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .accessories-title {
+    font-size: 1.9rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    max-width: 800px;
+  }
+
+  .accessory-card {
+    padding: 1.4rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .accessory-card:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .accessories-section {
+    padding: 2rem 1rem;
+  }
+
+  .accessories-title {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    max-width: 600px;
+  }
+
+  .accessory-card {
+    padding: 1.2rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .accessory-card:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 640px) {
+  .accessories-section {
+    padding: 1.8rem 0.8rem;
+  }
+
+  .accessories-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 500px;
+  }
+
+  .accessory-card {
+    padding: 1rem;
+  }
+
+  .accessory-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .accessory-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .accessories-section {
+    padding: 1.5rem 0.6rem;
+  }
+
+  .accessories-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    max-width: 400px;
+  }
+
+  .accessory-card {
+    padding: 0.8rem;
+  }
+
+  .accessory-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
+
+  /* Reduce hover effect on small mobile screens */
+  .accessory-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+  .accessories-section {
+    padding: 1.2rem 0.4rem;
+  }
+
+  .accessories-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .accessory-grid {
+    gap: 0.6rem;
+    max-width: 300px;
+  }
+
+  .accessory-card {
+    padding: 0.6rem;
+  }
+
+  .accessory-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.65rem;
+    line-height: 1.0;
+  }
+
+  /* Disable hover effect on very small screens */
+  .accessory-card:hover {
+    transform: none;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .accessories-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .accessories-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .accessory-card {
+    padding: 0.5rem;
+  }
+
+  .accessory-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 0.7rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.6rem;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .accessory-card {
+    transition: none;
+  }
+
+  .accessory-card:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .accessory-card {
+    border: 2px solid #333;
+  }
+
+  .accessories-title {
+    color: #000;
+  }
+
+  .accessory-card h3 {
+    color: #000;
+  }
+.accessories-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.accessories-title {
+  /* Standardized accessories title font size using typography scale */
+  font-size: var(--text-4xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.accessory-card {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.accessory-card:hover {
+  transform: translateY(-10px);
+}
+
+.accessory-icon {
+  font-size: 3rem;
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.accessory-card h3 {
+  /* Standardized accessory card heading font size using typography scale */
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.accessory-card p {
+  /* Standardized accessory card text font size using typography scale */
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  color: #666;
+}
+
+/* Enhanced responsive design with comprehensive breakpoints */
+
+/* Large desktop screens */
+@media (max-width: 1400px) {
+  .accessories-section {
+    padding: 3.5rem 1.8rem;
+  }
+
+  .accessories-title {
+    /* Responsive accessories title using typography scale */
+    font-size: var(--text-4xl);
+    margin-bottom: 1.8rem;
+  }
+
+  .accessory-grid {
+    gap: 1.8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .accessory-card {
+    padding: 1.8rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.8rem;
+  }
+
+  .accessory-card h3 {
+    /* Responsive accessory card heading using typography scale */
+    font-size: var(--text-lg);
+  }
+
+  .accessory-card p {
+    /* Responsive accessory card text using typography scale */
+    font-size: var(--text-sm);
+  }
+}
+
+/* Desktop and laptop screens */
+@media (max-width: 1200px) {
+  .accessories-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .accessories-title {
+    /* Desktop accessories title using typography scale */
+    font-size: var(--text-3xl);
+    margin-bottom: 1.6rem;
+  }
+
+  .accessory-grid {
+    gap: 1.6rem;
+    max-width: 1000px;
+  }
+
+  .accessory-card {
+    padding: 1.6rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .accessory-card h3 {
+    /* Desktop accessory card heading using typography scale */
+    font-size: var(--text-lg);
+    margin-bottom: 0.4rem;
+  }
+
+  .accessory-card p {
+    /* Desktop accessory card text using typography scale */
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .accessories-section {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .accessories-title {
+    /* Tablet accessories title using typography scale */
+    font-size: var(--text-3xl);
+    margin-bottom: 1.4rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    max-width: 800px;
+  }
+
+  .accessory-card {
+    padding: 1.4rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .accessory-card h3 {
+    /* Tablet accessory card heading using typography scale */
+    font-size: var(--text-base);
+    margin-bottom: 0.3rem;
+  }
+
+  .accessory-card p {
+    /* Tablet accessory card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+  }
+
+  .accessory-card:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .accessories-section {
+    padding: 2rem 1rem;
+  }
+
+  .accessories-title {
+    /* Mobile accessories title using typography scale */
+    font-size: var(--text-2xl);
+    margin-bottom: 1.2rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    max-width: 600px;
+  }
+
+  .accessory-card {
+    padding: 1.2rem;
+  }
+
+  .accessory-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .accessory-card h3 {
+    /* Mobile accessory card heading using typography scale */
+    font-size: var(--text-base);
+    margin-bottom: 0.3rem;
+  }
+
+  .accessory-card p {
+    /* Mobile accessory card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+  }
+
+  .accessory-card:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 640px) {
+  .accessories-section {
+    padding: 1.8rem 0.8rem;
+  }
+
+  .accessories-title {
+    /* Small mobile accessories title using typography scale */
+    font-size: var(--text-xl);
+    margin-bottom: 1rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 500px;
+  }
+
+  .accessory-card {
+    padding: 1rem;
+  }
+
+  .accessory-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .accessory-card h3 {
+    /* Small mobile accessory card heading using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 0.2rem;
+  }
+
+  .accessory-card p {
+    /* Small mobile accessory card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+  }
+
+  .accessory-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .accessories-section {
+    padding: 1.5rem 0.6rem;
+  }
+
+  .accessories-title {
+    /* Extra small mobile accessories title using typography scale */
+    font-size: var(--text-lg);
+    margin-bottom: 0.8rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    max-width: 400px;
+  }
+
+  .accessory-card {
+    padding: 0.8rem;
+  }
+
+  .accessory-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .accessory-card h3 {
+    /* Extra small mobile accessory card heading using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 0.2rem;
+  }
+
+  .accessory-card p {
+    /* Extra small mobile accessory card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+  }
+
+  /* Reduce hover effect on small mobile screens */
+  .accessory-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+  .accessories-section {
+    padding: 1.2rem 0.4rem;
+  }
+
+  .accessories-title {
+    /* Tiny mobile accessories title using typography scale */
+    font-size: var(--text-base);
+    margin-bottom: 0.6rem;
+  }
+
+  .accessory-grid {
+    gap: 0.6rem;
+    max-width: 300px;
+  }
+
+  .accessory-card {
+    padding: 0.6rem;
+  }
+
+  .accessory-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .accessory-card h3 {
+    /* Tiny mobile accessory card heading using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 0.1rem;
+  }
+
+  .accessory-card p {
+    /* Tiny mobile accessory card text using typography scale */
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+  }
+
+  /* Disable hover effect on very small screens */
+  .accessory-card:hover {
+    transform: none;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .accessories-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .accessories-title {
+    /* Landscape mobile accessories title using typography scale */
+    font-size: var(--text-sm);
+    margin-bottom: 0.5rem;
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .accessory-card {
+    padding: 0.5rem;
+  }
+
+  .accessory-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .accessory-card h3 {
+    /* Landscape mobile accessory card heading using typography scale */
+    font-size: var(--text-xs);
+    margin-bottom: 0.1rem;
+  }
+
+  .accessory-card p {
+    /* Landscape mobile accessory card text using typography scale */
+    font-size: var(--text-xs);
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .accessory-card {
+    transition: none;
+  }
+
+  .accessory-card:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .accessory-card {
+    border: 2px solid #333;
+  }
+
+  .accessories-title {
+    color: #000;
+  }
+
+  .accessory-card h3 {
+    color: #000;
+  }
+
+  .accessory-card p {
+    color: #333;
+  }
+}
+
+  .accessory-card p {
+    color: #333;
+  }
+}

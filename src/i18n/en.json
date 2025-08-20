@@ -7,7 +7,9 @@
     "about": "About Company",
     "contact": "Contact",
     "language": "Language",
-    "catalog": "Catalog"
+    "catalog": "Catalog",
+    "logo_alt": "Vero Ceilings Logo",
+    "home": "Home"
   },
   "welcome": "Welcome to Vero Ceilings",
   "whyus": {
@@ -248,7 +250,8 @@
     "story_title": "Vero Ceilings: Elevating Spaces with a Decade of Excellence.",
     "story_text": "Vero Ceilings is one of the divisions of the Vero Group Companies, which produces ceilings, MDF decor, ARMSTRONG suspended ceilings and also sells its products in 14 regions of Uzbekistan. Vero Ceilings doesn't just make ceilings; ahe creates architectural masterpieces. The product range includes innovative acoustic and aesthetic ceiling designs, as well as advanced solutions for commercial and residential applications. With a commitment to excellence, Vero Ceilings provides not only visually impressive options, but also functional solutions, ensuring that their ceilings meet the diverse needs of modern construction. Vero Ceilings provides a list of services provided: design, measurements, installation, delivery. The main goal of Vero Ceilings is to provide consumers with high-quality, safe branded products made from the best raw materials.",
     "vision_title": "Vero Group's Vision: A Decade of Success, A Future of Excellence",
-    "vision_text": "After nearly a decade of growth, Vero Group has secured its position in the market, earning trust through high-quality products. Not only recognized in Uzbekistan, Vero Group stands out for rapid development and connecting consumers with modern living. Vero Ceilings, a division of Vero Group, produces exceptional ceilings in four Uzbek regions, employing 1700 factory workers. Offering benefits for loyal customers, the company provides free measurement services and delivery for orders exceeding 100 square meters. Over the years, Vero has achieved milestones, including a visit by the President of Uzbekistan, Shavkat Mirziyeev, who praised the company's work.Actively participating in international exhibitions, such as 'Aquatherm Tashkent 2017' and 'ShymkentBuild 2018,' Vero has earned certificates for its outstanding contributions to the industry. As Vero Group looks towards the future, it remains dedicated to excellence and aims to contribute significantly to the global construction industry."
+    "vision_text": "After nearly a decade of growth, Vero Group has secured its position in the market, earning trust through high-quality products. Not only recognized in Uzbekistan, Vero Group stands out for rapid development and connecting consumers with modern living. Vero Ceilings, a division of Vero Group, produces exceptional ceilings in four Uzbek regions, employing 1700 factory workers. Offering benefits for loyal customers, the company provides free measurement services and delivery for orders exceeding 100 square meters. Over the years, Vero has achieved milestones, including a visit by the President of Uzbekistan, Shavkat Mirziyeev, who praised the company's work.Actively participating in international exhibitions, such as 'Aquatherm Tashkent 2017' and 'ShymkentBuild 2018,' Vero has earned certificates for its outstanding contributions to the industry. As Vero Group looks towards the future, it remains dedicated to excellence and aims to contribute significantly to the global construction industry.",
+    "story_image_alt": "Our Story Image"
   },
   "faq": {
     "title": "Frequently Asked Questions",
