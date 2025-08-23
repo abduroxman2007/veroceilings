@@ -27,7 +27,6 @@ const AboutUs = () => {
     const { t } = useTranslation();
 
     const breadcrumbs = [
-        { text: t('navbar.about'), link: '/' },
         { text: t('navbar.about') },
     ];
 
@@ -35,7 +34,7 @@ const AboutUs = () => {
 
         <main>
             <PageHeader
-                title={t('contact.page_title')}
+                title={t('about.page_title')}
                 breadcrumbs={breadcrumbs}
                 backgroundImage={slider}
             />

@@ -19,7 +19,7 @@
 }
 
 .footer-column h5 {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--color-primary);
@@ -87,7 +87,7 @@
 
 .social-icons a {
   color: var(--color-text-light);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   transition: color 0.2s;
 }
 

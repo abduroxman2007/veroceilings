@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { FaHome } from 'react-icons/fa';
 import '../styles/page-header.css';
 
 const PageHeader = ({ title, breadcrumbs, backgroundImage }) => {
+  const { t } = useTranslation();
   return (
     <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
       <div className="carousel-inner">
@@ -16,7 +18,7 @@ const PageHeader = ({ title, breadcrumbs, backgroundImage }) => {
                   <li>
                     <Link to="/">
                       <FaHome />
-                      &nbsp;Home&nbsp;/&nbsp;
+                      &nbsp;{t('navbar.home')}&nbsp;/&nbsp;
                     </Link>
                   </li>
                   {breadcrumbs.map((crumb, index) => (

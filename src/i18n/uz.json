@@ -8,7 +8,8 @@
     "contact": "Bog'lanish",
     "language": "Til",
     "catalog": "Katalog",
-    "logo_alt": "Vero Ceilings Logotipi"
+    "logo_alt": "Vero Ceilings Logotipi",
+    "home": "Bosh sahifa"
   },
   "welcome": "Vero Ceilings ga xush kelibsiz",
   "whyus": {
@@ -27,6 +28,11 @@
         "title": "15 yillik kafolat",
         "description": "Bizning sifatga bo'lgan sodiqligimiz 15 yillik kafolat bilan tasdiqlangan bo'lib, sizga xotirjamlik va mahsulotlarimizga ishonch bag'ishlaydi."
       }
+    },
+    "start_trial_button": "LOYIHANGIZNI BOSHLANG",
+    "impact_ceilings": {
+      "title": "100+ yuqori samarali shiftlar",
+      "description": "Vero bugungi bozordagi asosiy uslublarni o'z ichiga olgan 100 dan ortiq shift dizaynini taklif etadi. Siz uy egasi yoki tajribali mutaxassis bo'lishingizdan qat'i nazar, bizning turli xil uslubdagi mahsulotlarimizning keng assortimenti sizning tasavvuringizni zudlik bilan va raqobatbardosh tarzda qo'llashga yordam beradigan amaliy, amaliy echimlarni taqdim etadi."
     }
   },
   "hero": {
@@ -144,6 +150,10 @@
         "length": "25-50 m"
       }
     },
+    "paneli": {
+      "title": "Panellar",
+      "description": "Turli xil ilovalar uchun yuqori sifatli panellar."
+    },
     "specs_title": "Texnik xususiyatlari",
     "spec_keys": {
         "durability": "Chidamlilik",
@@ -203,17 +213,7 @@
       "projects": "Loyihalar",
       "contact": "Bog'lanish"
     },
-    "product_detail": {
-      "dimensions": "O'lchamlari",
-      "product": "Mahsulot",
-      "size": "Hajmi",
-      "name": "Nomi",
-      "width": "Kengligi",
-      "height": "Balandligi",
-      "length": "Uzunligi",
-      "application_cases": "Qo'llash sohalari"
-    },
-      "footer_products": {
+    "products": {
       "title": "Mahsulotlar",
       "metal_armstrong": {
         "title": "Metall Armstrong"
@@ -248,6 +248,10 @@
   },
   "about": {
     "page_title": "Biz haqimizda",
+    "title": "Kompaniyamiz haqida",
+    "paragraph1": "Vero Ceilings - yuqori sifatli shift echimlarining etakchi yetkazib beruvchisi. Biz mijozlarimizga eng yaxshi mahsulotlar va xizmatlarni taqdim etishga intilamiz.",
+    "paragraph2": "Kompaniyamiz 2014-yilda tashkil etilgan va o'shandan beri yuqori darajadagi shift echimlarini taqdim etib kelmoqda. Bizda o'z ishiga ishtiyoqli tajribali mutaxassislar jamoasi mavjud.",
+    "paragraph3": "Biz mijozlarimizning ehtiyojlarini qondirish uchun keng turdagi mahsulotlarni taklif etamiz. Oddiy yoki murakkab shiftli echim izlayotganingizdan qat'i nazar, biz sizga yordam beramiz.",
     "intro_title": "«Vero Group» kompaniyalar guruhi Sizga o'z hurmatini bildiradi!",
     "intro_text": "2014-yilda tashkil etilgan «Vero Group» kompaniyalar guruhi. Xolding tarkibiga keng turdagi qurilish materiallari ishlab chiqarishga ixtisoslashgan 10 dan ortiq kompaniya kiradi. «Vero Group» kompaniyalar guruhi zamonaviy uskunalar va ilg'or texnologiyalardan foydalangan holda o'z assortimentini doimiy ravishda kengaytirib bormoqda, yuqori sifat standartlariga amal qiladi, xalqaro sertifikatlarga ega va turli qurilish sohalari uchun ideal bo'lgan ekologik toza mahsulotlar ishlab chiqaradi.",
     "counter1_title": "Zavod ishchilari",
@@ -287,6 +291,9 @@
       "question": "Maxsus dizayn echimlarini taklif qilasizmi?",
       "answer": "Ha, biz maxsus dizayn echimlariga ixtisoslashganmiz. Bizning jamoamiz arxitektorlar va dizaynerlar bilan yaqindan hamkorlik qilib, muayyan loyiha ehtiyojlariga javob beradigan noyob shift tizimlarini yaratadi."
     }
+  },
+  "projects": {
+    "page_title": "Bizning loyihalarimiz"
   },
   "architects": {
     "page_title": "Arxitektorlar uchun",
@@ -336,6 +343,19 @@
     "status_sending": "Xabar yuborilmoqda...",
     "status_success": "Xabaringiz uchun rahmat! Tez orada siz bilan bog'lanamiz.",
     "status_error": "Xabarni yuborib bo'lmadi. Iltimos, qaytadan urunib ko'ring.",
-    "status_error_generic": "Xatolik yuz berdi. Iltimos, qaytadan urunib ko'ring."
+    "status_error_generic": "Xatolik yuz berdi. Iltimos, qaytadan urunib ko'ring.",
+    "title": "BIZ BILAN BOG'LANISH",
+    "subtitle": "Biz bilan aloqada bo'lishdan tortinmang!",
+    "phone": "+998 (90) 098 11 10",
+    "email": "info@company.com",
+    "website": "www.company.com",
+    "form": {
+      "name": "Sizning ismingiz",
+      "phone": "Sizning telefoningiz",
+      "email": "Sizning elektron pochtangiz",
+      "subject": "Mavzu",
+      "message": "Xabar",
+      "send": "XABARNI YUBORISH"
+    }
   }
 }

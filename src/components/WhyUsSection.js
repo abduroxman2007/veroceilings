@@ -73,12 +73,9 @@ const ExpertSection = () => {
           <button className="start-trial">{t('whyus.start_trial_button')}</button>
         </div>
         <div className="feature short-wide">
-          <h3>100+ High Impact Ceilings</h3>
+          <h3>{t('whyus.impact_ceilings.title')}</h3>
           <p>
-            Vero offers over 100 courses that cover essential skills in today’s tech industry.
-            Whether you’re a beginner or an experienced professional, our courses in web development,
-            data science, and cybersecurity provide practical, hands-on learning to help you apply your
-            skills immediately & competitively.
+            {t('whyus.impact_ceilings.description')}
           </p>
         </div>
       </div>

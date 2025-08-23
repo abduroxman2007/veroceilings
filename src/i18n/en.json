@@ -28,6 +28,11 @@
         "title": "15-Year Guarantee",
         "description": "Our commitment to quality is backed by a 15-year guarantee, giving you peace of mind and confidence in our products."
       }
+    },
+    "start_trial_button": "START YOUR PROJECT",
+    "impact_ceilings": {
+      "title": "100+ High Impact Ceilings",
+      "description": "Vero offers over 100 ceiling designs that cover essential styles in today’s market. Whether you’re a home owner or an experienced professional, our wide range of products in various styles provide practical, hands-on solutions to help you apply your vision immediately & competitively."
     }
   },
   "hero": {
@@ -145,6 +150,10 @@
         "length": "25-50 m"
       }
     },
+    "paneli": {
+      "title": "Paneli",
+      "description": "High-quality panels for various applications."
+    },
     "specs_title": "Specifications",
     "spec_keys": {
         "durability": "Durability",
@@ -239,6 +248,10 @@
   },
   "about": {
     "page_title": "About Us",
+    "title": "About Our Company",
+    "paragraph1": "Vero Ceilings is a leading provider of high-quality ceiling solutions. We are dedicated to providing our customers with the best products and services.",
+    "paragraph2": "Our company was founded in 2014 and has been providing top-notch ceiling solutions ever since. We have a team of experienced professionals who are passionate about their work.",
+    "paragraph3": "We offer a wide range of products to meet the needs of our customers. Whether you are looking for a simple or a complex ceiling solution, we have you covered.",
     "intro_title": "The Vero Group Group of Companies expresses its respect to you!",
     "intro_text": "Vero Group of Companies, founded in 2014. The holding includes more than 10 companies, specializing in the production of a wide range of building materials. The Vero Group of Companies is constantly expanding its range, using modern equipment and advanced technologies, adheres to high quality standards, has international certificates and produces environmentally friendly products ideal for various construction applications.",
     "counter1_title": "Factory workers",
@@ -279,6 +292,9 @@
       "question": "Do you offer custom design solutions?",
       "answer": "Yes, we specialize in custom design solutions. Our team works closely with architects and designers to create unique ceiling systems that meet specific project needs."
     }
+  },
+  "projects": {
+    "page_title": "Our Projects"
   },
   "architects": {
     "page_title": "For Architects",
@@ -328,6 +344,19 @@
     "status_sending": "Sending message...",
     "status_success": "Thank you for your message! We will get back to you soon.",
     "status_error": "Failed to send message. Please try again.",
-    "status_error_generic": "An error occurred. Please try again."
+    "status_error_generic": "An error occurred. Please try again.",
+    "title": "CONTACT US",
+    "subtitle": "Feel free to keep in touch with us!",
+    "phone": "+998 (90) 098 11 10",
+    "email": "info@company.com",
+    "website": "www.company.com",
+    "form": {
+      "name": "Your Name",
+      "phone": "Your Phone",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "SEND MESSAGE NOW"
+    }
   }
 }

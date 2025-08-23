@@ -7,7 +7,7 @@ import bgImg from '../assets/images/slider/slid3.jpg';
 function Architects() {
   const { t } = useTranslation();
 
-  const breadcrumbs = [{ text: t('navbar.architects'), link: '/architects' }];
+  const breadcrumbs = [{ text: t('navbar.architects') }];
 
   const videos = [
     {

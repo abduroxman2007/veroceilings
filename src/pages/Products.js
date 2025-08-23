@@ -11,7 +11,7 @@ function Products() {
   const { t } = useTranslation();
 
   const breadcrumbs = [
-    { text: t('navbar.products'), link: '/products' },
+    { text: t('navbar.products') },
   ];
 
   // Separate products into categories

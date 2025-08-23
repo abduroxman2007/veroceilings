@@ -6,7 +6,6 @@
 }
 
 .expert-section h2 {
-  /* Standardized section heading font size using typography scale */
   font-size: var(--text-4xl);
   font-weight: var(--font-semibold);
   margin-bottom: 50px;
@@ -37,15 +36,13 @@
 }
 
 .feature h3 {
-  /* Standardized feature heading font size using typography scale */
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: var(--font-bold);
   margin-bottom: 12px;
 }
 
 .feature p {
-  /* Standardized feature text font size using typography scale */
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: var(--font-normal);
   color: var(--color-text);
   line-height: var(--leading-normal);
@@ -72,8 +69,7 @@
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
-  /* Standardized button font size using typography scale */
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: var(--font-medium);
   cursor: pointer;
   align-self: flex-start;
@@ -98,24 +94,23 @@
 }
 
 .counter-icon {
-  font-size: 36px;
+  font-size: var(--text-4xl);
   margin-bottom: 8px;
   color: var(--color-logo);
 }
 
 .counter-number {
-  /* Standardized counter number font size using typography scale */
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-weight: var(--font-bold);
   color: var(--color-logo);
 }
 
 .counter-text {
-  /* Standardized counter text font size using typography scale */
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: var(--font-medium);
   margin-top: 6px;
 }
+
 
 /* Enhanced responsive design with better breakpoints and mobile optimization */
 

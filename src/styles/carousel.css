@@ -53,15 +53,13 @@
 }
 
 .hero-title {
-  /* Standardized hero title font size using typography scale */
   font-size: var(--text-5xl);
   font-weight: var(--font-bold);
   margin-bottom: 10px;
 }
 
 .hero-subtitle {
-  /* Standardized hero subtitle font size */
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: var(--font-normal);
   margin-bottom: 20px;
 }
@@ -73,11 +71,11 @@
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  /* Standardized hero button font size and weight */
-  font-size: var(--text-sm);
+  font-size: var(--text-lg);
   font-weight: var(--font-semibold);
   transition: background-color 0.3s ease;
 }
+
 
 .hero-button:hover {
   background-color: var(--color-hover);

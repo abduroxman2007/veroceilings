@@ -17,15 +17,15 @@ import aquaPanelImg from '../assets/images/products/paneli/aqua-panel1.jpg';
 
 const products = [
   { key: 'grilyato', image: grilyatoImg },
-  { key: 'gypsum_armstrong', image: gypsumArmstrongImg },
-  { key: 'metal_armstrong', image: metalArmstrongImg },
-  { key: 'washing_armstrong', image: washingArmstrongImg },
-  { key: 'reyechniy', image: reyechniyImg },
-  { key: 't_profil', image: tProfilImg },
-  { key: 'l_profil', image: lProfilImg },
+  { key: 'gypsumarmstrong', image: gypsumArmstrongImg },
+  { key: 'metalarmstrong', image: metalArmstrongImg },
+  { key: 'washingarmstrong', image: washingArmstrongImg },
+  { key: 'slatceiling', image: reyechniyImg },
+  { key: 't-profil', image: tProfilImg },
+  { key: 'l-profil', image: lProfilImg },
   { key: 'stringer', image: stringerImg },
-  { key: 'honeycomb', image: honeycombImg },
-  { key: 'aqua_panel', image: aquaPanelImg },
+  { key: 'hexagon-wall-decor', image: honeycombImg },
+  { key: 'paneli', image: aquaPanelImg },
 ];
 
 const Products = () => {
@@ -34,7 +34,7 @@ const Products = () => {
   return (
     <section className="carousel-section">
       <h2 className="carousel-title">
-        <FaCube className="carousel-icon" /> {t('products.title')}
+        <FaCube className="carousel-icon" /> {t('products.products_section_title')}
       </h2>
       <div className="carousel-wrapper">
         <div className="carousel-track">
