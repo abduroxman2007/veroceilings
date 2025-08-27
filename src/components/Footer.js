@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import '../styles/footer.css';
@@ -13,30 +14,31 @@ const Footer = () => {
           <div className="footer-column">
             <h5>{t('footer.links.title')}</h5>
             <ul>
-              <li><a href="/">{t('footer.links.home')}</a></li>
-              <li><a href="/about">{t('footer.links.about')}</a></li>
-              <li><a href="/products">{t('footer.links.products')}</a></li>
-              <li><a href="/gallery">{t('footer.links.projects')}</a></li>
-              <li><a href="/contact">{t('footer.links.contact')}</a></li>
+              <li><Link to="/">{t('footer.links.home')}</Link></li>
+              <li><Link to="/about">{t('footer.links.about')}</Link></li>
+              <li><Link to="/products">{t('footer.links.products')}</Link></li>
+              <li><Link to="/projects">{t('footer.links.projects')}</Link></li>
+              <li><Link to="/contact">{t('footer.links.contact')}</Link></li>
             </ul>
           </div>
           <div className="footer-column">
             <h5>{t('footer.products.title')}</h5>
             <ul>
-              <li><a href="/products/metal-armstrong">{t('footer.products.metal_armstrong.title')}</a></li>
-              <li><a href="/products/gypsum-armstrong">{t('footer.products.gypsum_armstrong.title')}</a></li>
-              <li><a href="/products/washing-armstrong">{t('footer.products.washing_armstrong.title')}</a></li>
-              <li><a href="/products/grilyato">{t('footer.products.grilyato.title')}</a></li>
-              <li><a href="/products/slat-ceiling">{t('footer.products.slat_ceiling.title')}</a></li>
+              <li><Link to="/products/metalarmstrong">{t('footer.products.metal_armstrong.title')}</Link></li>
+              <li><Link to="/products/gypsumarmstrong">{t('footer.products.gypsum_armstrong.title')}</Link></li>
+              <li><Link to="/products/washingarmstrong">{t('footer.products.washing_armstrong.title')}</Link></li>
+              <li><Link to="/products/grilyato">{t('footer.products.grilyato.title')}</Link></li>
+              <li><Link to="/products/slatceiling">{t('footer.products.slat_ceiling.title')}</Link></li>
             </ul>
           </div>
           <div className="footer-column">
             <h5>{t('footer.contact.title')}</h5>
             <ul>
               <li>{t('footer.contact.address')}</li>
-              <li><a href="tel:+998900981110">{t('footer.contact.phone1')}</a></li>
-              <li><a href="tel:+998901091110">{t('footer.contact.phone2')}</a></li>
-              <li><a href="mailto:veroceilingsuz@gmail.com">{t('footer.contact.email')}</a></li>
+              <li><a href={`tel:${t('footer.contact.phone1')}`}>{t('footer.contact.phone1')}</a></li>
+              <li><a href={`tel:${t('footer.contact.phone2')}`}>{t('footer.contact.phone2')}</a></li>
+              <li><a href={`mailto:${t('footer.contact.email')}`}>{t('footer.contact.email')}</a></li>
+              <li><a href={`http://${t('footer.contact.website')}`}>{t('footer.contact.website')}</a></li>
             </ul>
           </div>
           <div className="footer-column">

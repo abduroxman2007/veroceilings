@@ -234,9 +234,10 @@
     "contact": {
       "title": "Контакты",
       "address": "Ташкент, Чиланзар, Чорбог 27.",
-      "phone1": "+998 (90) 098 11 10",
-      "phone2": "+998 (90) 109 11 10",
-      "email": "veroceilingsuz@gmail.com"
+      "phone1": "+99878 333 73 77",
+      "phone2": "+998 90 049 11 10",
+      "email": "veroceiling@gmail.com",
+      "website": "veroceilings.uz"
     },
     "newsletter": {
       "title": "Подпишитесь на нашу рассылку",
@@ -347,9 +348,9 @@
     "status_error_generic": "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
     "title": "СВЯЖИТЕСЬ С НАМИ",
     "subtitle": "Не стесняйтесь поддерживать с нами связь!",
-    "phone": "+998 (90) 098 11 10",
-    "email": "info@company.com",
-    "website": "www.company.com",
+    "phone": "+99878 333 73 77",
+    "email": "veroceiling@gmail.com",
+    "website": "veroceilings.uz",
     "form": {
       "name": "Ваше имя",
       "phone": "Ваш телефон",

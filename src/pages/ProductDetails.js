@@ -109,7 +109,7 @@ function ProductDetails() {
         </div>
       )}
 
-      {product.video && (
+      {/* {product.video && (
         <div className="video-installation-section">
           <h2>{t('products.video_installation_title')}</h2>
           <div className="video-container">
@@ -122,7 +122,7 @@ function ProductDetails() {
             ></iframe>
           </div>
         </div>
-      )}
+      )} */}
 
       {relatedProducts && relatedProducts.length > 0 && (
         <div className="related-products-section">

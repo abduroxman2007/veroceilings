@@ -234,9 +234,10 @@
     "contact": {
       "title": "Contact",
       "address": "Tashkent, Chilanzar, Chorbog 27.",
-      "phone1": "+998 (90) 098 11 10",
-      "phone2": "+998 (90) 109 11 10",
-      "email": "veroceilingsuz@gmail.com"
+      "phone1": "+99878 333 73 77",
+      "phone2": "+998 90 049 11 10",
+      "email": "veroceiling@gmail.com",
+      "website": "veroceilings.uz"
     },
     "newsletter": {
       "title": "Subscribe to our newsletter",
@@ -347,9 +348,9 @@
     "status_error_generic": "An error occurred. Please try again.",
     "title": "CONTACT US",
     "subtitle": "Feel free to keep in touch with us!",
-    "phone": "+998 (90) 098 11 10",
-    "email": "info@company.com",
-    "website": "www.company.com",
+    "phone": "+99878 333 73 77",
+    "email": "veroceiling@gmail.com",
+    "website": "veroceilings.uz",
     "form": {
       "name": "Your Name",
       "phone": "Your Phone",

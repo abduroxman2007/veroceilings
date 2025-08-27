@@ -50,11 +50,11 @@ function Navbar() {
               {t("navbar.projects")}
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/architects" className="nav-link" onClick={closeMenu}>
               {t("navbar.architects")}
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link to="/about" className="nav-link" onClick={closeMenu}>
               {t("navbar.about")}
