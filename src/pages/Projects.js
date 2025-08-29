@@ -23,7 +23,8 @@ import 'lightgallery/css/lg-share.css';
 import '../styles/projects-page.css';
 
 // Image imports
-import airportproject from '../assets/images/project gallery/airportproject.jpg';
+import airportproject from '../assets/images/slider/slid6.jpg';
+
 import educationalproject from '../assets/images/project gallery/educationalproject.png';
 import hotel from '../assets/images/project gallery/hotel.jpg';
 import officearmstrong from '../assets/images/project gallery/office-armstrong.jpg';
@@ -61,7 +62,7 @@ function Projects() {
   }, []);
 
   const breadcrumbs = [
-    { text: t('navbar.home'), link: '/' },
+    // { text: t('navbar.home'), link: '/' },
     { text: t('navbar.projects') },
   ];
 

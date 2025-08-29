@@ -48,7 +48,7 @@ const AboutUs = () => {
                             <img src={aboutImg0} alt="Vero Group Factory" className="img-fluid small-image-left" />
                         </div>
                         <div className="col-md-4">
-                            <img src={aboutImg2} alt="Vero Group Leadership" className="img-fluid small-image-right" />
+                            <img src={aboutImg6} alt="Vero Group Leadership" className="img-fluid small-image-right" />
                         </div>
                     </div>
 

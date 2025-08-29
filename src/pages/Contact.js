@@ -4,13 +4,13 @@ import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 import '../styles/contact-page.css';
-import slid9 from '../assets/images/slider/slid9.png'; // Ensure path is correct
+import slid9 from '../assets/images/slider/slid10.png'; // Ensure path is correct
 
 function Contact() {
   const { t } = useTranslation();
 
   const breadcrumbs = [
-    { text: t('navbar.home'), link: '/' },
+    // { text: t('navbar.home'), link: '/' },
     { text: t('navbar.contact') },
   ];
 

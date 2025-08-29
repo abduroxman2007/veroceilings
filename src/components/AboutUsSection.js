@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import '../styles/about-us.css';
 
 // Image Imports
-import storyImage from '../assets/images/aboutus/au1.jpg';
+import storyImage from '../assets/images/aboutus/au0.jpg';
 
 const AboutUsSection = () => {
   const { t } = useTranslation();
