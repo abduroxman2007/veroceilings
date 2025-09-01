@@ -68,9 +68,15 @@ function Navbar() {
         </ul>
       </nav>
       <div className="navbar-right">
-        <a href="/catalog.pdf" className="catalog-button">
+        <a
+          href="/catalog.pdf"
+          className="catalog-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {t("navbar.catalog")}
         </a>
+
         <LanguageSwitcher
           dropdown
           label={<span className="lang-switcher-label">{t("navbar.language")}</span>}
