@@ -44,8 +44,8 @@ const Footer = () => {
           <div className="footer-column">
             <h5>{t('footer.newsletter.title')}</h5>
             <p>{t('footer.newsletter.description')}</p>
-            <form>
-              <input type="email" placeholder={t('footer.newsletter.placeholder')} />
+            <form action="https://formsubmit.co/veroceiling@gmail.com" method="POST">
+              <input type="email" name="email" placeholder={t('footer.newsletter.placeholder')} required />
               <button type="submit">{t('footer.newsletter.button')}</button>
             </form>
           </div>

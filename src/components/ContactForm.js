@@ -21,16 +21,16 @@ function ContactForm() {
 
         {/* Right Side - Form */}
         <div className="contact-form">
-          <form>
+          <form action="https://formsubmit.co/veroceiling@gmail.com" method="POST">
             <div className="form-row">
-              <input type="text" placeholder={t('contact.form.name')} />
-              <input type="text" placeholder={t('contact.form.phone')} />
+              <input type="text" name="name" placeholder={t('contact.form.name')} required />
+              <input type="text" name="phone" placeholder={t('contact.form.phone')} required />
             </div>
             <div className="form-row">
-              <input type="email" placeholder={t('contact.form.email')} />
-              <input type="text" placeholder={t('contact.form.subject')} />
+              <input type="email" name="email" placeholder={t('contact.form.email')} required />
+              <input type="text" name="subject" placeholder={t('contact.form.subject')} required />
             </div>
-            <textarea placeholder={t('contact.form.message')}></textarea>
+            <textarea name="message" placeholder={t('contact.form.message')}></textarea>
             <button type="submit">{t('contact.form.send')}</button>
           </form>
         </div>

@@ -22,11 +22,11 @@ const HomeContactSection = () => {
           <div className="contact-form">
             <h3>{t('home_contact.form_title')}</h3>
             <p>{t('home_contact.form_description')}</p>
-            <form>
-              <input type="text" placeholder={t('home_contact.name_placeholder')} />
-              <input type="email" placeholder={t('home_contact.email_placeholder')} />
-              <input type="text" placeholder={t('home_contact.subject_placeholder')} />
-              <textarea placeholder={t('home_contact.message_placeholder')}></textarea>
+            <form action="https://formsubmit.co/veroceiling@gmail.com" method="POST">
+              <input type="text" name="name" placeholder={t('home_contact.name_placeholder')} required />
+              <input type="email" name="email" placeholder={t('home_contact.email_placeholder')} required />
+              <input type="text" name="subject" placeholder={t('home_contact.subject_placeholder')} required />
+              <textarea name="message" placeholder={t('home_contact.message_placeholder')}></textarea>
               <button type="submit">{t('home_contact.button')}</button>
             </form>
           </div>
