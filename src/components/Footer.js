@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTelegram } from 'react-icons/fa';
 import '../styles/footer.css';
 
 const Footer = () => {
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="footer-column">
             <h5>{t('footer.newsletter.title')}</h5>
             <p>{t('footer.newsletter.description')}</p>
-            <form action="https://formsubmit.co/veroceiling@gmail.com" method="POST">
+            <form action="https://formsubmit.co/veroceiling.ft@gmail.com" method="POST">
               <input type="email" name="email" placeholder={t('footer.newsletter.placeholder')} required />
               <button type="submit">{t('footer.newsletter.button')}</button>
             </form>
@@ -53,9 +53,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Vero Ceiling Company, Inc. {t('footer.rights')}</p>
           <div className="social-icons">
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaFacebook /></a>
+            <a href="https://t.me/VeroCeilings"><FaTelegram /></a>
+            <a href="https://www.instagram.com/vero_ceiling.uz/"><FaInstagram /></a>
+            <a href="https://www.facebook.com/people/Vero-Rasmiy-sahifa/61554402564771/"><FaFacebook /></a>
           </div>
         </div>
       </div>

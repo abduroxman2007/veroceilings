@@ -21,7 +21,7 @@ function ContactForm() {
 
         {/* Right Side - Form */}
         <div className="contact-form">
-          <form action="https://formsubmit.co/veroceiling@gmail.com" method="POST">
+          <form action="https://formsubmit.co/veroceiling.ft@gmail.com" method="POST">
             <div className="form-row">
               <input type="text" name="name" placeholder={t('contact.form.name')} required />
               <input type="text" name="phone" placeholder={t('contact.form.phone')} required />
