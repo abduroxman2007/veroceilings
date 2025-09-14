@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css"
 import { useTranslation } from "react-i18next"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -14,7 +15,19 @@ import Footer from "./components/Footer"
 import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  useEffect(() => {
+    document.title = t("seo.title")
+    const descriptionMeta = document.querySelector('#meta-description');
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute('content', t('seo.description'));
+    }
+    const keywordsMeta = document.querySelector('#meta-keywords');
+    if (keywordsMeta) {
+      keywordsMeta.setAttribute('content', t('seo.keywords'));
+    }
+  }, [i18n.language, t]);
 
   return (
     <Router>
