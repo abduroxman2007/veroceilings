@@ -1,94 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import '../styles/faq.css';
+import PageHeader from '../components/PageHeader';
+import FAQSection from '../components/FAQ';
+import ContactForm from '../components/ContactForm';
+import bgImg from '../assets/images/slider/slid4.jpg';
 
-const FAQ = () => {
+/**
+ * The /faq route previously carried its own copy of the accordion markup, but
+ * that copy built its data as { questionKey, answerKey } while rendering
+ * {faq.question} / {faq.answer} — so every question and answer rendered empty,
+ * and each item's React key was undefined. It also had no <h1>.
+ *
+ * Reusing the working <FAQ /> component removes the duplicated markup and the
+ * bug with it; PageHeader supplies the single <h1> the route was missing.
+ */
+const FAQPage = () => {
   const { t } = useTranslation();
-  const [activeFAQ, setActiveFAQ] = useState(null);
 
-  const faqData = [
-    { questionKey: 'faq.q1.question', answerKey: 'faq.q1.answer' },
-    { questionKey: 'faq.q2.question', answerKey: 'faq.q2.answer' },
-    { questionKey: 'faq.q3.question', answerKey: 'faq.q3.answer' },
-    { questionKey: 'faq.q4.question', answerKey: 'faq.q4.answer' },
-    { questionKey: 'faq.q5.question', answerKey: 'faq.q5.answer' },
-    { questionKey: 'faq.q6.question', answerKey: 'faq.q6.answer' },
+  const breadcrumbs = [
+    { text: t('faq.title') },
   ];
 
-  const toggleFAQ = (id) => {
-    setActiveFAQ(activeFAQ === id ? null : id);
-  };
-
-  const leftColumnFAQs = faqData.slice(0, 3);
-  const rightColumnFAQs = faqData.slice(3, 6);
-
   return (
-    <section className="faq-section" id="faq">
-      <div className="faq-container">
-        <div className="faq-header">
-          <h2>{t('faq.title')}</h2>
-        </div>
-        
-        <div className="faq-grid">
-          {/* Left Column */}
-          <div className="faq-column">
-            {leftColumnFAQs.map((faq) => (
-              <div
-                key={faq.id}
-                className={`faq-item ${activeFAQ === faq.id ? 'active' : ''}`}
-              >
-                <button
-                  className="faq-question"
-                  onClick={() => toggleFAQ(faq.id)}
-                  aria-expanded={activeFAQ === faq.id}
-                  aria-controls={`faq-answer-${faq.id}`}
-                >
-                  <h3>{faq.question}</h3>
-                  <div className="faq-toggle" aria-hidden="true"></div>
-                </button>
-                <div
-                  id={`faq-answer-${faq.id}`}
-                  className="faq-answer"
-                  role="region"
-                  aria-labelledby={`faq-question-${faq.id}`}
-                >
-                  <p>{faq.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column */}
-          <div className="faq-column">
-            {rightColumnFAQs.map((faq) => (
-              <div
-                key={faq.id}
-                className={`faq-item ${activeFAQ === faq.id ? 'active' : ''}`}
-              >
-                <button
-                  className="faq-question"
-                  onClick={() => toggleFAQ(faq.id)}
-                  aria-expanded={activeFAQ === faq.id}
-                  aria-controls={`faq-answer-${faq.id}`}
-                >
-                  <h3>{faq.question}</h3>
-                  <div className="faq-toggle" aria-hidden="true"></div>
-                </button>
-                <div
-                  id={`faq-answer-${faq.id}`}
-                  className="faq-answer"
-                  role="region"
-                  aria-labelledby={`faq-question-${faq.id}`}
-                >
-                  <p>{faq.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+    <>
+      <PageHeader
+        title={t('faq.page_title')}
+        breadcrumbs={breadcrumbs}
+        backgroundImage={bgImg}
+      />
+      <FAQSection />
+      <ContactForm />
+    </>
   );
 };
 
-export default FAQ;
+export default FAQPage;

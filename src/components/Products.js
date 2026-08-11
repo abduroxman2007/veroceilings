@@ -40,14 +40,14 @@ const Products = () => {
         <div className="carousel-track">
           {products.map((product, index) => (
             <div className="carousel-card" key={`product-${index}`}>
-              <img src={product.image} alt={t(`products.${product.key}.title`)} />
+              <img src={product.image} alt={t(`products.${product.key}.title`)} loading="lazy" />
               <h3>{t(`products.${product.key}.title`)}</h3>
               <p>{t(`products.${product.key}.description`)}</p>
             </div>
           ))}
           {products.map((product, index) => (
             <div className="carousel-card" key={`product-duplicate-${index}`}>
-              <img src={product.image} alt={t(`products.${product.key}.title`)} />
+              <img src={product.image} alt={t(`products.${product.key}.title`)} loading="lazy" />
               <h3>{t(`products.${product.key}.title`)}</h3>
               <p>{t(`products.${product.key}.description`)}</p>
             </div>

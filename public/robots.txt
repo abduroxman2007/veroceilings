@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Yandex handles a large share of Russian-language search in Uzbekistan.
+User-agent: Yandex
+Allow: /
+
+Host: https://veroceilings.uz
+
+Sitemap: https://veroceilings.uz/sitemap.xml

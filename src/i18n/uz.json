@@ -264,9 +264,11 @@
     "story_title": "Vero Ceilings: O'n yillik mukammallik bilan makonlarni yuksaltirish.",
     "story_text": "Vero Ceilings «Vero Group» kompaniyalar guruhining bo'linmalaridan biri bo'lib, u shiftlar, MDF dekorlari, ARMSTRONG osma shiftlarini ishlab chiqaradi va o'z mahsulotlarini O'zbekistonning 14 viloyatida sotadi. Vero Ceilings shunchaki shiftlar ishlab chiqarmaydi; u me'moriy durdonalar yaratadi. Mahsulotlar assortimenti innovatsion akustik va estetik shift dizaynlarini, shuningdek, tijorat va turar-joy binolari uchun ilg'or echimlarni o'z ichiga oladi. Mukammallikka intilib, Vero Ceilings nafaqat vizual jihatdan ta'sirchan variantlarni, balki funktsional echimlarni ham taqdim etadi, bu ularning shiftlari zamonaviy qurilishning turli ehtiyojlarini qondirishini ta'minlaydi. Vero Ceilings ko'rsatiladigan xizmatlar ro'yxatini taqdim etadi: dizayn, o'lchovlar, o'rnatish, yetkazib berish. Vero Ceilingsning asosiy maqsadi iste'molchilarga eng yaxshi xom ashyolardan tayyorlangan yuqori sifatli, xavfsiz markali mahsulotlarni taqdim etishdir.",
     "vision_title": "Vero Groupning qarashlari: O'n yillik muvaffaqiyat, kelajakdagi mukammallik",
-    "vision_text": "Deyarli o'n yillik o'sishdan so'ng, Vero Group yuqori sifatli mahsulotlar orqali ishonch qozonib, bozorda o'z o'rnini mustahkamladi. Nafaqat O'zbekistonda tan olingan, Vero Group tez rivojlanishi va iste'molchilarni zamonaviy hayot bilan bog'lashi bilan ajralib turadi. Vero Groupning bo'linmasi bo'lgan Vero Ceilings O'zbekistonning to'rtta viloyatida 1700 nafar zavod ishchisini ish bilan ta'minlab, ajoyib shiftlar ishlab chiqaradi. Sodiq mijozlar uchun imtiyozlar taklif qilib, kompaniya 100 kvadrat metrdan ortiq buyurtmalar uchun bepul o'lchov xizmatlari va yetkazib berishni ta'minlaydi. Yillar davomida Vero O'zbekiston Prezidenti Shavkat Mirziyoyevning tashrifi kabi muhim bosqichlarga erishdi, u kompaniyaning ishini yuqori baholadi. «Aquatherm Tashkent 2017» va «ShymkentBuild 2018» kabi xalqaro ko'rgazmalarda faol ishtirok etib, Vero sanoatga qo'shgan ulkan hissasi uchun sertifikatlarga sazovor bo'ldi. Vero Group kelajakka nazar tashlar ekan, u mukammallikka sodiq qoladi va jahon qurilish sanoatiga sezilarli hissa qo'shishni maqsad qilgan."
+    "vision_text": "Deyarli o'n yillik o'sishdan so'ng, Vero Group yuqori sifatli mahsulotlar orqali ishonch qozonib, bozorda o'z o'rnini mustahkamladi. Nafaqat O'zbekistonda tan olingan, Vero Group tez rivojlanishi va iste'molchilarni zamonaviy hayot bilan bog'lashi bilan ajralib turadi. Vero Groupning bo'linmasi bo'lgan Vero Ceilings O'zbekistonning to'rtta viloyatida 1700 nafar zavod ishchisini ish bilan ta'minlab, ajoyib shiftlar ishlab chiqaradi. Sodiq mijozlar uchun imtiyozlar taklif qilib, kompaniya 100 kvadrat metrdan ortiq buyurtmalar uchun bepul o'lchov xizmatlari va yetkazib berishni ta'minlaydi. Yillar davomida Vero O'zbekiston Prezidenti Shavkat Mirziyoyevning tashrifi kabi muhim bosqichlarga erishdi, u kompaniyaning ishini yuqori baholadi. «Aquatherm Tashkent 2017» va «ShymkentBuild 2018» kabi xalqaro ko'rgazmalarda faol ishtirok etib, Vero sanoatga qo'shgan ulkan hissasi uchun sertifikatlarga sazovor bo'ldi. Vero Group kelajakka nazar tashlar ekan, u mukammallikka sodiq qoladi va jahon qurilish sanoatiga sezilarli hissa qo'shishni maqsad qilgan.",
+    "story_image_alt": "Vero Ceilings zavodida osma shift panellari ishlab chiqarish jarayoni — Toshkent"
   },
   "faq": {
+    "page_title": "Osma shiftlar bo'yicha savol-javoblar",
     "title": "Tez-tez so'raladigan savollar",
     "q1": {
       "question": "Qanday shift turlarini taklif qilasiz?",
@@ -360,8 +362,34 @@
     }
   },
   "seo": {
-    "title": "Vero Ceilings | Toshkentda zamonaviy shift tizimlari",
-    "description": "Vero Ceiling - Toshkent va O'zbekistonda zamonaviy shift tizimlarini ishlab chiqarish va sotish. Grilyato, armstrong, reykali va dizaynerlik shiftlarining keng tanlovi.",
-    "keywords": "grilyato shift, armstrong shift, reykali shift, osma shift, shift panellari, shift sotib olish Toshkent, shift narxi O'zbekiston, dekorativ shiftlar, ofis shiftlari, metall shiftlar, akustik shiftlar, Toshkent, O'zbekiston"
+    "title": "Osma shiftlar Toshkentda — Grilyato, Armstrong | Vero",
+    "description": "Toshkent va butun O'zbekiston bo'ylab grilyato, armstrong va reykali osma shiftlar. Ishlab chiqaruvchidan to'g'ridan-to'g'ri narxlar, o'lchov, o'rnatish va yetkazib berish.",
+    "keywords": "grilyato shift, armstrong shift, reykali shift, osma shift, shift panellari, shift sotib olish Toshkent, shift narxi O'zbekiston, dekorativ shiftlar, ofis shiftlari, metall shiftlar, akustik shiftlar, Toshkent, O'zbekiston",
+    "pages": {
+      "products": {
+        "title": "Osma shift mahsulotlari — Grilyato, Armstrong | Vero",
+        "description": "Vero Ceilings mahsulotlari: grilyato, metall va gipsli armstrong, yuviladigan shiftlar, reykali shiftlar hamda T-profil, L-profil va osma tizimlari."
+      },
+      "projects": {
+        "title": "Loyihalarimiz — Osma shift o'rnatish | Vero Ceilings",
+        "description": "Aeroportlar, savdo markazlari, ofislar, mehmonxonalar va restoranlarda amalga oshirilgan osma shift loyihalarimiz galereyasi."
+      },
+      "about": {
+        "title": "Kompaniya haqida — Shift zavodi O'zbekiston | Vero",
+        "description": "«Vero Group» tarkibidagi Vero Ceilings 2014-yildan beri O'zbekistonda osma shift tizimlarini ishlab chiqaradi. 1700 nafar xodim, 200 dan ortiq zamonaviy uskuna."
+      },
+      "contact": {
+        "title": "Bog'lanish — Vero Ceilings Toshkent",
+        "description": "Toshkent, Chilonzor, Chorbog' 27. Osma shiftlar bo'yicha bepul maslahat, o'lchov va hisob-kitob uchun biz bilan bog'laning."
+      },
+      "faq": {
+        "title": "Osma shiftlar bo'yicha savol-javoblar | Vero Ceilings",
+        "description": "Osma shiftlar, ularning turlari, o'rnatilishi, narxi va kafolati haqida ko'p so'raladigan savollarga javoblar."
+      },
+      "architects": {
+        "title": "Me'morlar uchun — Katalog va hujjatlar | Vero Ceilings",
+        "description": "Me'mor va loyihachilar uchun Vero Ceilings katalogi, texnik ma'lumotlar va shift tizimlari bo'yicha hujjatlar."
+      }
+    }
   }
 }

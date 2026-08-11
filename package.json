@@ -23,7 +23,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "node scripts/generate-sitemap.js",
     "build": "react-scripts --openssl-legacy-provider build",
+    "sitemap": "node scripts/generate-sitemap.js",
+    "optimize:images": "node scripts/optimize-images.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
   }
 }

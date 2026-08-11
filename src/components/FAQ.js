@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import JsonLd from './JsonLd';
+import { faqSchema } from '../seo-schema';
 import '../styles/faq.css';
 
 const FAQ = () => {
@@ -48,6 +50,7 @@ const FAQ = () => {
 
   return (
     <section className="faq-section" id="faq">
+      <JsonLd id="ld-faq" schema={faqSchema(faqData)} />
       <div className="faq-container">
         <div className="faq-header">
           <h2>{t('faq.title')}</h2>

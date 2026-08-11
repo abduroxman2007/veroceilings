@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -59,23 +60,31 @@ const HeaderCarousel = () => {
       speed={1500}
       className="mySwiper"
     >
-      {slides.map((slide) => (
-        <SwiperSlide key={slide.id}>
-          <div
-            className="hero-section"
-            style={{ backgroundImage: `url(${slide.backgroundImage})` }}
-          >
-            <div className="hero-overlay"></div>
-            <div className="hero-content">
-              <h1 className="hero-title">{slide.title}</h1>
-              <p className="hero-subtitle">{slide.text}</p>
-              <a href={slide.buttonLink} className="hero-button">
-                {slide.buttonText}
-              </a>
+      {slides.map((slide, index) => {
+        // Swiper renders every slide into the DOM at once, so tagging each
+        // slide title <h1> gave the home page three <h1> elements. Only the
+        // first is the page heading; the rest are section headings. Styling is
+        // driven by .hero-title, so this is visually identical.
+        const TitleTag = index === 0 ? 'h1' : 'h2';
+
+        return (
+          <SwiperSlide key={slide.id}>
+            <div
+              className="hero-section"
+              style={{ backgroundImage: `url(${slide.backgroundImage})` }}
+            >
+              <div className="hero-overlay"></div>
+              <div className="hero-content">
+                <TitleTag className="hero-title">{slide.title}</TitleTag>
+                <p className="hero-subtitle">{slide.text}</p>
+                <Link to={slide.buttonLink} className="hero-button">
+                  {slide.buttonText}
+                </Link>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };

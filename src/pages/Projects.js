@@ -67,14 +67,14 @@ function Projects() {
   ];
 
   const galleryImages = [
-    { src: airportproject, alt: 'Airport Project' },
-    { src: educationalproject, alt: 'Educational Project' },
-    { src: hotel, alt: 'Hotel' },
-    { src: officearmstrong, alt: 'Office Armstrong' },
-    { src: officegrilyato, alt: 'Office Grilyato' },
-    { src: officeslatceiling, alt: 'Office Slat Ceiling' },
-    { src: restaurantproject, alt: 'Restaurant Project' },
-    { src: shopingcenter, alt: 'Shopping Center' },
+    { src: airportproject, alt: 'Suspended metal ceiling system installed in an airport terminal' },
+    { src: educationalproject, alt: 'Suspended ceiling installed in an educational building classroom' },
+    { src: hotel, alt: 'Decorative suspended ceiling installed in a hotel lobby interior' },
+    { src: officearmstrong, alt: 'Suspended Armstrong ceiling installed in a Tashkent office' },
+    { src: officegrilyato, alt: 'Aluminium Grilyato cell ceiling installed in an open-plan office' },
+    { src: officeslatceiling, alt: 'Aluminium slat ceiling installed in an office interior' },
+    { src: restaurantproject, alt: 'Suspended ceiling installed in a restaurant dining hall' },
+    { src: shopingcenter, alt: 'Suspended ceiling installed in a shopping centre retail hall' },
   ];
 
   return (
@@ -88,7 +88,7 @@ function Projects() {
         <div id="gallery-container" className="gallery" ref={galleryRef}>
           {galleryImages.map((image, index) => (
             <a key={index} href={image.src}>
-              <img src={image.src} alt={image.alt} />
+              <img src={image.src} alt={image.alt} loading="lazy" />
             </a>
           ))}
         </div>

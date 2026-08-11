@@ -10,6 +10,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 import products from '../product-data';
 import PageHeader from '../components/PageHeader';
+import JsonLd from '../components/JsonLd';
+import { productSchema } from '../seo-schema';
 import '../styles/ProductDetails.css';
 import bgImg from '../assets/images/slider/slid5.jpg';
 
@@ -32,6 +34,16 @@ function ProductDetails() {
 
   return (
     <>
+      <JsonLd
+        id="ld-product"
+        schema={productSchema({
+          name: t(`products.${product.id}.title`),
+          description: t(`products.${product.id}.description`),
+          images: product.images,
+          url: `/products/${product.id}`,
+          sku: product.id,
+        })}
+      />
       <PageHeader
         title={t(`products.${product.id}.title`)}
         breadcrumbs={[
@@ -52,13 +64,25 @@ function ProductDetails() {
           >
             {product.images.map((image, index) => (
               <SwiperSlide key={index}>
-                <img src={image} alt={`${t(`products.${product.id}.title`)} ${index + 1}`} />
+                <img
+                  src={image}
+                  // Per-image alt strings can be supplied per language under
+                  // products.<id>.image_alts; the fallback is still keyword-
+                  // bearing rather than the old "Title 1" / "Title 2".
+                  alt={t(`products.${product.id}.image_alts.${index}`, {
+                    defaultValue: `${t(`products.${product.id}.title`)} — Vero Ceilings, Toshkent`,
+                  })}
+                  width="800"
+                  height="600"
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  fetchPriority={index === 0 ? 'high' : undefined}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
         <div className="product-details-info">
-          <h1>{t(`products.${product.id}.title`)}</h1>
+          <h2>{t(`products.${product.id}.title`)}</h2>
           <p>{t(`products.${product.id}.description`)}</p>
           
           {productSpecs && typeof productSpecs === 'object' && (
@@ -102,7 +126,15 @@ function ProductDetails() {
           >
             {product.applicationCases.map((image, index) => (
               <SwiperSlide key={index}>
-                <img src={image} alt={`Application case ${index + 1}`} />
+                <img
+                  src={image}
+                  alt={t(`products.${product.id}.application_alts.${index}`, {
+                    defaultValue: `${t(`products.${product.id}.title`)} — ${t('products.application_cases_title')}`,
+                  })}
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -131,7 +163,7 @@ function ProductDetails() {
             {relatedProducts.map(relatedProduct => (
               <div className="product-card" key={relatedProduct.id}> {/* Changed to div and added product-card class */}
                 <Link to={`/products/${relatedProduct.id}`}>
-                  <img src={relatedProduct.images[0]} alt={t(`products.${relatedProduct.id}.title`)} className="product-image" /> {/* Added product-image class */}
+                  <img src={relatedProduct.images[0]} alt={t(`products.${relatedProduct.id}.title`)} className="product-image" loading="lazy" /> {/* Added product-image class */}
                   <h3 className="product-name">{t(`products.${relatedProduct.id}.title`)}</h3> {/* Added product-name class */}
                   <p className="product-description">{t(`products.${relatedProduct.id}.description`)}</p> {/* Added product-description class */}
                 </Link>

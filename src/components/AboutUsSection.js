@@ -19,7 +19,7 @@ const AboutUsSection = () => {
             ))}
           </div>
           <div className="story-image-container">
-            <img src={storyImage} alt={t("about.story_image_alt")} className="story-image" />
+            <img src={storyImage} alt={t("about.story_image_alt")} className="story-image" loading="lazy" />
           </div>
         </div>
       </div>

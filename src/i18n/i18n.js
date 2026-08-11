@@ -14,12 +14,14 @@ const getInitialLanguage = () => {
 
   // 2. Check the browser's language setting
   const browserLang = navigator.language.split('-')[0];
-  if (['ru', 'uz'].includes(browserLang)) {
+  if (['ru', 'en'].includes(browserLang)) {
     return browserLang;
   }
 
-  // 3. Default to English
-  return 'en';
+  // 3. Default to Uzbek — this site serves Uzbekistan, and Uzbek is the
+  //    priority-1 language. Defaulting to English previously meant the one
+  //    version search engines could index was the lowest-priority language.
+  return 'uz';
 };
 
 i18n
@@ -31,7 +33,7 @@ i18n
       uz: { translation: uz }
     },
     lng: getInitialLanguage(), // Set language dynamically
-    fallbackLng: 'en',
+    fallbackLng: 'uz',
     interpolation: { escapeValue: false }
   });
 

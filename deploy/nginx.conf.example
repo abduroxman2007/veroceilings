@@ -1,0 +1,155 @@
+# =============================================================================
+# nginx configuration for veroceilings.uz (Create React App static build)
+#
+# This file fixes two audit findings that CANNOT be fixed in application code:
+#
+#   Issue #5 — soft-404 across the whole domain. The usual SPA catch-all
+#              (`try_files $uri /index.html`) answers EVERY path with HTTP 200
+#              and the app shell, so Google sees an infinite set of duplicate
+#              pages and burns crawl budget on them. Below, only known routes
+#              receive the shell; anything else gets a real 404.
+#
+#   Issue #7 — no canonical host. www vs apex and http vs https are four
+#              distinct URLs to a crawler unless they are collapsed with 301s.
+#
+# Deploy:
+#   1. npm run build            (also regenerates public/sitemap.xml)
+#   2. copy build/ to /var/www/veroceilings/build
+#   3. put this file in /etc/nginx/sites-available/veroceilings.uz and symlink
+#      it into sites-enabled/
+#   4. nginx -t && systemctl reload nginx
+#
+# NOTE: the route lists in this file are duplicated from src/App.js and
+# src/product-data.js. If you add a route or a product id, add it here too, or
+# the new page will 404 in production. This duplication disappears the moment
+# the site moves to pre-rendered per-route HTML.
+# =============================================================================
+
+# --- http -> https, both hosts ------------------------------------------------
+server {
+    listen 80;
+    listen [::]:80;
+    server_name veroceilings.uz www.veroceilings.uz;
+
+    # Leave ACME challenges reachable over plain http for certbot renewals.
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://veroceilings.uz$request_uri;
+    }
+}
+
+# --- www -> apex --------------------------------------------------------------
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name www.veroceilings.uz;
+
+    ssl_certificate     /etc/letsencrypt/live/veroceilings.uz/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/veroceilings.uz/privkey.pem;
+
+    return 301 https://veroceilings.uz$request_uri;
+}
+
+# --- canonical host -----------------------------------------------------------
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name veroceilings.uz;
+
+    ssl_certificate     /etc/letsencrypt/live/veroceilings.uz/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/veroceilings.uz/privkey.pem;
+
+    root  /var/www/veroceilings/build;
+    index index.html;
+
+    # ---- compression --------------------------------------------------------
+    gzip              on;
+    gzip_vary         on;
+    gzip_min_length   1024;
+    gzip_proxied      any;
+    gzip_comp_level   6;
+    gzip_types
+        text/plain
+        text/css
+        text/xml
+        application/javascript
+        application/json
+        application/xml
+        image/svg+xml;
+
+    # If ngx_brotli is available it beats gzip on text assets; uncomment:
+    # brotli            on;
+    # brotli_comp_level 6;
+    # brotli_types      text/plain text/css application/javascript application/json image/svg+xml;
+
+    # ---- caching ------------------------------------------------------------
+    # CRA fingerprints everything under /static/, so it is safe to cache forever.
+    location /static/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    # Images/fonts served from the build root but not fingerprinted.
+    location ~* \.(?:jpg|jpeg|png|gif|webp|avif|svg|ico|woff2?|ttf|eot)$ {
+        expires 30d;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # The shell must never be cached, or users get a stale app after a deploy.
+    location = /index.html {
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        try_files $uri =404;
+    }
+
+    # ---- crawler files ------------------------------------------------------
+    location = /robots.txt      { try_files $uri =404; access_log off; }
+    location = /sitemap.xml     { try_files $uri =404; }
+    location = /manifest.json   { try_files $uri =404; }
+    location = /catalog.pdf     { try_files $uri =404; }
+
+    # Google Search Console verification file.
+    location = /googlee4f800ba18ad58cf.html { try_files $uri =404; }
+
+    # ---- known application routes -> serve the shell ------------------------
+    # Kept as an explicit allow-list so unknown paths can 404 honestly.
+    location = / {
+        try_files /index.html =404;
+    }
+
+    location ~ ^/(products|projects|about|contact|faq|architects)/?$ {
+        try_files /index.html =404;
+    }
+
+    location ~ ^/products/(metalarmstrong|gypsumarmstrong|washingarmstrong|grilyato|slatceiling|hexagon-wall-decor|t-profil|l-profil|stringer|suspension)/?$ {
+        try_files /index.html =404;
+    }
+
+    # ---- everything else ----------------------------------------------------
+    # Real files are served; anything else is a genuine 404.
+    location / {
+        try_files $uri @notfound;
+    }
+
+    location @notfound {
+        return 404;
+    }
+
+    # Optional: serve the branded app shell on a 404 while still returning the
+    # 404 status code, so humans see the site and crawlers see "not found".
+    # The `=404` is what preserves the status — without it nginx would rewrite
+    # the response to 200 and reintroduce the soft-404 problem this config exists
+    # to solve.
+    # error_page 404 =404 /index.html;
+
+    # ---- security headers ---------------------------------------------------
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options        "SAMEORIGIN" always;
+    add_header Referrer-Policy        "strict-origin-when-cross-origin" always;
+}

@@ -45,10 +45,10 @@ const AboutUs = () => {
                     {/* Section 1: Images */}
                     <div className="row g-4 mb-5">
                         <div className="col-md-8">
-                            <img src={aboutImg0} alt="Vero Group Factory" className="img-fluid small-image-left" />
+                            <img src={aboutImg0} alt="Vero Ceilings suspended ceiling production facility in Tashkent" className="img-fluid small-image-left" loading="lazy" />
                         </div>
                         <div className="col-md-4">
-                            <img src={aboutImg6} alt="Vero Group Leadership" className="img-fluid small-image-right" />
+                            <img src={aboutImg6} alt="Vero Group leadership team at the company headquarters" className="img-fluid small-image-right" loading="lazy" />
                         </div>
                     </div>
 
@@ -82,16 +82,16 @@ const AboutUs = () => {
                                 className="mySwiper_about"
                             >
                                 <SwiperSlide>
-                                    <img src={aboutImg2} alt="Leadership Team" className="img-fluid" />
+                                    <img src={aboutImg2} alt="Vero Ceilings team at the suspended ceiling production facility" className="img-fluid" loading="lazy" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={aboutImg3} alt="Warehouse Interior" className="img-fluid" />
+                                    <img src={aboutImg3} alt="Vero Ceilings warehouse stocked with suspended ceiling panels and profiles" className="img-fluid" loading="lazy" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={aboutImg4} alt="Product Detail" className="img-fluid" />
+                                    <img src={aboutImg4} alt="Close-up detail of a Vero suspended ceiling product" className="img-fluid" loading="lazy" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src={aboutImg5} alt="Another Product View" className="img-fluid" />
+                                    <img src={aboutImg5} alt="Another view of a Vero suspended ceiling product" className="img-fluid" loading="lazy" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>

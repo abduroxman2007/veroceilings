@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import "./App.css"
-import { useTranslation } from "react-i18next"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
@@ -13,24 +11,14 @@ import Contact from "./pages/Contact"
 import FAQ from "./pages/FAQ"
 import Footer from "./components/Footer"
 import ScrollToTop from "./components/ScrollToTop"
+import RouteMeta from "./components/RouteMeta"
 
 function App() {
-  const { t, i18n } = useTranslation()
-
-  useEffect(() => {
-    document.title = t("seo.title")
-    const descriptionMeta = document.querySelector('#meta-description');
-    if (descriptionMeta) {
-      descriptionMeta.setAttribute('content', t('seo.description'));
-    }
-    const keywordsMeta = document.querySelector('#meta-keywords');
-    if (keywordsMeta) {
-      keywordsMeta.setAttribute('content', t('seo.keywords'));
-    }
-  }, [i18n.language, t]);
-
   return (
     <Router>
+      {/* Title/description/canonical now vary per route — see RouteMeta.
+          It must live inside <Router> to read the current location. */}
+      <RouteMeta />
       <ScrollToTop />
       <Navbar />
       <Routes>

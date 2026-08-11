@@ -23,7 +23,12 @@ function Navbar() {
     <div className="navbar">
       <div className="navbar-left">
         <Link to="/" className="logo">
-          <img src={logo || "/placeholder.svg"} alt={t("navbar.logo_alt")} style={{ width: "140px", height: "auto" }} />
+          <img
+            src={logo || "/placeholder.svg"}
+            alt={t("navbar.logo_alt")}
+            fetchPriority="high"
+            style={{ width: "140px", height: "auto" }}
+          />
         </Link>
       </div>
       <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>

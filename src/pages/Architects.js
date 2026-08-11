@@ -60,7 +60,7 @@ function Architects() {
             {videos.map((video) => (
               <div key={video.id} className="video-card">
                 <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" className="video-thumbnail-link">
-                  <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} className="video-thumbnail" />
+                  <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} className="video-thumbnail" loading="lazy" width="480" height="360" />
                   <div className="play-icon"></div>
                 </a>
                 <div className="video-card-content">
