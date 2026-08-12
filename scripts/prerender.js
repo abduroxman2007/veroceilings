@@ -170,30 +170,45 @@ async function main() {
     return;
   }
 
-  // Two ways to get a browser, tried in order:
+  // Three ways to get a browser, tried in order:
   //
-  // 1. `puppeteer` (the full package, if installed) — it downloads and
-  //    manages its own known-good Chromium build, no system package or
-  //    executablePath needed. This is the right choice whenever the machine
-  //    running the build has normal internet access (a real server, a CI
-  //    runner) — which is the common case. It's what's actually installed
-  //    for this project's deployment.
+  // 1. An explicit PUPPETEER_EXECUTABLE_PATH or a system Chromium/Chrome
+  //    found in a common install location — checked FIRST and always wins
+  //    if set. This matters because `puppeteer`'s own downloaded Chromium
+  //    is a bare unpacked binary with no dependency resolution behind it;
+  //    on a minimal server install it commonly fails to launch with missing
+  //    shared libraries (libnss3, libatk, ...). Installing a real system
+  //    Chrome/Chromium via apt pulls in the correct dependency chain
+  //    automatically — this branch is what lets that override take effect
+  //    even though the full `puppeteer` package is also installed.
   //
-  // 2. `puppeteer-core` + an explicit PUPPETEER_EXECUTABLE_PATH or a system
-  //    Chromium/Chrome found in a common install location — for restricted
-  //    environments where downloading a browser isn't possible (this is the
-  //    path a sandboxed CI step or a minimal Docker image would use).
+  // 2. `puppeteer` (the full package, if installed) — downloads and manages
+  //    its own Chromium build, no system package needed. Works as long as
+  //    the machine has the runtime libraries a headless Chromium needs,
+  //    which a typical desktop OS has and a bare server often doesn't.
+  //
+  // 3. Neither available — fail with instructions rather than guess.
   let puppeteer;
   let launchOptions;
 
-  try {
+  const systemExecutablePath = findExecutablePath();
+
+  if (systemExecutablePath) {
     // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-    puppeteer = require('puppeteer');
-    launchOptions = { headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] };
-    console.log('Using puppeteer\'s bundled Chromium.');
-  } catch {
-    const executablePath = findExecutablePath();
-    if (!executablePath) {
+    puppeteer = require('puppeteer-core');
+    launchOptions = {
+      executablePath: systemExecutablePath,
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    };
+    console.log(`Using system browser at ${systemExecutablePath}.`);
+  } else {
+    try {
+      // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+      puppeteer = require('puppeteer');
+      launchOptions = { headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] };
+      console.log('Using puppeteer\'s bundled Chromium.');
+    } catch {
       console.error(
         'No browser available. Either `npm install puppeteer` (downloads its own\n' +
         'Chromium — needs normal internet access) or set PUPPETEER_EXECUTABLE_PATH\n' +
@@ -203,10 +218,6 @@ async function main() {
       process.exitCode = 1;
       return;
     }
-    // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-    puppeteer = require('puppeteer-core');
-    launchOptions = { executablePath, headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] };
-    console.log(`Using system browser at ${executablePath}.`);
   }
 
   const server = await startServer();
