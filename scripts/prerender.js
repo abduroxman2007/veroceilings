@@ -170,30 +170,47 @@ async function main() {
     return;
   }
 
-  const executablePath = findExecutablePath();
-  if (!executablePath) {
-    console.error(
-      'No Chromium/Chrome binary found. Set PUPPETEER_EXECUTABLE_PATH to one, e.g.\n' +
-      '  PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium npm run build\n' +
-      'See DEPLOY.md for the recommended Docker setup (apk/apt-installed chromium,\n' +
-      'not a Puppeteer-downloaded one — much smaller image, no network dependency\n' +
-      'on Chromium\'s CDN download host at build time).'
-    );
-    process.exitCode = 1;
-    return;
+  // Two ways to get a browser, tried in order:
+  //
+  // 1. `puppeteer` (the full package, if installed) — it downloads and
+  //    manages its own known-good Chromium build, no system package or
+  //    executablePath needed. This is the right choice whenever the machine
+  //    running the build has normal internet access (a real server, a CI
+  //    runner) — which is the common case. It's what's actually installed
+  //    for this project's deployment.
+  //
+  // 2. `puppeteer-core` + an explicit PUPPETEER_EXECUTABLE_PATH or a system
+  //    Chromium/Chrome found in a common install location — for restricted
+  //    environments where downloading a browser isn't possible (this is the
+  //    path a sandboxed CI step or a minimal Docker image would use).
+  let puppeteer;
+  let launchOptions;
+
+  try {
+    // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+    puppeteer = require('puppeteer');
+    launchOptions = { headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] };
+    console.log('Using puppeteer\'s bundled Chromium.');
+  } catch {
+    const executablePath = findExecutablePath();
+    if (!executablePath) {
+      console.error(
+        'No browser available. Either `npm install puppeteer` (downloads its own\n' +
+        'Chromium — needs normal internet access) or set PUPPETEER_EXECUTABLE_PATH\n' +
+        'to a system Chromium/Chrome and keep puppeteer-core, e.g.\n' +
+        '  PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium npm run build:prod'
+      );
+      process.exitCode = 1;
+      return;
+    }
+    // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+    puppeteer = require('puppeteer-core');
+    launchOptions = { executablePath, headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] };
+    console.log(`Using system browser at ${executablePath}.`);
   }
 
-  // puppeteer-core (not puppeteer) deliberately never downloads a browser —
-  // see the error above and DEPLOY.md for why that's the intended setup here.
-  // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-  const puppeteer = require('puppeteer-core');
-
   const server = await startServer();
-  const browser = await puppeteer.launch({
-    executablePath,
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
+  const browser = await puppeteer.launch(launchOptions);
 
   let failures = 0;
 

@@ -92,28 +92,57 @@ getting fixed, made concrete.
 **dry run**, if you just want to see the target list without needing a
 browser at all: `npm run prerender:dry`.
 
-## Getting it onto the VPS
+## The actual production setup (confirmed on the VPS, not Docker)
 
-You mentioned Oracle Cloud, Ubuntu, Docker, and "probably Apache, not 100%
-sure — check the compose setup." I don't have access to that repo, so
 `deploy/nginx.conf`, `deploy/apache.conf`, and `deploy/Dockerfile.example`
-are reference configs, not wired into anything yet. Concretely, once you've
-confirmed:
+were written before checking the real server and don't apply — there's no
+Docker or nginx/Apache in front of the frontend at all. The real setup,
+confirmed by SSHing in:
 
-1. **Which web server is actually in the container** — `docker compose exec
-   <service> nginx -v` or `apache2 -v` (or check the Dockerfile's base
-   image / installed packages directly).
-2. **Share the actual `Dockerfile`/`docker-compose.yml`** and I'll adapt
-   `deploy/nginx.conf` or `deploy/apache.conf` into it exactly, rather than
-   you having to merge it by hand.
+- **Caddy** (`/etc/caddy/Caddyfile`) is the single reverse proxy in front of
+  everything on the box — smartops.uz, n8n, Huly, a Moodle install, and
+  veroceilings.uz all share this one file. For veroceilings.uz it's
+  currently a bare `reverse_proxy 127.0.0.1:8001`, no routing logic at all.
+  **This file is shared infrastructure — always `cp` a backup and run
+  `caddy validate` before reloading it.**
+- **PM2** runs the process named `vero-frontend`: `serve -s build -l 8001`,
+  cwd `/var/www/veroceiling/veroceilings`. The `-s` flag is the soft-404
+  bug from `SEO-AUDIT.md` section 1.1, live, on the current site — it
+  serves `index.html` with HTTP 200 for literally any path. Dropping `-s`
+  (once real per-route files exist from the prerender step) is what makes
+  unknown paths actually 404.
+- The server checkout was on `main` at an old commit, well before any of
+  this work — confirming why the live site still showed empty titles.
+- No Chromium was installed, but the server has normal internet access
+  (unlike the sandbox this was built in), so plain `puppeteer` — not
+  `puppeteer-core` — is the right choice here: `npm install` downloads its
+  own known-good Chromium, no system package or `PUPPETEER_EXECUTABLE_PATH`
+  needed. `scripts/prerender.js` tries `puppeteer` first automatically and
+  falls back to `puppeteer-core` + a system binary only if `puppeteer`
+  isn't installed.
 
-The short version of what needs to happen either way: `npm run build:prod`
-needs to run inside the image (with a Chromium binary available, per
-`deploy/Dockerfile.example`), and whichever web server serves the result
-needs the "real files, real 404s, no blanket SPA fallback" behavior in
-those reference configs — see the comments in `deploy/nginx.conf` for why
-that specific detail matters (it's the difference between actually fixing
-the soft-404 problem from `SEO-AUDIT.md` and just moving it).
+### Deploy sequence used
+
+1. Merge the fix branches into `main` locally, push — the server only
+   tracks `main`, matching its existing simple setup.
+2. On the server, clone `main` into a **separate directory**
+   (`veroceilings-staging`), `npm install`, `npm run build:prod`. This
+   downloads puppeteer's Chromium (~300MB) on first install.
+3. Serve the staging build on a spare port (`npx serve build -l 8002`, no
+   `-s`) and verify with `curl` before touching anything live — real
+   titles per locale, a legacy path 301ing, a fake path 404ing.
+4. Add explicit `redir` rules to the Caddyfile's veroceilings.uz block for
+   `/` → `/uz` and the legacy bare paths → their `/uz` equivalents.
+   `caddy validate` before `systemctl reload caddy`.
+5. Atomic swap: rename the old checkout out of the way, move the verified
+   staging build into its place, so `serve`'s cwd never points at a
+   half-built directory.
+6. `pm2 delete vero-frontend` + recreate it with `serve build -l 8001` (no
+   `-s`), then `pm2 save`.
+7. Verify against the live domain, watch Search Console for a week.
+
+Rollback at any point is: point PM2 back at the renamed-aside old
+directory, or restore the Caddyfile backup and reload.
 
 ## After it's live
 
