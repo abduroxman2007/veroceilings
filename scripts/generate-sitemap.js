@@ -2,75 +2,34 @@
 /**
  * Generates public/sitemap.xml. Runs automatically via the `prebuild` script.
  *
- * IMPORTANT — no hreflang alternates are emitted yet.
- * The site currently serves all three languages from a single set of URLs
- * (language is chosen at runtime from localStorage), so /uz/, /ru/ and /en/ do
- * not exist. Declaring hreflang for URLs that 404 is worse than declaring none.
- * When locale-prefixed routing ships, set LOCALES below and the generator will
- * emit one <url> per locale with reciprocal <xhtml:link> alternates.
+ * Emits one <url> entry per locale per route (three URLs per page, not one),
+ * each carrying the full set of reciprocal hreflang alternates — including a
+ * self-reference, which Google's guidance treats as required, not optional.
  */
 
 const fs = require('fs');
 const path = require('path');
+const { ROOT, LOCALES, DEFAULT_LOCALE, buildRoutes } = require('./routes');
 
 const SITE_URL = 'https://veroceilings.uz';
-const ROOT = path.join(__dirname, '..');
 const OUT_FILE = path.join(ROOT, 'public', 'sitemap.xml');
 
-// Set to e.g. ['uz', 'ru', 'en'] once locale-prefixed routes exist.
-const LOCALES = [];
-
-/**
- * product-data.js imports image binaries through webpack, so it cannot be
- * require()d from plain Node. Read the product ids out of the source instead.
- */
-function readProductIds() {
-  const source = fs.readFileSync(path.join(ROOT, 'src', 'product-data.js'), 'utf8');
-  const ids = [...source.matchAll(/^\s*id:\s*'([^']+)'/gm)].map((m) => m[1]);
-
-  if (!ids.length) {
-    throw new Error(
-      'No product ids found in src/product-data.js — the sitemap would be ' +
-      'missing every product page. Check that the `id:` field format has not changed.'
-    );
-  }
-  return ids;
+// No trailing slash, on either the locale root or any sub-page — this has
+// to match RouteMeta's canonical URLs and the actual React Router paths
+// exactly, or the sitemap ends up promising URLs that differ from the ones
+// each page declares as its own canonical, which is a real duplicate-content
+// footgun rather than a cosmetic one.
+function localeUrl(locale, routePath) {
+  return `${SITE_URL}/${locale}${routePath === '/' ? '' : routePath}`;
 }
 
-function buildRoutes() {
-  const productIds = readProductIds();
+function urlEntry(locale, route, lastmod) {
+  const loc = localeUrl(locale, route.path);
 
-  const staticRoutes = [
-    { path: '/', priority: '1.0', changefreq: 'weekly' },
-    { path: '/products', priority: '0.9', changefreq: 'weekly' },
-    { path: '/projects', priority: '0.8', changefreq: 'monthly' },
-    { path: '/about', priority: '0.7', changefreq: 'monthly' },
-    { path: '/architects', priority: '0.7', changefreq: 'monthly' },
-    { path: '/contact', priority: '0.6', changefreq: 'monthly' },
-    { path: '/faq', priority: '0.6', changefreq: 'monthly' },
+  const alternates = [
+    ...LOCALES.map((loc2) => `    <xhtml:link rel="alternate" hreflang="${loc2}" href="${localeUrl(loc2, route.path)}"/>`),
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${localeUrl(DEFAULT_LOCALE, route.path)}"/>`,
   ];
-
-  const productRoutes = productIds.map((id) => ({
-    path: `/products/${id}`,
-    priority: '0.8',
-    changefreq: 'monthly',
-  }));
-
-  return [...staticRoutes, ...productRoutes];
-}
-
-function urlEntry(route, lastmod) {
-  const loc = `${SITE_URL}${route.path === '/' ? '/' : route.path}`;
-
-  const alternates = LOCALES.map((locale) => {
-    const href = `${SITE_URL}/${locale}${route.path === '/' ? '/' : route.path}`;
-    return `    <xhtml:link rel="alternate" hreflang="${locale}" href="${href}"/>`;
-  });
-
-  if (LOCALES.length) {
-    const xDefault = `${SITE_URL}/${LOCALES[0]}${route.path === '/' ? '/' : route.path}`;
-    alternates.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefault}"/>`);
-  }
 
   return [
     '  <url>',
@@ -87,17 +46,19 @@ function main() {
   const lastmod = new Date().toISOString().split('T')[0];
   const routes = buildRoutes();
 
+  const entries = LOCALES.flatMap((locale) => routes.map((route) => urlEntry(locale, route, lastmod)));
+
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     '        xmlns:xhtml="http://www.w3.org/1999/xhtml">',
-    ...routes.map((route) => urlEntry(route, lastmod)),
+    ...entries,
     '</urlset>',
     '',
   ].join('\n');
 
   fs.writeFileSync(OUT_FILE, xml, 'utf8');
-  console.log(`sitemap.xml written with ${routes.length} URLs -> ${OUT_FILE}`);
+  console.log(`sitemap.xml written with ${entries.length} URLs (${routes.length} routes x ${LOCALES.length} locales) -> ${OUT_FILE}`);
 }
 
 main();

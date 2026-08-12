@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from './LocalizedLink';
 import '../styles/ProductCard.css'; // Ensure you have styles for the product card
 
 function ProductCard({ name, description, image, link }) {

@@ -1,0 +1,40 @@
+# Reference multi-stage Dockerfile showing how the prerender step fits into
+# a container build. This is NOT wired into your actual Dockerfile/compose —
+# you mentioned that setup needs double-checking first. Treat this as the
+# pattern to merge into whatever you already have.
+#
+# Key choice: apk-installed Chromium, not Puppeteer's own downloaded one.
+# `npm install puppeteer` (not puppeteer-core) downloads a full ~170MB
+# Chromium build from storage.googleapis.com at install time — on an Oracle
+# free-tier VPS that's a meaningful chunk of image size and a network
+# dependency at build time for no real benefit. Alpine's `chromium` package
+# is the same underlying engine, already there, already maintained by
+# distro security updates. scripts/prerender.js uses puppeteer-core
+# specifically so it never tries to download anything itself — it just needs
+# PUPPETEER_EXECUTABLE_PATH pointed at a real binary, set below.
+
+# ---- Stage 1: build + prerender ----
+FROM node:20-alpine AS build
+
+RUN apk add --no-cache chromium
+
+# Alpine's chromium package has historically installed as either
+# /usr/bin/chromium or /usr/bin/chromium-browser depending on version —
+# confirm with `docker run --rm <this-image> which chromium chromium-browser`
+# and adjust if needed. scripts/prerender.js also checks both automatically.
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --legacy-peer-deps
+
+COPY . .
+RUN npm run build:prod
+# ^ runs: react-scripts build (sitemap + webpack), then scripts/prerender.js
+#   (headless Chromium visits every /uz /ru /en route and writes real HTML)
+
+# ---- Stage 2: serve ----
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80

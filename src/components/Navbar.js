@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import Link from "./LocalizedLink"
 import { useTranslation } from "react-i18next"
 import "../styles/navbar.css"
 import LanguageSwitcher from "./LanguageSwitcher"

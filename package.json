@@ -28,7 +28,10 @@
     "sitemap": "node scripts/generate-sitemap.js",
     "optimize:images": "node scripts/optimize-images.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prerender": "node scripts/prerender.js",
+    "prerender:dry": "node scripts/prerender.js --dry-run",
+    "build:prod": "npm run build && npm run prerender"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,14 @@
     ]
   },
   "devDependencies": {
+    "puppeteer-core": "^25.6.0",
     "sharp": "^0.35.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^react-router-dom$": "<rootDir>/node_modules/react-router-dom/dist/index.js",
+      "^react-router$": "<rootDir>/node_modules/react-router/dist/development/index.js",
+      "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js"
+    }
   }
 }

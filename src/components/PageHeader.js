@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import Link from './LocalizedLink';
 import { useTranslation } from 'react-i18next';
 import { FaHome } from 'react-icons/fa';
 import JsonLd from './JsonLd';
@@ -8,12 +9,19 @@ import '../styles/page-header.css';
 
 const PageHeader = ({ title, breadcrumbs, backgroundImage }) => {
   const { t } = useTranslation();
+  const { locale } = useParams();
 
-  // The visible trail and the structured-data trail are built from the same
-  // source so they can never drift apart.
+  // Visible links go through LocalizedLink, which prefixes the locale on
+  // its own. The structured-data trail needs the same locale prefix baked
+  // into its absolute URLs directly, since breadcrumbSchema/absoluteUrl just
+  // concatenate SITE_URL with whatever path they're given.
+  const localePath = (path) => (path === '/' ? `/${locale}` : `/${locale}${path}`);
   const trail = [
-    { name: t('navbar.home'), path: '/' },
-    ...breadcrumbs.map((crumb) => ({ name: crumb.text, path: crumb.link })),
+    { name: t('navbar.home'), path: localePath('/') },
+    ...breadcrumbs.map((crumb) => ({
+      name: crumb.text,
+      ...(crumb.link ? { path: localePath(crumb.link) } : {}),
+    })),
   ];
 
   return (

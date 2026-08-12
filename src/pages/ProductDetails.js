@@ -1,6 +1,7 @@
 // src/pages/ProductDetails.js
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import Link from '../components/LocalizedLink';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -16,7 +17,7 @@ import '../styles/ProductDetails.css';
 import bgImg from '../assets/images/slider/slid5.jpg';
 
 function ProductDetails() {
-  const { id } = useParams();
+  const { id, locale } = useParams();
   const { t } = useTranslation();
 
   const product = products.find(p => p.id === id);
@@ -40,7 +41,7 @@ function ProductDetails() {
           name: t(`products.${product.id}.title`),
           description: t(`products.${product.id}.description`),
           images: product.images,
-          url: `/products/${product.id}`,
+          url: `/${locale}/products/${product.id}`,
           sku: product.id,
         })}
       />
@@ -48,7 +49,7 @@ function ProductDetails() {
         title={t(`products.${product.id}.title`)}
         breadcrumbs={[
           { text: t('navbar.products'), link: '/products' },
-          { text: t(`products.${product.id}.title`), link: `/products/${product.id}` }
+          { text: t(`products.${product.id}.title`) }
         ]}
         backgroundImage={bgImg}
       />

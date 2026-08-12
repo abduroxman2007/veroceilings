@@ -3,25 +3,39 @@ import { initReactI18next } from 'react-i18next';
 import en from './en.json';
 import ru from './ru.json';
 import uz from './uz.json';
+import { LOCALES, DEFAULT_LOCALE } from './locales';
 
 // Function to determine the initial language
 const getInitialLanguage = () => {
-  // 1. Check localStorage for a saved language
-  const savedLang = localStorage.getItem('i18nextLng');
-  if (savedLang && ['en', 'ru', 'uz'].includes(savedLang)) {
+  // 1. The URL is the source of truth once locale-prefixed routing exists
+  //    (/uz/..., /ru/..., /en/...). Reading it here — before React or the
+  //    router has mounted — means the very first paint already shows the
+  //    right language instead of flashing the localStorage/browser guess
+  //    and then correcting a tick later. It also means a prerendered
+  //    /ru/products/grilyato page reliably prerenders as Russian, not
+  //    whatever was last saved to localStorage during the crawl.
+  if (typeof window !== 'undefined') {
+    const segment = window.location.pathname.split('/')[1];
+    if (LOCALES.includes(segment)) {
+      return segment;
+    }
+  }
+
+  // 2. Saved preference. Only reached for "/" itself, which immediately
+  //    redirects to a locale-prefixed URL — see App.js.
+  const savedLang = typeof localStorage !== 'undefined' ? localStorage.getItem('i18nextLng') : null;
+  if (savedLang && LOCALES.includes(savedLang)) {
     return savedLang;
   }
 
-  // 2. Check the browser's language setting
-  const browserLang = navigator.language.split('-')[0];
+  // 3. Browser language.
+  const browserLang = typeof navigator !== 'undefined' ? navigator.language.split('-')[0] : '';
   if (['ru', 'en'].includes(browserLang)) {
     return browserLang;
   }
 
-  // 3. Default to Uzbek — this site serves Uzbekistan, and Uzbek is the
-  //    priority-1 language. Defaulting to English previously meant the one
-  //    version search engines could index was the lowest-priority language.
-  return 'uz';
+  // 4. Uzbek — priority-1 language for this market (see SEO-AUDIT.md).
+  return DEFAULT_LOCALE;
 };
 
 i18n
@@ -33,7 +47,7 @@ i18n
       uz: { translation: uz }
     },
     lng: getInitialLanguage(), // Set language dynamically
-    fallbackLng: 'uz',
+    fallbackLng: DEFAULT_LOCALE,
     interpolation: { escapeValue: false }
   });
 

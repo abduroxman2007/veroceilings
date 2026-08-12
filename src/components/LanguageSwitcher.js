@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 
 import uzFlag from '../assets/images/uzbekistan.png'; // Assuming you will provide this file
 import ruFlag from '../assets/images/russia.png';
@@ -13,7 +14,23 @@ const languages = [
 
 const LanguageSwitcher = ({ dropdown, label, borderColorVar }) => {
   const { i18n } = useTranslation();
-  const current = i18n.language;
+  const navigate = useNavigate();
+  const { locale } = useParams();
+  const location = useLocation();
+  const current = locale || i18n.language;
+
+  // Switching language means navigating to the equivalent page under the
+  // new locale prefix (e.g. /ru/products/grilyato -> /uz/products/grilyato),
+  // not just flipping i18next's in-memory language while staying on the same
+  // URL. The old behaviour was the whole reason every language shared one
+  // URL — see SEO-AUDIT.md section 1.1.
+  const switchTo = (code) => {
+    const segments = location.pathname.split('/');
+    // segments[0] is '' (leading slash), segments[1] is the current locale.
+    const rest = segments.slice(2).join('/');
+    const target = `/${code}${rest ? `/${rest}` : ''}${location.search}`;
+    navigate(target);
+  };
   const [open, setOpen] = useState(false);
   const ref = useRef();
   const borderColor = borderColorVar ? `var(${borderColorVar})` : 'var(--color-border)';
@@ -34,7 +51,7 @@ const LanguageSwitcher = ({ dropdown, label, borderColorVar }) => {
         {languages.map(lang => (
           <button
             key={lang.code}
-            onClick={() => i18n.changeLanguage(lang.code)}
+            onClick={() => switchTo(lang.code)}
             style={{
               background: 'none',
               border: 'none',
@@ -103,7 +120,7 @@ const LanguageSwitcher = ({ dropdown, label, borderColorVar }) => {
           {languages.filter(l => l.code !== current).map(lang => (
             <button
               key={lang.code}
-              onClick={() => { i18n.changeLanguage(lang.code); setOpen(false); }}
+              onClick={() => { switchTo(lang.code); setOpen(false); }}
               style={{
                 background: 'none',
                 border: 'none',
