@@ -51,6 +51,11 @@ function Navbar() {
             </ul> */}
           </li>
           <li className="nav-item">
+            <Link to="/calculator" className="nav-link" onClick={closeMenu}>
+              {t("navbar.calculator", { defaultValue: "Калькулятор" })}
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/projects" className="nav-link" onClick={closeMenu}>
               {t("navbar.projects")}
             </Link>

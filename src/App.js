@@ -8,6 +8,7 @@ import Architects from "./pages/Architects"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import FAQ from "./pages/FAQ"
+import Calculator from "./pages/Calculator"
 import LocaleLayout from "./components/LocaleLayout"
 import NotFound from "./components/NotFound"
 import { DEFAULT_LOCALE } from "./i18n/locales"
@@ -44,6 +45,7 @@ function App() {
         <Route path="/about" element={<LegacyRedirect />} />
         <Route path="/contact" element={<LegacyRedirect />} />
         <Route path="/faq" element={<LegacyRedirect />} />
+        <Route path="/calculator" element={<LegacyRedirect />} />
 
         {/* One shared layout instance (Navbar/Footer/RouteMeta) for every
             locale-prefixed page, so navigating between pages swaps only the
@@ -57,6 +59,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="faq" element={<FAQ />} />
+          <Route path="calculator" element={<Calculator />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />

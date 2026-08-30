@@ -56,10 +56,21 @@ export const productSchema = ({ name, description, images, url, sku }) => ({
   name,
   ...(description ? { description } : {}),
   ...(sku ? { sku } : {}),
+  category: 'Suspended Ceiling Systems',
+  countryOfOrigin: {
+    '@type': 'Country',
+    name: 'Uzbekistan',
+  },
   ...(images && images.length
     ? { image: images.map(absoluteUrl).filter(Boolean) }
     : {}),
   ...(url ? { url: absoluteUrl(url) } : {}),
   brand: { '@type': 'Brand', name: 'Vero Ceilings' },
   manufacturer: { '@id': ORGANIZATION_ID },
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'UZS',
+    availability: 'https://schema.org/InStock',
+    seller: { '@id': ORGANIZATION_ID },
+  },
 });

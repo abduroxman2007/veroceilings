@@ -98,7 +98,7 @@ describe('locale-prefixed routing', () => {
     renderAt('/ru/products/grilyato');
     await screen.findByText('grilyato stub');
     await waitFor(() => expect(canonicalHref()).toBe('https://veroceilings.uz/ru/products/grilyato'));
-    await waitFor(() => expect(document.title).toMatch(/Toshkent \| Vero Ceilings$/));
+    await waitFor(() => expect(document.title).toMatch(/Vero Ceilings$/));
   });
 
   test('an invalid locale segment renders a real not-found page, not a silent redirect', async () => {

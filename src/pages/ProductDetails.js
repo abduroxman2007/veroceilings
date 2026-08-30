@@ -98,6 +98,59 @@ function ProductDetails() {
               </ul>
             </div>
           )}
+
+          <div
+            className="product-order-cta"
+            style={{
+              marginTop: '24px',
+              padding: '20px',
+              backgroundColor: '#f8fafc',
+              borderRadius: '12px',
+              border: '1px solid #e2e8f0',
+            }}
+          >
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#1e293b' }}>
+              {t('products.order_cta_title')}
+            </h3>
+            <p style={{ fontSize: '0.95rem', color: '#64748b', marginBottom: '16px' }}>
+              {t('products.order_cta_text')}
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+              <a
+                href="tel:+998783337377"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  padding: '10px 20px',
+                  backgroundColor: '#19193f',
+                  color: '#ffffff',
+                  borderRadius: '8px',
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                }}
+              >
+                📞 +998 78 333 73 77
+              </a>
+              <Link
+                to="/contact"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  padding: '10px 20px',
+                  backgroundColor: '#f1f5f9',
+                  color: '#1e293b',
+                  borderRadius: '8px',
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  border: '1px solid #cbd5e1',
+                  fontSize: '0.95rem',
+                }}
+              >
+                {t('products.order_cta_button')} →
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 

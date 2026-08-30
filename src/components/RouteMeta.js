@@ -30,6 +30,7 @@ const PAGE_KEYS = {
   '/contact': 'contact',
   '/faq': 'faq',
   '/architects': 'architects',
+  '/calculator': 'calculator',
 };
 
 /**
@@ -109,9 +110,13 @@ const RouteMeta = () => {
       if (product) {
         // Follow the [keyword] + [geo] + [brand] pattern used across the site.
         const name = t(`products.${product.id}.title`);
-        title = `${name} — Toshkent | Vero Ceilings`;
-        description = t(`products.${product.id}.description`, {
-          defaultValue: description,
+        title = t(`products.${product.id}.seo_title`, {
+          defaultValue: `${name} — Toshkent | Vero Ceilings`,
+        });
+        description = t(`products.${product.id}.seo_description`, {
+          defaultValue: t(`products.${product.id}.description`, {
+            defaultValue: description,
+          }),
         });
       }
     } else if (PAGE_KEYS[path]) {

@@ -2,10 +2,36 @@
 User-agent: *
 Allow: /
 
-# Yandex handles a large share of Russian-language search in Uzbekistan.
+# Search Engines
+User-agent: Googlebot
+Allow: /
+
 User-agent: Yandex
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI Search & Retrieval Engines (AIO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Host: https://veroceilings.uz
 
 Sitemap: https://veroceilings.uz/sitemap.xml
+
