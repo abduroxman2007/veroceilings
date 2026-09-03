@@ -1,66 +1,39 @@
 {
-  "name": "vero-frontend",
-  "version": "0.1.0",
+  "name": "vero-ceilings",
+  "version": "0.2.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "seed": "npx tsx scripts/seed.ts"
+  },
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "ajv": "6.12.6",
-    "ajv-keywords": "3.5.2",
-    "i18next": "^25.3.2",
-    "lightgallery": "^2.9.0-beta.1",
+    "@supabase/ssr": "^0.12.5",
+    "@supabase/supabase-js": "^2.112.4",
+    "@tanstack/react-table": "^9.2.4",
     "lucide-react": "^0.525.0",
+    "next": "^16.3.3",
+    "next-intl": "^4.14.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-i18next": "^15.6.0",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.7.0",
-    "react-scripts": "5.0.1",
-    "swiper": "^11.2.10",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "prebuild": "node scripts/generate-sitemap.js",
-    "build": "react-scripts --openssl-legacy-provider build",
-    "sitemap": "node scripts/generate-sitemap.js",
-    "optimize:images": "node scripts/optimize-images.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prerender": "node scripts/prerender.js",
-    "prerender:dry": "node scripts/prerender.js --dry-run",
-    "build:prod": "npm run build && npm run prerender"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.7.0",
+    "recharts": "^3.10.1",
+    "swiper": "^14.2.0",
+    "yet-another-react-lightbox": "^3.32.2",
+    "zod": "^3.24.0"
   },
   "devDependencies": {
-    "puppeteer": "^23.0.0",
-    "puppeteer-core": "^25.6.0",
-    "sharp": "^0.35.3"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^react-router-dom$": "<rootDir>/node_modules/react-router-dom/dist/index.js",
-      "^react-router$": "<rootDir>/node_modules/react-router/dist/development/index.js",
-      "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js"
-    }
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.4",
+    "tailwindcss": "^4",
+    "tsx": "^4.19.3",
+    "typescript": "^5"
   }
 }

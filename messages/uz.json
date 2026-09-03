@@ -1,0 +1,502 @@
+{
+  "navbar": {
+    "products": "Mahsulotlar",
+    "projects": "Loyihalar/Obyektlar",
+    "architects": "Arxitektorlar uchun",
+    "clients": "Mijozlar uchun",
+    "about": "Kompaniya haqida",
+    "contact": "Bog'lanish",
+    "language": "Til",
+    "catalog": "Katalog",
+    "logo_alt": "Vero Ceilings logotipi — Toshkentdagi osma shift zavodi",
+    "home": "Bosh sahifa",
+    "calculator": "Kalkulyator"
+  },
+  "welcome": "Vero Ceilings ga xush kelibsiz — O'zbekistondagi eng yirik osma shift ishlab chiqaruvchisi",
+  "whyus": {
+    "title": "Nima uchun Vero Ceilings osma shiftlarini tanlashadi",
+    "subtitle": "To'g'ridan-to'g'ri ishlab chiqaruvchi — butun O'zbekiston bo'ylab ulgurji va chakana narxlar",
+    "features": {
+      "experience": {
+        "title": "10+ yillik ishlab chiqarish tajribasi",
+        "description": "2014-yildan beri Vero Ceilings Toshkentda va O'zbekistonning barcha 14 viloyatida osma shift tizimlarini yetkazib bermoqda. Vero Group xoldingi 10 dan ortiq korxona, 1700 nafar mutaxassis va 200 dan ortiq yuqori aniqlikdagi uskunalarni o'z ichiga oladi."
+      },
+      "quality": {
+        "title": "Yuqori sifatli materiallar va ISO standartlari",
+        "description": "Biz grilyato, armstrong va reykali shiftlarni birlamchi alyuminiy va ruxlangan po'lat qotishmalaridan ishlab chiqaramiz. Toshkentdagi o'z zavodimizda to'liq sifat nazorati o'rnatilgan."
+      },
+      "guarantee": {
+        "title": "15 yillik rasmiy zavod kafolati",
+        "description": "Vero Ceilings mahsulotlari 15 yillik rasmiy kafolat hamda yong'inga xavfsizlik (NG klassi) va xalqaro sifat sertifikatlari bilan ta'minlanadi."
+      }
+    },
+    "start_trial_button": "BEPUL HISOB-KITOB VA SMETA OLISH",
+    "impact_ceilings": {
+      "title": "Zavoddan to'g'ridan-to'g'ri narxlar — vositachilarsiz",
+      "description": "Vero Ceilings — eng yirik ishlab chiqaruvchi: narxlarimiz vositachilarsiz va bozordan arzon. Toshkent bo'ylab o'lchov uchun bepul chiqish. 100 m²dan ortiq buyurtmalarda bepul yetkazib berish. Qurilish kompaniyalari va yuridik shaxslar bilan shartnomalar tuzamiz."
+    }
+  },
+  "hero": {
+    "slide1": {
+      "title": "Toshkentda osma shiftlar sotib olish — ishlab chiqaruvchi Vero Ceilings dan",
+      "text": "Grilyato, Armstrong, reykali va kubsimon osma shiftlar to'g'ridan-to'g'ri zavoddan. Arzon narxlar, bepul hisob-kitob, professional montaj va butun O'zbekiston bo'ylab yetkazib berish.",
+      "button": "KATALOGNI KO'RISH"
+    },
+    "slide2": {
+      "title": "Toshkentda grilyato shift sotib olish — 50x50, 75x75, 100x100, 150x150, 200x200 mm",
+      "text": "Ofislar, savdo markazlari, aeroportlar va jamoat binolari uchun alyuminiy uyali grilyato shiftlar. Klassik, piramidal va jalyuzi turlari. Barcha RAL ranglari mavjud.",
+      "button": "GRILYATONI TANLASH"
+    },
+    "slide3": {
+      "title": "Amalga oshirilgan yirik loyihalar — aeroportlar, savdo markazlari, mehmonxonalar",
+      "text": "10 yildan ortiq tajriba. Vero Ceilings mahsulotlari O'zbekistonning eng yirik obyektlari va davlat binolarida muvaffaqiyatli o'rnatilgan.",
+      "button": "LOYIHALARIMIZ"
+    }
+  },
+  "products": {
+    "page_title": "Osma shiftlar katalogi — Toshkentda ishlab chiqaruvchidan sotib olish",
+    "products_section_title": "Osma shift tizimlari",
+    "accessories_section_title": "Profil va butlovchi qismlar",
+    "grilyato": {
+      "title": "Grilyato Shiftlari",
+      "seo_title": "Toshkentda grilyato shift sotib olish — ishlab chiqaruvchidan arzon narxlar | Vero Ceilings",
+      "seo_description": "Toshkentda grilyato shift sotib oling — zavod narxida. 50x50, 75x75, 100x100, 150x150, 200x200 mm katakchalar. Bepul o'lchov, kafolat 15 yil, O'zbekiston bo'ylab yetkazib berish.",
+      "description": "Grilyato — U va P-shaklidagi profillardan monolit panjara hosil qilib yig'ilgan alyuminiy uyali osma shift. Savdo markazlari, ofislar, aeroportlar, restoranlar va zallar uchun eng mukammal yechim. Muhandislik kommunikatsiyalarini yashirgan holda havoni erkin aylantiradi. Yong'inga chidamli (NG), namlikka bardoshli. Katakcha o'lchamlari: 50×50, 75×75, 100×100, 150×150, 200×200 mm.",
+      "specs": {
+        "durability": "20+ yil",
+        "profile_width": "10 mm",
+        "profile_height": "30-40-50 mm",
+        "profile_length": "2000 mm",
+        "cell_sizes": "50x50 mm, 75x75 mm, 100x100 mm, 150x150 mm, 200x200 mm"
+      }
+    },
+    "armstrong": {
+      "title": "Armstrong Shiftlari",
+      "seo_title": "Toshkentda armstrong osma shift sotib olish — ulgurji va chakana | Vero Ceilings",
+      "seo_description": "Toshkentda armstrong shift panellari 600x600 mm ishlab chiqaruvchidan. Metall, gipsli va yuviladigan panellar hamda T-profillar. Sifatli va hamyonbop narxlar.",
+      "description": "Armstrong osma shiftlari — ofislar, maktablar, shifoxonalar, ma'muriy va tijorat binolari uchun klassik va qulay yechim. Ovoz va issiqlik izolyatsiyasini ta'minlaydi. Gipsli, metall va yuviladigan turlari mavjud.",
+      "specs": {
+        "durability": "15+ yil",
+        "water_resistance": "Ha (100% namlikka chidamli)",
+        "humidity_resistance": "Ha"
+      }
+    },
+    "slatceiling": {
+      "title": "Reykali Shiftlar",
+      "seo_title": "Toshkentda reykali shift sotib olish — alyuminiy va metall reyka narxlari | Vero Ceilings",
+      "seo_description": "Reykali metall shiftlar Toshkentdagi Vero Ceilings zavodidan. Chiziqli va kubsimon reykalar, yog'och va metall ranglar. 15 yil kafolat, butun O'zbekistonga yetkazish.",
+      "description": "Alyuminiy va ruxlangan po'latdan tayyorlangan reykali osma shiftlar — yo'laklar, savdo zallari, restoran va mehmonxonalar uchun zamonaviy dizaynerlik yechimi. Harorat va namlikka o'ta chidamli.",
+      "specs": {
+        "durability": "15+ yil",
+        "material": "Alyuminiy va ruxlangan po'lat"
+      }
+    },
+    "gypsumarmstrong": {
+      "title": "Gipsli Armstrong",
+      "seo_title": "Gipsli armstrong panellari 600x600 Toshkentda — zavod narxida | Vero Ceilings",
+      "seo_description": "Gipsli Armstrong plitalari 595x595 mm. O'tga chidamli, ovoz o'tkazmaydigan, ekologik toza. Toshkent omboridan ulgurji narxlar.",
+      "description": "O'tga chidamli va shovqin yutuvchi gipsli Armstrong panellari (595x595 mm). Ta'lim muassasalari, tibbiyot markazlari va ofislar uchun tavsiya etiladi.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "15 mm"
+      }
+    },
+    "metalarmstrong": {
+      "title": "Metall Armstrong",
+      "seo_title": "Metall kassetali Armstrong shiftlari Toshkentda | Vero Ceilings",
+      "seo_description": "Kassetali metall Armstrong shiftlari 600x600 mm po'lat va alyuminiydan. Mustahkam, zamonaviy va chidamli. Toshkentda ishlab chiqaruvchidan xarid qiling.",
+      "description": "Metall kassetali panellar (595x595 mm). Mexanik mustahkamligi yuqori, tozalash va dezinfeksiya qilish juda oson. Savdo markazlari va banklar uchun ideal.",
+      "specs": {
+        "size": "595 x 595 mm"
+      }
+    },
+    "washingarmstrong": {
+      "title": "Yuviladigan Armstrong",
+      "seo_title": "Yuviladigan namlikka chidamli Armstrong shift panellari Toshkentda | Vero Ceilings",
+      "seo_description": "Yuviladigan plyonkali va folgali Armstrong panellari. 100% suv o'tkazmaydi, oson yuviladi. Vero Ceilings zavodidan to'g'ridan-to'g'ri xarid qiling.",
+      "description": "Old qismi vinil qoplama, orqa tomoni issiqlik qaytaruvchi alyuminiy folga bilan qoplangan yuviladigan shift panellari. Oshxonalar va shifoxonalar uchun mo'ljallangan.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "6 mm",
+        "features": "Old tomoni oson yuviladigan plyonka, orqa tomoni namlikka chidamli folga."
+      }
+    },
+    "t-profil": {
+      "title": "T-Profil osma shift uchun",
+      "seo_title": "T-profil armstrong karkasi sotib olish Toshkentda | Vero Ceilings",
+      "seo_description": "Armstrong shiftlari uchun T24 va T15 asosiy va oraliq profillari. Aniq geometriya, mustahkam karkas, arzon zavod narxida Toshkentda.",
+      "description": "Shift panellarini mustahkam ushlab turish uchun mo'ljallangan yuqori sifatli T-shaklidagi osma profillar. Tez montaj va mustahkam karkasni ta'minlaydi.",
+      "specs": {
+        "length": "0.6 m / 1.2 m / 3.6 m",
+        "height": "24 mm",
+        "width": "24 mm",
+        "thickness": "0.25 - 0.35 mm"
+      }
+    },
+    "l-profil": {
+      "title": "L-Profil devorbop burchaklik",
+      "seo_title": "Devorbop L-profil (ugolok) osma shift uchun Toshkentda | Vero Ceilings",
+      "seo_description": "Armstrong va Grilyato shiftlari uchun devorbop L-profil ugolok. Toza perimetr, sifatli bo'yalgan metall.",
+      "description": "Xona devorlari perimetri bo'ylab shift tizimini mustahkam va tekis o'rnatish uchun devorbop L-profil.",
+      "specs": {
+        "length": "3 m",
+        "height": "22 mm",
+        "width": "20 mm",
+        "thickness": "0.25 - 0.4 mm"
+      }
+    },
+    "stringer": {
+      "title": "Stringer (traversa) reykali shiftlar uchun",
+      "seo_title": "Reykali shift uchun stringer traversa sotib olish Toshkentda | Vero Ceilings",
+      "seo_description": "Reykali va kubsimon shiftlar uchun ko'taruvchi stringer grebenka. Ruxlangan po'lat 0.6 mm, zavod narxida.",
+      "description": "Reykalarni mahkamlash uchun mo'ljallangan 0.6 mm qalinlikdagi ruxlangan po'latdan tayyorlangan ko'taruvchi traversa.",
+      "specs": {
+        "thickness": "0.6 mm"
+      }
+    },
+    "hexagon-wall-decor": {
+      "title": "Olti burchakli devor bezagi (Hexagon)",
+      "seo_title": "Olti burchakli devor bezagi Hexagon Toshkentda | Vero Ceilings",
+      "seo_description": "IT-markazlar, ofislar va maktablar uchun zamonaviy olti burchakli dekorativ va akustik panellar.",
+      "description": "Zamonaviy IT-markazlar, kovorkinglar va ofislar uchun zamonaviy olti burchakli dizaynerlik bezak panellari.",
+      "specs": {
+        "application": "IT-markazlar, ofislar, kovorkinglar, ta'lim markazlari",
+        "colors": "Qora, sariq, oq, buyurtma asosida RAL ranglari"
+      }
+    },
+    "suspension": {
+      "title": "Osma tizim (podveslar)",
+      "seo_title": "Osma shift podveslari va prujinali kapalaklar Toshkentda | Vero Ceilings",
+      "seo_description": "Barcha turdagi osma shiftlar uchun sozlanuvchi osma sim va prujinali kapalaklar. Toshkentda ulgurji narxda.",
+      "description": "Shift karkasini asosiy beton plitaga mustahkam va balandligini to'g'irlab qotirish uchun mo'ljallangan osma tizim.",
+      "specs": {
+        "length": "250 - 1000 mm"
+      }
+    },
+    "paneli": {
+      "title": "Panellar",
+      "seo_title": "Shift panellari Toshkentda — ishlab chiqaruvchidan sotib olish | Vero Ceilings",
+      "seo_description": "Vero Ceilings zavodidan dekorativ va funksional shift panellari.",
+      "description": "Interyer yechimlari uchun yuqori sifatli dekorativ panellar."
+    },
+    "specs_title": "Texnik xususiyatlari",
+    "spec_keys": {
+      "durability": "Xizmat muddati",
+      "profile_width": "Profil kengligi",
+      "profile_height": "Profil balandligi",
+      "profile_length": "Profil uzunligi",
+      "cell_sizes": "Katakcha o'lchamlari",
+      "water_resistance": "Suv o'tkazmasligi",
+      "humidity_resistance": "Namlikka chidamliligi",
+      "material": "Material",
+      "size": "Panel o'lchami",
+      "thickness": "Metall qalinligi",
+      "features": "Konstruksiya xususiyatlari",
+      "length": "Uzunlik",
+      "height": "Balandlik",
+      "width": "Kenglik",
+      "application": "Qo'llanish sohalari",
+      "colors": "Ranglar gammasi"
+    },
+    "application_cases_title": "Amalga oshirilgan loyihalar va qo'llanish sohalari",
+    "video_installation_title": "O'rnatish bo'yicha video-qo'llanma",
+    "related_products_title": "Butlovchi qismlar va tegishli mahsulotlar",
+    "order_cta_title": "Narxni hisoblash va to'g'ridan-to'g'ri zavoddan buyurtma qilish",
+    "order_cta_text": "Loyihangiz bo'yicha bepul smeta hisob-kitobiga buyurtma bering. Toshkent bo'ylab o'lchovchi bepul chiqadi. 100 m²dan ortiq buyurtmada yetkazib berish bepul!",
+    "order_cta_button": "Savdo bo'limi bilan bog'lanish"
+  },
+  "accessories": {
+    "title": "Montaj butlovchi qismlari",
+    "wrench_set": {
+      "title": "Montaj asboblari to'plami",
+      "description": "Karkasni tez va mustahkam yig'ish uchun maxsus asboblar."
+    },
+    "bolt_kit": {
+      "title": "Anker va mahkamlagichlar to'plami",
+      "description": "Osma tizimlarni beton va metallga mustahkam qotirish moslamalari."
+    },
+    "mounting_gear": {
+      "title": "Montaj yo'naltiruvchilari",
+      "description": "Shift sathining mukammal tekis bo'lishini ta'minlaydi."
+    },
+    "connectors": {
+      "title": "Universal ulagichlar",
+      "description": "Profillarni bo'ylama va ko'ndalang ulash qismlari."
+    },
+    "measuring_tools": {
+      "title": "Lazerli o'lchov asboblari",
+      "description": "Balandlik va sathni aniq belgilash uchun professional uskunalar."
+    },
+    "led_indicators": {
+      "title": "Grilyato va Armstrong uchun o'rnatma chiroqlar",
+      "description": "600x600 mm diodli panellar va yacheykaga mos tushuvchi yoritgichlar."
+    }
+  },
+  "footer": {
+    "links": {
+      "title": "Navigatsiya",
+      "home": "Bosh sahifa",
+      "about": "Zavod haqida",
+      "products": "Shiftlar katalogi",
+      "projects": "Obyektlarimiz",
+      "contact": "Bog'lanish"
+    },
+    "products": {
+      "title": "Ommabop mahsulotlar",
+      "metal_armstrong": {
+        "title": "Metall Armstrong"
+      },
+      "gypsum_armstrong": {
+        "title": "Gipsli Armstrong"
+      },
+      "washing_armstrong": {
+        "title": "Yuviladigan Armstrong"
+      },
+      "grilyato": {
+        "title": "Grilyato shiftlari 100x100, 75x75"
+      },
+      "slat_ceiling": {
+        "title": "Reykali shiftlar"
+      }
+    },
+    "contact": {
+      "title": "Savdo bo'limi va zavod",
+      "address": "Toshkent sh., Chilonzor tumani, Chorbog' ko'chasi, 27.",
+      "phone1": "+99878 333 73 77",
+      "phone2": "+998 90 049 11 10",
+      "email": "veroceiling@gmail.com",
+      "website": "veroceilings.uz"
+    },
+    "newsletter": {
+      "title": "Maxsus takliflarga obuna bo'ling",
+      "description": "Ulgurji xaridorlar, me'morlar va pudratchilar uchun maxsus narxlar.",
+      "placeholder": "Elektron pochtangiz",
+      "button": "Prays-list olish"
+    },
+    "rights": "Vero Ceilings © 2014-2026. Barcha huquqlar himoyalangan. O'zbekistondagi rasmiy osma shiftlar ishlab chiqaruvchi zavod."
+  },
+  "about": {
+    "page_title": "Vero Ceilings zavodi haqida — O'zbekistondagi eng yirik osma shiftlar ishlab chiqaruvchisi",
+    "title": "Vero Ceilings kompaniyasi va zavodi haqida",
+    "paragraph1": "Vero Ceilings — O'zbekistonda zamonaviy osma shift tizimlarini to'g'ridan-to'g'ri ishlab chiqaruvchi yetakchi zavod bo'lib, 2014-yilda tashkil topgan «Vero Group» sanoat xoldingi tarkibiga kiradi. Ishlab chiqarish maydonimiz Toshkentda 15 000 m² dan ortiq hududni egallagan va 200 dan ortiq xorijiy zamonaviy uskunalar bilan jihozlangan. Xoldingda 1700 nafardan ziyod malakali mutaxassislar mehnat qiladi.",
+    "paragraph2": "Biz barcha turdagi Grilyato, Armstrong (metall va gipsli), chiziqli hamda kubsimon reykali osma shiftlarni ishlab chiqaramiz. Mahsulotlarimiz O'zbekistonning 14 viloyatiga va Markaziy Osiyo davlatlariga eksport qilinadi. Barcha mahsulotlar ISO 9001 xalqaro sifat sertifikatlari va yong'in xavfsizligi talablariga to'liq javob beradi.",
+    "paragraph3": "Vero Ceilings «kalit ostida» to'liq xizmat ko'rsatadi: smetani tezkor hisoblash, Toshkent bo'ylab bepul o'lchov olish, loyihalash, o'z transportimizda yetkazish va tajribali mutaxassislar tomonidan professional montaj. 100 m²dan ortiq buyurtmalarga yetkazib berish bepul.",
+    "intro_title": "«Vero Group» xoldingi — O'zbekiston qurilish sanoatida 10+ yillik yetakchilik",
+    "intro_text": "«Vero Group» sanoat guruhi 2014-yilda tashkil etilgan bo'lib, qurilish sohasidagi 10 dan ortiq ixtisoslashgan korxonalarni birlashtiradi. Biz zamonaviy avtomatlashtirilgan ishlab chiqarish liniyalari va ekologik toza xom ashyolardan foydalanamiz.",
+    "counter1_title": "Malakali mutaxassislar",
+    "counter1_text": "Vero Group xoldingidagi 1700+ muhandis va ishchilar uzluksiz ishlab chiqarish va qat'iy sifat nazoratini ta'minlaydi.",
+    "counter2_title": "Zamonaviy uskunalar",
+    "counter2_text": "200 dan ortiq zamonaviy avtomatlashtirilgan dastgohlar toʻliq siklli seriyali ishlab chiqarishni taʼminlaydi.",
+    "counter3_title": "Doimiy yirik hamkorlar",
+    "counter3_text": "Oʻzbekiston va MDH boʻylab qurilish kompaniyalari, arxitektura byurolari va dilerlar Vero Ceilings bilan ishlaydi.",
+    "story_title": "Vero Ceilings: keng ko'lamli osma shift ishlab chiqarishi",
+    "story_text": "Vero Ceilings barcha turdagi metall va mineral osma shiftlarni ishlab chiqaradi. Mahsulotlarimiz O'zbekistonning eng yirik savdo markazlari, xalqaro aeroportlar, banklar va zamonaviy ofislarini bezab turibdi.",
+    "vision_title": "Vero Group qarashlari: Markaziy Osiyoda yetakchilik va eksport",
+    "vision_text": "Zavodimizga O'zbekiston Respublikasi Prezidenti Shavkat Mirziyoyev tashrif buyurib, ishlab chiqarish sifati va mahalliylashtirish darajasini yuqori baholagan. Vero Ceilings doimiy ravishda Aquatherm Tashkent, ShymkentBuild va boshqa xalqaro ko'rgazmalarda ishtirok etib kelmoqda.",
+    "story_image_alt": "Toshkentdagi Vero Ceilings grilyato va armstrong osma shift ishlab chiqarish zavodi"
+  },
+  "faq": {
+    "page_title": "Osma shiftlar sotib olish va o'rnatish bo'yicha tez-tez so'raladigan savollar",
+    "title": "Tez-tez so'raladigan savollar",
+    "q1": {
+      "question": "Toshkentda grilyato shift sotib olish narxi qancha?",
+      "answer": "Grilyato shiftining narxi katakcha o'lchamiga (50x50, 75x75, 100x100, 150x150, 200x200 mm), balandligiga va rangiga bog'liq. To'g'ridan-to'g'ri ishlab chiqaruvchi bo'lganimiz uchun Toshkentda vositachilarsiz eng arzon narxlarni taklif qilamiz. Aniq smeta va bepul hisob-kitob uchun +99878 333 73 77 raqamiga qo'ng'iroq qiling."
+    },
+    "q2": {
+      "question": "Yetkazib berish muddatlari qanday va viloyatlarga yetkaziladimi?",
+      "answer": "Ommabop mahsulotlar (Grilyato 100x100, 75x75, Armstrong 600x600 oq, kulrang va qora ranglarda) Toshkentdagi omborimizda doim mavjud va buyurtma kuni jo'natiladi. O'zbekistonning barcha 14 viloyatiga yetkazib beramiz. 100 m²dan ortiq buyurtmalarda Toshkent bo'ylab yetkazib berish bepul."
+    },
+    "q3": {
+      "question": "Rasmiy kafolat va sifat sertifikatlari beriladimi?",
+      "answer": "Ha, barcha Vero Ceilings mahsulotlariga zavoddan 15 yillik rasmiy kafolat beriladi. Shuningdek, GOST/ISO muvofiqlik, yong'in xavfsizligi (NG) va sanitariya sertifikatlari to'liq taqdim etiladi."
+    },
+    "q4": {
+      "question": "Ulgurji xarid qilsa bo'ladimi va pul o'tkazish (perechislenie) yo'li bilan ishlaysizmi?",
+      "answer": "Ha, biz QQS bilan yuridik shaxslar, qurilish kompaniyalari, develoeprlar va me'morlar bilan pul o'tkazish (shartnoma) asosida ishlaymiz. Katta hajmdagi xaridlar uchun maxsus ulgurji chegirmalar taqdim etiladi."
+    },
+    "q5": {
+      "question": "Professional montaj xizmatlarini ham bajarasizmi?",
+      "answer": "Ha, bizda malakali montaj brigadalari mavjud. Lazerli o'lchov olishdan boshlab to'liq topshirishgacha bo'lgan barcha ishlarni bajaramiz. Toshkent bo'ylab o'lchovchi chiqishi bepul."
+    },
+    "q6": {
+      "question": "Qozog'iston, Qirg'iziston, Tojikiston va boshqa MDH davlatlariga eksport qilasizmi?",
+      "answer": "Ha! Vero Ceilings yirik partiyalarda (avtofuralar, konteynerlar) Markaziy Osiyo va MDH davlatlariga eksport bojxona hujjatlari va ST-1 kelib chiqish sertifikatlari bilan yetkazib beradi."
+    }
+  },
+  "projects": {
+    "page_title": "Amalga oshirilgan obyektlar — Toshkent va viloyatlarda Vero Ceilings osma shiftlari montaji"
+  },
+  "architects": {
+    "page_title": "Arxitektorlar, loyihachilar va dizaynerlar uchun | Vero Ceilings",
+    "library_title": "Bilimlar bazasi va montaj videolari",
+    "library_description": "Vero Ceilings arxitektor va loyihachilarga toʻliq texnik yordam koʻrsatadi: DWG chizmalar, oʻlcham va yuklama jadvallari, sinov bayonnomalari. Loyiha katalogini olish uchun biz bilan bogʻlaning.",
+    "video1": {
+      "title": "Grilyato shiftini o'rnatish bo'yicha video-qo'llanma",
+      "description": "Grilyato katakchali shiftini bosqichma-bosqich yig'ish va o'rnatish."
+    },
+    "video2": {
+      "title": "Armstrong kassetali shiftini o'rnatish",
+      "description": "T-profillarni o'rnatish va Armstrong plitalarini joylashtirish."
+    },
+    "video3": {
+      "title": "Reykali va kubsimon shiftlarni montaj qilish",
+      "description": "Stringerlarni qotirish va reykalarni biriktirish texnologiyasi."
+    },
+    "video4": {
+      "title": "Karkas T-profilini o'rnatish",
+      "description": "Asosiy va ko'ndalang yo'naltiruvchilarni montaj qilish."
+    },
+    "video5": {
+      "title": "Devorbop L-profilni o'rnatish",
+      "description": "Lazer sathi bo'yicha xona perimetrini tekislash."
+    },
+    "video6": {
+      "title": "Osma sim va podveslarni sozlash",
+      "description": "Prujinali podveslar balandligini to'g'rilash."
+    }
+  },
+  "contact": {
+    "page_title": "Toshkentdagi Vero Ceilings zavodi kontaktlari | Savdo bo'limi va buyurtma",
+    "view_map": "Xaritada ko'rish (Yandex / Google)",
+    "form_description_new": "Tijoriy taklif olish, smetani hisoblash yoki o'lchovchini chaqirish uchun savdo bo'limimizga so'rov qoldiring.",
+    "phone_number": "+998 (78) 333 73 77",
+    "email_address": "veroceiling@gmail.com",
+    "location": "Toshkent sh., Chilonzor tumani, Chorbog' ko'chasi, 27.",
+    "name_label": "Ismingiz / Korxona nomi",
+    "phone_label": "Telefon raqamingiz",
+    "email_label": "Elektron pochtangiz",
+    "message_label": "Xona maydoni (m²) yoki texnik topshiriq",
+    "name_placeholder_new": "Ali / 'Quruvchi' MCHJ",
+    "phone_placeholder_new": "+998 90 123 45 67",
+    "email_placeholder_new": "info@kompaniya.uz",
+    "message_placeholder_new": "Toshkentda 350 m² qora Grilyato 100x100 montaji bilan kerak...",
+    "send_button": "HISOBLASHGA BUYURTMA BERISH",
+    "status_sending": "So'rov yuborilmoqda...",
+    "status_success": "Rahmat! So'rovingiz qabul qilindi. Savdo muhandisi 15 daqiqa ichida siz bilan bog'lanadi.",
+    "status_error": "Yuborishda xatolik. Iltimos, bizga to'g'ridan-to'g'ri qo'ng'iroq qiling: +998 78 333 73 77.",
+    "status_error_generic": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring.",
+    "title": "SAVDO BO'LIMI VA ZAVOD",
+    "subtitle": "Osma shiftlar ishlab chiqaruvchisi bilan to'g'ridan-to'g'ri aloqa",
+    "phone": "+998 78 333 73 77",
+    "email": "veroceiling@gmail.com",
+    "website": "veroceilings.uz",
+    "form": {
+      "name": "Ismingiz",
+      "phone": "Telefon",
+      "email": "Email",
+      "subject": "Mavzu",
+      "message": "Xabar",
+      "send": "SO'ROV YUBORISH"
+    }
+  },
+  "seo": {
+    "h1": "Toshkentda osma shiftlar sotib olish — Grilyato, Armstrong, reykali shiftlar Vero Ceilings zavodidan",
+    "title": "Toshkentda osma shiftlar sotib olish — Grilyato, Armstrong | Vero Ceilings zavodi",
+    "description": "Toshkentda osma shiftlar sotib oling — ishlab chiqaruvchi Vero Ceilings zavodidan arzon narxlarda: Grilyato, Armstrong, reykali shiftlar. 2014-yildan beri, 200+ stanok, 15 yil kafolat. Bepul oʻlchov.",
+    "keywords": "grilyato shift sotib olish toshkent, grilyato shift toshkent narxi, osma shift sotib olish toshkent, armstrong shift toshkent narxi, reykali shift toshkent, grilyato 100x100 narxi toshkent, grilyato 75x75 sotib olish, osma shift ishlab chiqaruvchi o'zbekiston, ulgurji shiftlar toshkent, shift montaj toshkent, vero ceilings",
+    "pages": {
+      "products": {
+        "title": "Osma shiftlar sotib olish Toshkentda — Vero Ceilings katalogi va zavod narxlari",
+        "description": "Vero Ceilings osma shiftlar katalogi: Grilyato (50x50, 75x75, 100x100, 150x150), metall va gipsli Armstrong, reykali shift tizimlari va T-profillar. Ulgurji narxlar va smeta."
+      },
+      "projects": {
+        "title": "Amalga oshirilgan loyihalar — Grilyato va Armstrong shiftlari montaji | Vero Ceilings",
+        "description": "Vero Ceilings loyihalari: O'zbekiston va MDH bo'ylab aeroportlar, savdo markazlari, biznes markazlari va mehmonxonalardagi osma shiftlar galereyasi."
+      },
+      "about": {
+        "title": "Vero Ceilings zavodi haqida — O'zbekistonda osma shiftlar ishlab chiqaruvchisi",
+        "description": "Vero Ceilings — 2014-yildan buyon «Vero Group» xoldingining shift zavodi. 15 000 m² ishlab chiqarish maydoni, 200+ stanok, ISO 9001 sertifikatlari. Oʻzbekiston boʻylab yetkazish va eksport."
+      },
+      "contact": {
+        "title": "Vero Ceilings zavodi Toshkent kontaktlari — Bepul o'lchov va buyurtma",
+        "description": "Zavod manzili: Toshkent sh., Chilonzor, Chorbog' ko'chasi, 27. Savdo bo'limi: +998 78 333 73 77. Bepul o'lchov va smeta hisoblash."
+      },
+      "faq": {
+        "title": "Savol-javoblar: Toshkentda osma shiftlar narxi, sotib olish va montaj | Vero Ceilings",
+        "description": "Muhim savollarga javoblar: grilyato m² narxi qancha, O'zbekiston bo'ylab yetkazib berish, developerlar uchun chegirmalar, 15 yil kafolat va MDHga eksport."
+      },
+      "architects": {
+        "title": "Me'morlar va loyihachilar uchun — Katalog, DWG chizmalar va sertifikatlar | Vero Ceilings",
+        "description": "Loyihalash uchun texnik hujjatlar: DWG chizmalar, oʻlcham va yuklama jadvallari, sertifikatlar va Vero Ceilings sinov bayonnomalari."
+      },
+      "calculator": {
+        "title": "Osma shiftlar hisoblash onlayn kalkulyatori — Grilyato va Armstrong Toshkentda | Vero Ceilings",
+        "description": "Xonangiz uchun zarur boʻlgan Grilyato, Armstrong va reykali shift materiallari, profillari va podveslarini onlayn hisoblang. Vero Ceilings zavodidan toʻgʻridan-toʻgʻri smeta."
+      }
+    }
+  },
+  "calculator": {
+    "page_title": "Osma shiftlar hisoblash onlayn kalkulyatori",
+    "title": "Osma shift materiallari va smetasini onlayn hisoblash",
+    "subtitle": "Xonangiz oʻlchamlariga qarab kerakli profillar, Grilyato katakchalari va podveslar sonini 30 soniyada hisoblang",
+    "labels": {
+      "type": "1. Shift tizimi turini tanlang:",
+      "cell_size": "2. Grilyato katakcha oʻlchami:",
+      "color": "3. Rang tanlovi:",
+      "dimensions": "4. Xona oʻlchamlari (uzunligi va kengligi):",
+      "armstrong_type": "2. Armstrong plitalari turi (600х600 mm):",
+      "slat_type": "2. Reyka turi va kengligi:"
+    },
+    "types": {
+      "grilyato": "Grilyato",
+      "armstrong": "Armstrong",
+      "slat": "Reykali"
+    },
+    "colors": {
+      "white": "Oq RAL 9003",
+      "black": "Qora RAL 9005",
+      "graphite": "Grafit RAL 7024",
+      "metallic": "Metallik RAL 9006",
+      "wood": "Yogʻoch (Eman)"
+    },
+    "results": {
+      "title": "Dastlabki materiallar spetsifikatsiyasi",
+      "area": "Maydon",
+      "perimeter": "Perimetr",
+      "grilyato_main": "Asosiy yoʻnaltiruvchilar (2.4m)",
+      "grilyato_elements": "Panjara profillari (ona/ota)",
+      "t_main": "Asosiy T-profil (3.6m)",
+      "t_cross": "Oraliq T-profil (1.2 / 0.6m)",
+      "stringers": "Koʻtaruvchi stringerlar (3m)",
+      "slats": "Metall reykalar (3m)",
+      "l_angle": "Devorbop L-ugolok (3m)",
+      "hangers": "Sozlanuvchi prujinali podveslar",
+      "lights": "Tavsiya etiladigan LED yoritgichlar 600x600"
+    },
+    "cta_telegram": "Hisob-kitobni Telegramga yuborish",
+    "cta_quote": "Bepul oʻlchovchini chaqirish",
+    "armstrong_types": {
+      "metal": "Metall kassetalar 600x600 mm",
+      "washable": "Yuviladigan folgali plitalar Ecofol 600x600 mm",
+      "gypsum": "Gipsli Armstrong plitalari 600x600 mm",
+      "metal_short": "Metall kassetalar",
+      "washable_short": "Yuviladigan Ecofol",
+      "gypsum_short": "Gipsli plitalar"
+    },
+    "slat_types": {
+      "cube100": "Kubsimon reyka 100 mm (L = 3.0 m)",
+      "classic84": "Klassik reyka 84R (L = 3.0 m)",
+      "linear150": "Keng chiziqli reyka 150 mm (L = 3.0 m)",
+      "cube_short": "Kubsimon 100 mm",
+      "classic_short": "Klassik 84R",
+      "linear_short": "Keng 150 mm"
+    },
+    "items": {
+      "grilyato_mama": "Panjara profili «Ona» (Mama)",
+      "grilyato_papa": "Panjara profili «Ota» (Papa)",
+      "grilyato_main24": "Asosiy karkas yoʻnaltiruvchisi (2.4 m)",
+      "grilyato_cross12": "Oraliq profil (1.2 m)",
+      "grilyato_cross06": "Oraliq profil (0.6 m)",
+      "grilyato_connectors": "Asosiy profillar ulagichi",
+      "t_main36": "Asosiy koʻtaruvchi T-profil T24/T15 (3.6 m)",
+      "t_cross12": "Oraliq T-profil (1.2 m)",
+      "t_cross06": "Oraliq T-profil (0.6 m)",
+      "stringers": "Koʻtaruvchi стрингер / grebenka (3.0 m)",
+      "slat_perimeter": "Devorbop P/L-profil (3.0 m)",
+      "l_angle": "Devorbop burchaklik L-profil (3.0 m)",
+      "hangers": "Sozlanuvchi prujinali podveslar",
+      "lights": "Tavsiya etiladigan Grilyato LED chiroqlari",
+      "lights_armstrong": "Oʻrnatma LED panellar 600х600"
+    }
+  }
+}

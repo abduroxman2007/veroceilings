@@ -1,0 +1,502 @@
+{
+  "navbar": {
+    "products": "Products",
+    "projects": "Projects",
+    "architects": "For Architects",
+    "clients": "For Clients",
+    "about": "About Factory",
+    "contact": "Contact",
+    "language": "Language",
+    "catalog": "Product Catalogue",
+    "logo_alt": "Vero Ceilings Logo — Suspended Ceiling Manufacturer in Central Asia",
+    "home": "Home",
+    "calculator": "Calculator"
+  },
+  "welcome": "Vero Ceilings — Suspended Ceiling Manufacturing in Tashkent, Uzbekistan",
+  "whyus": {
+    "title": "Why Global Specifiers Choose Vero Ceilings",
+    "subtitle": "Direct Industrial Manufacturer — High Capacity, ISO Certified, Export Ready",
+    "features": {
+      "experience": {
+        "title": "10+ Years of Large-Scale Industrial Manufacturing",
+        "description": "Established in 2014 as the ceiling manufacturing division of Vero Group (10+ industrial enterprises), Vero Ceilings operates a 15,000 m² production complex in Tashkent with 200+ automated roll-forming and powder-coating machines."
+      },
+      "quality": {
+        "title": "Precision Engineering & International ISO Standards",
+        "description": "We engineer Grilyato open-cell, Armstrong acoustic cassettes, and linear slat systems using premium-grade aluminium and galvanized steel. Certified under ISO 9001 quality management; fire classification documentation available on request."
+      },
+      "guarantee": {
+        "title": "15-Year Factory Warranty & Export Compliance",
+        "description": "Every Vero Ceilings system is backed by a 15-year official factory warranty, full acoustic test reports, and international export documentation (CT-1 origin certificates, customs clearance support)."
+      }
+    },
+    "start_trial_button": "REQUEST COMMERCIAL PROPOSAL & SAMPLES",
+    "impact_ceilings": {
+      "title": "Massive Production Capacity — Direct From Factory",
+      "description": "Direct factory pricing, dedicated export project managers, and containerized logistics across Central Asia and the CIS."
+    }
+  },
+  "hero": {
+    "slide1": {
+      "title": "Suspended Ceiling Manufacturer in Central Asia — Vero Ceilings",
+      "text": "Open-cell Grilyato, Armstrong cassette tiles, and architectural linear slat ceiling systems. Industrial-scale manufacturing, custom dimensions, and worldwide export supply.",
+      "button": "EXPLORE CATALOGUE"
+    },
+    "slide2": {
+      "title": "Grilyato Open-Cell Ceilings — 50x50, 75x75, 100x100, 150x150, 200x200 mm",
+      "text": "Engineered aluminium cell ceilings for international airports, commercial mega-malls, corporate headquarters, and transit hubs. All RAL colours available.",
+      "button": "SPECIFY GRILYATO"
+    },
+    "slide3": {
+      "title": "Major Landmark Projects Across Central Asia and the CIS",
+      "text": "Over a decade of manufacturing experience. Vero Ceilings supplies contractors, architects and distributors across Uzbekistan and the CIS.",
+      "button": "VIEW CASE STUDIES"
+    }
+  },
+  "products": {
+    "page_title": "Suspended Ceiling Systems Catalogue — Direct Manufacturer",
+    "products_section_title": "Ceiling Systems",
+    "accessories_section_title": "Suspension Grid & Accessories",
+    "grilyato": {
+      "title": "Grilyato Open-Cell Ceilings",
+      "seo_title": "Buy Grilyato Open-Cell Ceilings — Direct Manufacturer & Exporter | Vero Ceilings",
+      "seo_description": "Industrial manufacturer of Grilyato open-cell aluminium ceilings in Central Asia. Cell sizes 50x50, 75x75, 100x100, 150x150, 200x200 mm. Direct export pricing, ISO 9001 certified.",
+      "description": "Grilyato is an open-cell aluminium suspended ceiling system assembled from precision U-profile interlocking blades into a seamless monolithic lattice grid. Specifically engineered for airports, shopping centres, transit hubs, and commercial buildings. Non-combustible (Class A1), moisture-proof, with unobstructed access to MEP services.",
+      "specs": {
+        "durability": "20+ years",
+        "profile_width": "10 mm",
+        "profile_height": "30-40-50 mm",
+        "profile_length": "2000 mm",
+        "cell_sizes": "50x50 mm, 75x75 mm, 100x100 mm, 150x150 mm, 200x200 mm"
+      }
+    },
+    "armstrong": {
+      "title": "Armstrong Suspended Ceilings",
+      "seo_title": "Armstrong Suspended Ceiling Tiles 600x600 — Manufacturer Supply | Vero Ceilings",
+      "seo_description": "Armstrong ceiling tile systems (metal, mineral, washable gypsum) with T-grid suspension. Direct manufacturer supply for commercial, hospital, and educational facilities.",
+      "description": "Armstrong lay-in and clip-in suspended ceiling systems for corporate offices, healthcare facilities, schools, and commercial centres. Delivers superior acoustic absorption, thermal comfort, and rapid installation.",
+      "specs": {
+        "durability": "15+ years",
+        "water_resistance": "Yes (100% humidity resistant)",
+        "humidity_resistance": "Yes"
+      }
+    },
+    "slatceiling": {
+      "title": "Linear Slat Ceilings",
+      "seo_title": "Aluminium Linear Slat & Baffle Ceilings — Manufacturer | Vero Ceilings",
+      "seo_description": "Architectural aluminium linear and box-baffle slat ceilings from manufacturer Vero Ceilings. Custom woodgrain and metallic finishes for modern lobbies and retail spaces.",
+      "description": "Precision-rollformed aluminium and galvanized steel linear slat ceiling systems. Provides a sleek architectural appearance with crisp reveal lines for hotel lobbies, transit stations, galleries, and exterior soffits.",
+      "specs": {
+        "durability": "15+ years",
+        "material": "Aluminium & Galvanized Steel"
+      }
+    },
+    "gypsumarmstrong": {
+      "title": "Gypsum Armstrong",
+      "seo_title": "Acoustic Gypsum Armstrong Ceiling Tiles 595x595 mm | Vero Ceilings",
+      "seo_description": "Fire-resistant and sound-dampening gypsum ceiling tiles from the Vero Ceilings factory. Eco-friendly, factory-direct export.",
+      "description": "Fire-resistant and acoustic-absorbing gypsum ceiling panels 595x595 mm for educational, medical, and administrative developments.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "15 mm"
+      }
+    },
+    "metalarmstrong": {
+      "title": "Metal Armstrong",
+      "seo_title": "Metal Cassette Ceiling Tiles 600x600 mm — Steel & Aluminium | Vero Ceilings",
+      "seo_description": "Perforated and plain metal cassette ceiling tiles. Heavy-duty, hygienic, and modern. Direct factory wholesale from Vero Ceilings.",
+      "description": "Metal cassette ceiling tiles (595x595 mm) in aluminium and galvanized steel with electro-static powder coating. High durability for demanding high-traffic environments.",
+      "specs": {
+        "size": "595 x 595 mm"
+      }
+    },
+    "washingarmstrong": {
+      "title": "Washable Armstrong",
+      "seo_title": "Washable Hygienic Ceiling Tiles — Foil Backed | Vero Ceilings",
+      "seo_description": "Washable PVC-faced and foil-backed ceiling panels for cleanrooms, commercial kitchens, and laboratories.",
+      "description": "100% washable ceiling tiles with vinyl facing and thermal-reflective aluminium foil backing. Designed for medical cleanrooms, commercial kitchens, and high-moisture facilities.",
+      "specs": {
+        "size": "595 x 595 mm",
+        "thickness": "6 mm",
+        "features": "Wipeable vinyl face, thermal foil backing, anti-microbial surface."
+      }
+    },
+    "t-profil": {
+      "title": "T-Grid Suspension System",
+      "seo_title": "T-Grid Ceiling Suspension System (T24, T15) — Manufacturer | Vero Ceilings",
+      "seo_description": "Main runner and cross tees (T24/T15) for lay-in ceiling systems. High load capacity, precision interlocking clips.",
+      "description": "Heavy-duty engineered T-grid suspension systems for lay-in ceiling installations. Precision rotary stitching ensures maximum torsional rigidity and fire safety.",
+      "specs": {
+        "length": "0.6 m / 1.2 m / 3.6 m",
+        "height": "24 mm",
+        "width": "24 mm",
+        "thickness": "0.25 - 0.35 mm"
+      }
+    },
+    "l-profil": {
+      "title": "Perimeter L-Trim",
+      "seo_title": "Wall Angle Perimeter L-Trim for Suspended Ceilings | Vero Ceilings",
+      "seo_description": "Pre-painted galvanized steel and aluminium perimeter wall angle trims. Crisp room perimeter detailing.",
+      "description": "Rollformed perimeter L-trim angles for clean, stable perimeter termination of grid and panel ceiling systems.",
+      "specs": {
+        "length": "3 m",
+        "height": "22 mm",
+        "width": "20 mm",
+        "thickness": "0.25 - 0.4 mm"
+      }
+    },
+    "stringer": {
+      "title": "Linear Slat Carrier (Stringer)",
+      "seo_title": "Slat Ceiling Stringer Carrier Bar | Vero Ceilings",
+      "seo_description": "Universal carrier stringers for linear and box-baffle ceiling systems. 0.6 mm galvanized steel.",
+      "description": "Heavy-duty 0.6 mm galvanized steel carrier stringers with precision alignment prongs for snap-in linear slat fixing.",
+      "specs": {
+        "thickness": "0.6 mm"
+      }
+    },
+    "hexagon-wall-decor": {
+      "title": "Hexagon Architectural Panels",
+      "seo_title": "Hexagon Acoustic & Architectural Wall Decor | Vero Ceilings",
+      "seo_description": "Modular hexagonal decorative and acoustic wall/ceiling modules for tech campuses, co-working, and creative spaces.",
+      "description": "Geometric modular hexagonal panel systems designed for corporate headquarters, IT parks, universities, and contemporary interiors.",
+      "specs": {
+        "application": "IT campuses, universities, creative studios, modern lobbies",
+        "colors": "Custom RAL powder coating options"
+      }
+    },
+    "suspension": {
+      "title": "Adjustable Suspension Components",
+      "seo_title": "Ceiling Suspension Hangers & Quick-Adjust Wire | Vero Ceilings",
+      "seo_description": "Heavy-load adjustable butterfly spring hangers and suspension rods for commercial ceiling installations.",
+      "description": "Precision spring-steel butterfly hangers and galvanized wire rods for level alignment under dynamic ceiling loads.",
+      "specs": {
+        "length": "250 - 1000 mm"
+      }
+    },
+    "paneli": {
+      "title": "Architectural Panels",
+      "seo_title": "Architectural Ceiling & Wall Panels — Export Manufacturer | Vero Ceilings",
+      "seo_description": "Custom interior architectural panels engineered by Vero Ceilings factory.",
+      "description": "High-grade bespoke panels tailored for premium commercial interior architecture."
+    },
+    "specs_title": "Technical Specifications",
+    "spec_keys": {
+      "durability": "Service Life",
+      "profile_width": "Profile Width",
+      "profile_height": "Profile Height",
+      "profile_length": "Profile Length",
+      "cell_sizes": "Cell Modular Sizes",
+      "water_resistance": "Water Resistance",
+      "humidity_resistance": "Humidity Resistance",
+      "material": "Base Material",
+      "size": "Panel Dimensions",
+      "thickness": "Metal Gauge Thickness",
+      "features": "Design Characteristics",
+      "length": "Standard Length",
+      "height": "Height",
+      "width": "Width",
+      "application": "Primary Applications",
+      "colors": "Available Colorway / Finishes"
+    },
+    "application_cases_title": "Landmark Projects & Typical Applications",
+    "video_installation_title": "Technical Installation Video",
+    "related_products_title": "Compatible Grid & Accessories",
+    "order_cta_title": "Request Direct Factory Quotation & Export Specification",
+    "order_cta_text": "Connect directly with our export engineering department for project calculations, container logistics, and bespoke manufacturing lead times.",
+    "order_cta_button": "Contact Export Department"
+  },
+  "accessories": {
+    "title": "Installation Hardware & Tooling",
+    "wrench_set": {
+      "title": "Professional Tooling Kit",
+      "description": "Precision alignment tools for rapid grid assembly."
+    },
+    "bolt_kit": {
+      "title": "Structural Anchor Hardware",
+      "description": "High-tensile concrete fasteners for heavy ceiling loads."
+    },
+    "mounting_gear": {
+      "title": "Laser Alignment Guides",
+      "description": "Guarantees millimeter-accurate ceiling plane flatness."
+    },
+    "connectors": {
+      "title": "Structural Interlocking Splices",
+      "description": "Longitudinal and transverse locking connectors."
+    },
+    "measuring_tools": {
+      "title": "Laser Distance & Level Instruments",
+      "description": "Professional laser tooling for commercial grid layout."
+    },
+    "led_indicators": {
+      "title": "Integrated LED Luminaires for Grilyato & Armstrong",
+      "description": "Seamless 600x600 mm LED panels and cell-compatible lighting modules."
+    }
+  },
+  "footer": {
+    "links": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About Factory",
+      "products": "Product Catalogue",
+      "projects": "Case Studies",
+      "contact": "Contact Us"
+    },
+    "products": {
+      "title": "Core Product Lines",
+      "metal_armstrong": {
+        "title": "Metal Armstrong"
+      },
+      "gypsum_armstrong": {
+        "title": "Gypsum Armstrong"
+      },
+      "washing_armstrong": {
+        "title": "Hygienic Washable Armstrong"
+      },
+      "grilyato": {
+        "title": "Grilyato Open-Cell (50x50 to 200x200)"
+      },
+      "slat_ceiling": {
+        "title": "Linear Slat & Baffle Ceilings"
+      }
+    },
+    "contact": {
+      "title": "Global Sales & Manufacturing HQ",
+      "address": "27 Chorbog St, Chilanzar district, Tashkent, Uzbekistan.",
+      "phone1": "+99878 333 73 77",
+      "phone2": "+998 90 049 11 10",
+      "email": "veroceiling@gmail.com",
+      "website": "veroceilings.uz"
+    },
+    "newsletter": {
+      "title": "Architect & Specifier Digest",
+      "description": "Receive technical bulletins, new product announcements and project case studies.",
+      "placeholder": "Your corporate e-mail",
+      "button": "Request Specifier Kit"
+    },
+    "rights": "Vero Ceilings © 2014-2026. All rights reserved. Suspended ceiling manufacturing in Tashkent, Uzbekistan."
+  },
+  "about": {
+    "page_title": "About Vero Ceilings Factory — Industrial Scale Ceiling Manufacturer in Central Asia",
+    "title": "About Vero Ceilings Manufacturing Complex",
+    "paragraph1": "Vero Ceilings is an industrial manufacturer of metal, mineral, and open-cell suspended ceiling systems in Uzbekistan, operating as the ceiling manufacturing division of Vero Group (established 2014). Our production facility in Tashkent spans over 15,000 m² of industrial floor space, equipped with over 200 automated roll-forming and powder-coating machines.",
+    "paragraph2": "We engineer and manufacture the full spectrum of Grilyato open-cell systems (50x50 to 200x200 mm), Armstrong lay-in and clip-in metal cassettes, acoustic gypsum tiles, and architectural linear baffle systems. All products comply with ISO 9001 quality management, international Class A fire safety regulations, and environmental standards, serving projects across all 14 regions of Uzbekistan and exporting to Central Asia, the CIS, and beyond.",
+    "paragraph3": "For international architectural firms, developers, and general contractors, Vero Ceilings provides full technical specification support, rapid sample dispatch, containerized worldwide shipping, and on-site engineering supervision.",
+    "intro_title": "Vero Group Holding — A Decade of Industrial Manufacturing Scale",
+    "intro_text": "Vero Group holding includes over 10 manufacturing enterprises across the building materials sector. We invest continuously in automated European and Asian production machinery, strict metallurgical quality control, and eco-sustainable manufacturing.",
+    "counter1_title": "Engineers & Factory Personnel",
+    "counter1_text": "Over 1,700 dedicated specialists across Vero Group ensuring uncompromising quality and around-the-clock production.",
+    "counter2_title": "Modern Production Machines",
+    "counter2_text": "More than 200 automated high-speed roll-forming and CNC sheet-metal lines.",
+    "counter3_title": "Contractors, Architects & Distributors",
+    "counter3_text": "Construction companies, architectural studios and regional distributors across Uzbekistan and the CIS work with Vero Ceilings.",
+    "story_title": "Vero Ceilings: Manufacturing Infrastructure at Scale",
+    "story_text": "From international airport terminals to commercial shopping malls, corporate banking headquarters, and luxury hotels, Vero Ceilings delivers architectural ceiling solutions with speed, precision, and factory-direct cost efficiency.",
+    "vision_title": "Global Vision: Central Asian Manufacturing Hub",
+    "vision_text": "The Vero manufacturing plant was visited and praised by the President of Uzbekistan, Shavkat Mirziyoyev, highlighting our contribution to industrial export. Vero Ceilings represents Uzbekistan at premier global exhibitions including Aquatherm Tashkent, ShymkentBuild, and MosBuild.",
+    "story_image_alt": "Vero Ceilings industrial manufacturing facility in Tashkent, Uzbekistan"
+  },
+  "faq": {
+    "page_title": "Frequently Asked Questions: Specifications, Production & Global Export",
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What is Vero Ceilings' production scale and manufacturing facility location?",
+      "answer": "Vero Ceilings operates a 15,000 m² factory complex in Tashkent, Uzbekistan, equipped with 200+ automated machinery lines. It is the ceiling manufacturing division of the Vero Group holding, which employs 1,700+ people across its 10+ enterprises."
+    },
+    "q2": {
+      "question": "What export destinations and shipping terms do you support?",
+      "answer": "We export throughout Central Asia (Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan), the CIS, and the Middle East by truckload (FTL) and ocean containers (FCL). We supply CT-1 certificates of origin, customs export documentation, and flexible Incoterms (FCA, CPT, DAP, FOB, CIF)."
+    },
+    "q3": {
+      "question": "What certifications and fire safety ratings do your ceilings carry?",
+      "answer": "All Vero Ceilings systems are manufactured under ISO 9001 quality management. Our panels and grid components are made from non-combustible aluminium and galvanized steel. Fire classification reports, acoustic performance data and sanitary certificates are available on request for your market."
+    },
+    "q4": {
+      "question": "Can architects request physical sample kits and technical documentation?",
+      "answer": "Yes. We provide specifier packages including physical aluminium and metal sample boxes, finish swatches, technical DWG details and dimensional tables. Contact our export desk to request a kit."
+    },
+    "q5": {
+      "question": "What Grilyato open-cell dimensions and custom finishes are available?",
+      "answer": "Standard cell sizes include 50x50, 75x75, 100x100, 150x150, and 200x200 mm with blade heights from 30 to 50 mm. Available in standard white, black, metallic grey, and custom RAL powder coatings or wood-sublimated finishes."
+    },
+    "q6": {
+      "question": "What are the minimum order quantities (MOQ) and lead times for wholesale export?",
+      "answer": "High-runner profiles (Grilyato 100x100, 75x75, Armstrong 600x600 in white/black) are maintained in inventory for immediate dispatch. Custom production runs are typically fulfilled within 5 to 14 business days depending on volume."
+    }
+  },
+  "projects": {
+    "page_title": "Landmark Case Studies — Vero Ceilings Installations in Central Asia & CIS"
+  },
+  "architects": {
+    "page_title": "For Architects, Engineers & Specifiers | Vero Ceilings",
+    "library_title": "Technical Documentation & Video Installation Guides",
+    "library_description": "Engineering resources for architectural specification: DWG cross-sections, dimensional and load tables, test certificates, and step-by-step video installation guides. Contact our technical team for project take-offs.",
+    "video1": {
+      "title": "Grilyato Open-Cell Ceiling Installation Guide",
+      "description": "Step-by-step engineering assembly and suspension alignment of Grilyato lattice grid."
+    },
+    "video2": {
+      "title": "Armstrong Cassette Lay-In Installation",
+      "description": "T-grid leveling and lay-in panel installation procedure."
+    },
+    "video3": {
+      "title": "Linear Slat & Baffle System Mounting",
+      "description": "Traverse stringer fixing and linear slat snap-in technique."
+    },
+    "video4": {
+      "title": "T-Grid Suspension System Assembly",
+      "description": "Main runner interlock and cross tee grid alignment."
+    },
+    "video5": {
+      "title": "Perimeter L-Angle Installation",
+      "description": "Laser-leveling and wall angle perimeter fixing."
+    },
+    "video6": {
+      "title": "Heavy-Duty Suspension Hanger Setup",
+      "description": "Spring-butterfly tension adjustment and leveling."
+    }
+  },
+  "contact": {
+    "page_title": "Contact Vero Ceilings Factory HQ | Global Export & Domestic Sales",
+    "view_map": "View on Google Maps / Yandex Maps",
+    "form_description_new": "Connect directly with our corporate sales and export engineering team for project pricing, container shipping schedules, or sample requests.",
+    "phone_number": "+998 (78) 333 73 77",
+    "email_address": "veroceiling@gmail.com",
+    "location": "27 Chorbog Street, Chilanzar District, Tashkent, Uzbekistan.",
+    "name_label": "Your Name / Organization",
+    "phone_label": "Direct Contact Number",
+    "email_label": "Corporate E-mail",
+    "message_label": "Project Scope (m²) / Specification Details",
+    "name_placeholder_new": "John Smith / ABC Development Corp",
+    "phone_placeholder_new": "+998 90 123 45 67",
+    "email_placeholder_new": "specifier@architecture.com",
+    "message_placeholder_new": "Inquiring about 2,500 m² Grilyato 100x100 Black with container shipping...",
+    "send_button": "SUBMIT PROJECT INQUIRY",
+    "status_sending": "Transmitting inquiry...",
+    "status_success": "Inquiry received. A senior export manager will follow up within 15 minutes.",
+    "status_error": "Transmission error. Please contact us directly via telephone: +998 78 333 73 77.",
+    "status_error_generic": "An error occurred. Please retry.",
+    "title": "GLOBAL SALES & MANUFACTURING COMPLEX",
+    "subtitle": "Direct communication with the manufacturer",
+    "phone": "+998 78 333 73 77",
+    "email": "veroceiling@gmail.com",
+    "website": "veroceilings.uz",
+    "form": {
+      "name": "Your Name",
+      "phone": "Phone",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "SUBMIT INQUIRY"
+    }
+  },
+  "seo": {
+    "h1": "Suspended Ceiling Manufacturer in Central Asia — Grilyato, Armstrong & Slat Systems | Vero Ceilings",
+    "title": "Suspended Ceiling Manufacturer in Central Asia — Grilyato, Armstrong | Vero Ceilings",
+    "description": "Vero Ceilings manufactures suspended ceiling systems in Uzbekistan: Grilyato open-cell, Armstrong cassettes, and linear slats. 15,000 m² factory, 200+ machines, ISO 9001, 15-year warranty. Direct export.",
+    "keywords": "suspended ceiling manufacturer Uzbekistan, grilyato ceiling manufacturer, buy grilyato Tashkent, armstrong ceiling manufacturer Central Asia, linear slat ceiling factory, open cell ceiling export, drop ceiling supplier CIS, metal ceiling tiles manufacturer, vero ceilings",
+    "pages": {
+      "products": {
+        "title": "Suspended Ceiling Systems Catalogue — Factory Direct Supply | Vero Ceilings",
+        "description": "Explore Vero Ceilings full industrial catalogue: Grilyato open-cell (50x50 to 200x200), metal & acoustic Armstrong cassettes, linear baffle slats, and T-grid suspension systems."
+      },
+      "projects": {
+        "title": "Major Case Studies — Commercial & Airport Ceiling Installations | Vero Ceilings",
+        "description": "View landmark architectural case studies completed by Vero Ceilings: airports, mega shopping malls, government headquarters, and luxury hotels across Central Asia & CIS."
+      },
+      "about": {
+        "title": "About Vero Ceilings Manufacturing Complex — Central Asia Ceiling Plant",
+        "description": "Vero Ceilings is the ceiling plant of the Vero Group holding (est. 2014). 15,000 m² factory floor, 200+ machines, ISO 9001 certified. Uzbekistan supply and export."
+      },
+      "contact": {
+        "title": "Contact Vero Ceilings Factory HQ — Export Desk & Domestic Orders",
+        "description": "Factory address: 27 Chorbog St, Chilanzar, Tashkent, Uzbekistan. Direct Sales: +998 78 333 73 77. Instant project estimates and sample dispatch."
+      },
+      "faq": {
+        "title": "Commercial FAQ: Export Logistics, Specifications & Volume Supply | Vero Ceilings",
+        "description": "Answers to key specifier questions: container export lead times, MOQs, fire and test certificates, sample kits, and direct factory pricing."
+      },
+      "architects": {
+        "title": "For Architects & Specifiers — DWG Details, Datasheets & Certificates | Vero Ceilings",
+        "description": "Architectural documentation library: DWG details, dimensional and load tables, acoustic test data and fire safety documentation for Vero ceiling systems."
+      },
+      "calculator": {
+        "title": "Online Suspended Ceiling Calculator — Grilyato & Armstrong BOQ | Vero Ceilings",
+        "description": "Calculate materials, grid runners, and tiles online for Grilyato open-cell and Armstrong systems based on your architectural floor plan. Instant specification from Vero Ceilings."
+      }
+    }
+  },
+  "calculator": {
+    "page_title": "Online Suspended Ceiling Material Calculator",
+    "title": "Ceiling Material & Grid Quantity Calculator",
+    "subtitle": "Instantly calculate required Grilyato open-cell blades, Armstrong tiles, T-grid profiles, and suspension hardware in 30 seconds",
+    "labels": {
+      "type": "1. Select Ceiling System Type:",
+      "cell_size": "2. Grilyato Modular Cell Size:",
+      "color": "3. Architectural Finish:",
+      "dimensions": "4. Room Dimensions (Length & Width):",
+      "armstrong_type": "2. Armstrong Tile Specification (600x600 mm):",
+      "slat_type": "2. Linear Slat Profile & Width:"
+    },
+    "types": {
+      "grilyato": "Grilyato",
+      "armstrong": "Armstrong",
+      "slat": "Linear Slat"
+    },
+    "colors": {
+      "white": "White RAL 9003",
+      "black": "Black RAL 9005",
+      "graphite": "Graphite RAL 7024",
+      "metallic": "Metallic Silver RAL 9006",
+      "wood": "Woodgrain Finish (Oak)"
+    },
+    "results": {
+      "title": "Preliminary Material Bill of Quantities (BOQ)",
+      "area": "Total Area",
+      "perimeter": "Perimeter",
+      "grilyato_main": "Main Runners (2.4m)",
+      "grilyato_elements": "Cell Grid Elements (Male/Female)",
+      "t_main": "Main T-Grid Runners (3.6m)",
+      "t_cross": "Cross Tees (1.2m / 0.6m)",
+      "stringers": "Carrier Stringers (3m)",
+      "slats": "Linear Metal Slats (3m)",
+      "l_angle": "Perimeter Wall Angle (3m)",
+      "hangers": "Adjustable Butterfly Spring Hangers",
+      "lights": "Recommended 600x600 LED Panels"
+    },
+    "cta_telegram": "Send BOQ to Telegram for Export Quote",
+    "cta_quote": "Request Official Engineer Take-off",
+    "armstrong_types": {
+      "metal": "Metal Cassette Tiles 600x600 mm",
+      "washable": "Washable Hygienic Ecofol Tiles 600x600 mm",
+      "gypsum": "Acoustic Gypsum Tiles 600x600 mm",
+      "metal_short": "Metal Cassette",
+      "washable_short": "Washable Ecofol",
+      "gypsum_short": "Acoustic Gypsum"
+    },
+    "slat_types": {
+      "cube100": "Box-Baffle Slat 100 mm (L = 3.0 m)",
+      "classic84": "Classic Linear Slat 84R (L = 3.0 m)",
+      "linear150": "Wide Linear Slat 150 mm (L = 3.0 m)",
+      "cube_short": "Box-Baffle 100 mm",
+      "classic_short": "Classic 84R",
+      "linear_short": "Wide Slat 150 mm"
+    },
+    "items": {
+      "grilyato_mama": "Grid Blade Female Profile",
+      "grilyato_papa": "Grid Blade Male Profile",
+      "grilyato_main24": "Main Carrier Runner (2.4 m)",
+      "grilyato_cross12": "Cross Tee Runner (1.2 m)",
+      "grilyato_cross06": "Cross Tee Runner (0.6 m)",
+      "grilyato_connectors": "Main Runner Splice Clips",
+      "t_main36": "Main T-Grid Runner T24/T15 (3.6 m)",
+      "t_cross12": "Cross Tee (1.2 m)",
+      "t_cross06": "Cross Tee (0.6 m)",
+      "stringers": "Carrier Stringer (3.0 m)",
+      "slat_perimeter": "Perimeter Trim Channel (3.0 m)",
+      "l_angle": "Perimeter Wall L-Angle (3.0 m)",
+      "hangers": "Adjustable Butterfly Spring Hangers",
+      "lights": "Recommended Grilyato LED Modules",
+      "lights_armstrong": "Lay-In 600x600 LED Panels"
+    }
+  }
+}

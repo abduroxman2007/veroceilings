@@ -1,156 +1,80 @@
-# Deploying the prerendered build
+# Deploying veroceilings.uz
 
-This covers what changed on the `seo/locale-routing-prerender` branch, how
-to verify it locally, and how to get it onto the VPS.
+This describes the **actual current architecture**: a real Next.js 16 SSR/hybrid
+app (App Router, middleware, API routes, a Supabase-backed admin dashboard).
+There is no static export and no prerender step — `next build` produces a
+`.next/` output that must be served by a persistent Node process (`next
+start`), not a static file server.
 
-## What this branch adds, on top of `seo/foundation-fixes`
+If you're reading an older version of this file that mentions
+`scripts/prerender.js`, Puppeteer, or `serve -s build`: that described a
+prior Create-React-App-based iteration of this site. That architecture, and
+the `deploy/nginx.conf` / `deploy/apache.conf` / `deploy/Dockerfile.example`
+files that assumed it, no longer exist — they described serving a static
+HTML tree, which cannot run this app's middleware, API routes, or SSR pages.
 
-1. **Locale-prefixed routing** — every page now lives at `/uz/...`,
-   `/ru/...`, and `/en/...` instead of one URL shared across all three
-   languages. This is what makes per-language titles/descriptions/canonicals
-   actually possible; see `SEO-AUDIT.md` section 1.1 for why the old
-   single-URL setup was the root cause of the site being unindexable.
-2. **A prerender step** (`scripts/prerender.js`) that runs a real headless
-   Chromium against the built app and saves what it renders as static HTML,
-   one file per route per locale (51 pages: 17 routes x 3 locales). This is
-   what makes that content visible to crawlers that don't reliably execute
-   JavaScript (Yandex) and to link-preview scrapers that never do (Telegram,
-   WhatsApp, Facebook).
-3. Server configs (`deploy/nginx.conf`, `deploy/apache.conf`) that serve
-   those real files with real 404s for anything else, plus 301s for the old
-   bare-path URLs and for `/` itself.
+## What the real setup requires
 
-## What I could and couldn't verify in my own sandbox
+1. **Build:** `npm ci && npm run build` (plain `next build`, Turbopack). No
+   `postbuild` step, no browser automation, no CRA.
+2. **Run:** `npm run start` (`next start`) as a **persistent Node process**.
+   Locale routing (`middleware.ts`), the admin auth gate, API routes
+   (`/api/track`), and Server Actions all require a live server — none of
+   this works from a static file host.
+3. **Environment variables** must be present in that process's environment
+   (see the table in [README.md](README.md)): at minimum
+   `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
+   `SUPABASE_SERVICE_ROLE_KEY`.
+4. **Process supervision:** run it under PM2 (or similar) so it survives a
+   crash or VPS reboot, e.g.:
+   ```bash
+   pm2 start npm --name vero-frontend -- start
+   pm2 save
+   ```
+5. **Reverse proxy:** terminate TLS and forward to the Node port — a pure
+   `reverse_proxy` / `proxy_pass`, not `try_files` against a build directory.
 
-Worth being upfront about this rather than just asserting it all works:
+## Known production infrastructure (as of the last time this was checked over SSH)
 
-- **Fully verified**: the locale routing itself, via 7 automated tests in
-  `src/App.routing.test.js` that render the real `LocaleLayout`,
-  `RouteMeta`, `LanguageSwitcher`, `NotFound`, and legacy-redirect code (not
-  mocks) through real React Router + real i18next, and assert on the actual
-  resulting `<title>`, canonical, hreflang tags, and `lang` attribute. Also
-  fully verified: `npm run build` succeeds end-to-end with no new errors or
-  warnings, `scripts/generate-sitemap.js` produces correct per-locale
-  sitemap entries, and the prerender script's static-file-serving logic
-  (tested directly with real HTTP requests against the actual `build/`
-  output).
-- **Not verified in my sandbox**: the actual headless-Chromium capture pass
-  in `scripts/prerender.js`. My sandbox has no root access and its network
-  is allowlisted in a way that blocks Chromium's download host — I
-  genuinely cannot launch a browser here. The script itself follows the
-  standard, well-understood pattern (navigate, wait for the page to finish
-  rendering, save `page.content()`), and everything it depends on (routing,
-  meta tags, the static server it navigates against) is independently
-  verified above — but the capture step itself needs to be run somewhere
-  with normal internet access. That's the one thing below I'd actually
-  ask you to check yourself.
+- **Caddy** (`/etc/caddy/Caddyfile`) is the single reverse proxy for the box,
+  shared with other unrelated sites/services (smartops.uz, n8n, Huly, a
+  Moodle install). veroceilings.uz's block should be a plain
+  `reverse_proxy 127.0.0.1:8001` — nothing else is needed on the Caddy side
+  for a Next.js SSR app (no locale routing logic belongs in Caddy; that's
+  `middleware.ts`'s job).
+  **This file is shared with other services — always back it up and run
+  `caddy validate` before reloading.**
+- **PM2** runs the process as `vero-frontend`. Make sure its start command is
+  `next start` (via `npm run start`, or `next start -p 8001` directly) — if
+  it's still configured as `serve -s build`, that's the stale CRA-era config
+  and needs to be replaced.
 
-## Verifying locally (or the VPS) — one command, ~2 minutes
+Re-verify both of these before your next deploy — infrastructure notes go
+stale fast and this file cannot see the live server.
 
-You'll need a Chromium/Chrome binary available. Easiest on most machines:
+## Deploy sequence
 
-```bash
-npm install --legacy-peer-deps   # picks up puppeteer-core + everything else
-# macOS: brew install chromium          (then find its path with `which chromium`)
-# Ubuntu/Debian: sudo apt install chromium-browser
-# Windows: point at your existing Chrome install, e.g.
-#   C:\Program Files\Google\Chrome\Application\chrome.exe
+1. Merge to `main`, push.
+2. On the server: `git pull`, `npm ci`, `npm run build`.
+3. `pm2 restart vero-frontend` (after confirming its start command is
+   `next start`, not `serve`).
+4. Smoke-test before walking away:
+   ```bash
+   curl -sI https://veroceilings.uz/ | grep -i location   # -> /uz, 308
+   curl -s https://veroceilings.uz/uz | grep -o '<title>[^<]*</title>'
+   curl -s -o /dev/null -w '%{http_code}' https://veroceilings.uz/uz/totally-fake-path  # -> 404
+   ```
 
-PUPPETEER_EXECUTABLE_PATH=/path/to/chromium npm run build:prod
-```
+## CI/CD
 
-**What success looks like**: the script prints one line per page —
+There is none right now — no GitHub Actions, no Vercel/Netlify config.
+Deployment is the manual sequence above. If that becomes painful, the build
+step (`npm ci && npm run build`) is a natural fit for a simple GitHub Actions
+workflow that SSHes in and runs steps 2–3.
 
-```
-Prerendering 51 pages (17 routes x 3 locales)...
-  ✓ /uz  "Vero Ceilings — Toshkentda osma shift ishlab chiqaruvchisi"  -> build/uz/index.html
-  ✓ /ru  "Vero Ceilings — Современные потолочные системы в Ташкенте"  -> build/ru/index.html
-  ✓ /ru/products/grilyato  "Потолки Грильято — Toshkent | Vero Ceilings"  -> build/ru/products/grilyato/index.html
-  ...
-Done — 51 pages prerendered.
-```
-
-then exits 0. If anything fails to render, the script prints `✗` for that
-page and **exits non-zero** — it deliberately does not ship a partially-
-prerendered `build/` folder, since a mix of real and stale/empty pages would
-be worse than the failure being visible.
-
-**Spot-check a couple of the output files directly** — this is the actual
-proof that a non-JS crawler now sees real content:
-
-```bash
-grep -o '<title>[^<]*</title>' build/uz/index.html
-grep -o '<title>[^<]*</title>' build/ru/products/grilyato/index.html
-grep -c '<h1' build/ru/products/grilyato/index.html   # should be 1, with real text inside
-curl -s http://localhost:PORT/ru/products/grilyato | grep -o '<title>[^<]*</title>'  # once served
-```
-
-Before this branch, every one of these would have shown an empty
-`<title></title>` and no `<h1>` content at all — that's the actual bug
-getting fixed, made concrete.
-
-**dry run**, if you just want to see the target list without needing a
-browser at all: `npm run prerender:dry`.
-
-## The actual production setup (confirmed on the VPS, not Docker)
-
-`deploy/nginx.conf`, `deploy/apache.conf`, and `deploy/Dockerfile.example`
-were written before checking the real server and don't apply — there's no
-Docker or nginx/Apache in front of the frontend at all. The real setup,
-confirmed by SSHing in:
-
-- **Caddy** (`/etc/caddy/Caddyfile`) is the single reverse proxy in front of
-  everything on the box — smartops.uz, n8n, Huly, a Moodle install, and
-  veroceilings.uz all share this one file. For veroceilings.uz it's
-  currently a bare `reverse_proxy 127.0.0.1:8001`, no routing logic at all.
-  **This file is shared infrastructure — always `cp` a backup and run
-  `caddy validate` before reloading it.**
-- **PM2** runs the process named `vero-frontend`: `serve -s build -l 8001`,
-  cwd `/var/www/veroceiling/veroceilings`. The `-s` flag is the soft-404
-  bug from `SEO-AUDIT.md` section 1.1, live, on the current site — it
-  serves `index.html` with HTTP 200 for literally any path. Dropping `-s`
-  (once real per-route files exist from the prerender step) is what makes
-  unknown paths actually 404.
-- The server checkout was on `main` at an old commit, well before any of
-  this work — confirming why the live site still showed empty titles.
-- No Chromium was installed, but the server has normal internet access
-  (unlike the sandbox this was built in), so plain `puppeteer` — not
-  `puppeteer-core` — is the right choice here: `npm install` downloads its
-  own known-good Chromium, no system package or `PUPPETEER_EXECUTABLE_PATH`
-  needed. `scripts/prerender.js` tries `puppeteer` first automatically and
-  falls back to `puppeteer-core` + a system binary only if `puppeteer`
-  isn't installed.
-
-### Deploy sequence used
-
-1. Merge the fix branches into `main` locally, push — the server only
-   tracks `main`, matching its existing simple setup.
-2. On the server, clone `main` into a **separate directory**
-   (`veroceilings-staging`), `npm install`, `npm run build:prod`. This
-   downloads puppeteer's Chromium (~300MB) on first install.
-3. Serve the staging build on a spare port (`npx serve build -l 8002`, no
-   `-s`) and verify with `curl` before touching anything live — real
-   titles per locale, a legacy path 301ing, a fake path 404ing.
-4. Add explicit `redir` rules to the Caddyfile's veroceilings.uz block for
-   `/` → `/uz` and the legacy bare paths → their `/uz` equivalents.
-   `caddy validate` before `systemctl reload caddy`.
-5. Atomic swap: rename the old checkout out of the way, move the verified
-   staging build into its place, so `serve`'s cwd never points at a
-   half-built directory.
-6. `pm2 delete vero-frontend` + recreate it with `serve build -l 8001` (no
-   `-s`), then `pm2 save`.
-7. Verify against the live domain, watch Search Console for a week.
-
-Rollback at any point is: point PM2 back at the renamed-aside old
-directory, or restore the Caddyfile backup and reload.
-
-## After it's live
+## After deploying
 
 - Submit `https://veroceilings.uz/sitemap.xml` in both Google Search Console
   and Yandex Webmaster.
-- `curl -s https://veroceilings.uz/ | grep title` should show real Uzbek
-  content, not an empty tag.
-- `curl -s https://veroceilings.uz/products` should return an HTTP 301 to
-  `/uz/products`, not a 200.
-- `curl -s -o /dev/null -w '%{http_code}' https://veroceilings.uz/uz/totally-fake-path`
-  should return 404, not 200 — this is the soft-404 fix actually holding.
+- Verify the domain in Yandex Webmaster and set `NEXT_PUBLIC_YANDEX_VERIFICATION`
+  in the server's environment (see README) — this is not done yet.
